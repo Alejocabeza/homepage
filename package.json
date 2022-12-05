@@ -1,0 +1,24 @@
+{
+  "name": "homepages",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:css": "node-sass ./src/sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "dev:project": "vite",
+    "dev": "concurrently yarn:dev:*"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.56.1",
+    "vite": "^3.2.3"
+  }
+}
