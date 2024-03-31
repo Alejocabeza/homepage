@@ -35,7 +35,7 @@
       "url": "",
       "startDate": "2022-05-12",
       "endDate": "2024-03-07",
-      "summary": "En este proyecto me dediqué a mejorar y mantener el código de backend, solucionando problemas y creando nuevas features. Dando soporte a conexiónes con APIS externas, Como “ZOHO CRM” y “ZOHO BOOKS”, Implemente una mejorar al entorno de desarrollo al integrar docker en el backend para una facil instalacion y una mejorar estabilidad del entorno",
+      "summary": "En este proyecto me dediqué a mejorar y mantener el código de back-end, solucionando problemas y creando nuevas features. Dando soporte a conexiones con APIS externas, como “ZOHO CRM” y “ZOHO BOOKS”,  implementé una mejora al entorno de desarrollo al integrar Docker en el back-end y front-end para una fácil instalación y una mejora de estabilidad del entorno.",
       "highlights": [],
       "languages": ["Php", "Symfony", "Mysql", "Docker"]
     },
@@ -45,7 +45,7 @@
       "url": "",
       "startDate": "2023-05-01",
       "endDate": "2023-07-01",
-      "summary": "En este trabajo freelancer desarrolle un plugin de manejo de usuarios, en donde se generaba un dashboard para wordpress donde se podían ver la cantidad de usuarios registrados, también se podía filtrar y manipular datos, este plugin se hizo con php y javascript nativo, dado la complejidad de la plataforma web wordpress.",
+      "summary": "En este trabajo freelancer, desarrolle un plugin de manejo de usuarios, en donde se generaba un dashboard para WordPress donde se podían ver la cantidad de usuarios registrados, también se podía filtrar y manipular datos, este plugin se hizo con PHP y JavaScript nativo, dado la complejidad de la plataforma web WordPress.",
       "highlights": [],
       "languages": [
         "wordpress",
@@ -62,7 +62,7 @@
       "url": "",
       "startDate": "2021-10-8",
       "endDate": "2022-05-12",
-      "summary": "Construcción de la página web de la marca Empresas Polar (Multinacional), construí lo que es el tema que se usa actualmente, para seguir su desarrollo, donde se usó typescript, sass, nodejs, php, Esto para mejorar y optimizar el código del anterior tema pasado. Para así mejorar su implementación dentro de wordpress para hacer mejorar las animaciones usando dependencias usadas en el theme",
+      "summary": "Construcción de la página web de la marca Empresas Polar (Multinacional), construí lo que es el tema que se usa actualmente, para seguir su desarrollo, donde se usó TypeScript, SASS, Node.js, PHP. Esto para mejorar y optimizar el código del anterior tema pasado. Para así mejorar su implementación dentro de WordPress para hacer mejorar las animaciones usando dependencias usadas en el tema.",
       "highlights": [],
       "languages": [
         "Wordpress",
@@ -90,7 +90,7 @@
   ],
   "education": [
     {
-      "institution": "Universidad Catolica Del Tachira",
+      "institution": "Universidad Católica del Táchira",
       "url": "https://www.uoc.edu/portal/es/index.html",
       "area": "Derecho",
       "studyType": "",
@@ -100,9 +100,9 @@
       "courses": []
     },
     {
-      "institution": "Universidad Politécnica Territorial Agroindustrial Del Estado Tachira",
+      "institution": "Universidad Politécnica Territorial Agroindustrial del Estado Táchira",
       "url": "",
-      "area": "Ingenieria Informatica",
+      "area": "Ingeniería Informática",
       "studyType": "",
       "startDate": "2021-10-01",
       "endDate": null,
@@ -120,19 +120,19 @@
   ],
   "certificates": [
     {
-      "name": "Diseño de Paginas Web con Wordpress",
+      "name": "Diseño de páginas web con WordPress.",
       "date": "2020-11-07",
-      "issuer": "Ingenieria Digital",
+      "issuer": "Ingeniería Digital",
       "url": null
     },
     {
-      "name": "Master en Javascript: JS, JQUERY, NODEJS",
+      "name": "Master en JavaScript: JS, jQuery, NODE.js",
       "date": "2021-11-07",
       "issuer": "Udemy",
       "url": null
     },
     {
-      "name": "Master en php: PHP, SQL, POO, MVC, SYMFONY, WORDPRESS",
+      "name": "Master en php: SQL, POO, MVC, SYMFONY, WORDPRESS",
       "date": "2022-11-07",
       "issuer": "Udemy",
       "url": null
@@ -314,10 +314,10 @@
   "languages": [
     {
       "language": "Español",
-      "fluency": "Idioma Nativo"
+      "fluency": "Idioma nativo"
     },
     {
-      "language": "Ingles",
+      "language": "Inglés",
       "fluency": "Basico (En Formación)"
     }
   ],
@@ -338,7 +338,7 @@
       "name": "pixelui",
       "isActive": false,
       "status": "In progress",
-      "description": "Catalogo de componentes para react, basada en las mejores librerias de componentes (chakraui, nextui, materialui, etc)",
+      "description": "Construye React a tu Ritmo Olvida el código repetitivo. Nuestro catálogo de componentes te brinda libertad para enfocarte en la funcionalidad única de tu proyecto. Acelera el desarrollo, mejora la calidad y ¡disfruta la experiencia!",
       "highlights": ["react", "monorepo", "typescript", "stitches/react", "clsx", "CSS", "Docusaurus"],
       "url": "https://github.com/Alejocabeza/pixelui",
       "github": "https://github.com/Alejocabeza/pixelui"
@@ -347,7 +347,7 @@
       "name": "Cooper",
       "isActive": false,
       "status": "In progress",
-      "description": "Cooper es un chat con inteligencia artificial orientado a hacer un asesor de ventas para diversas empresas, diseño y contruido para concretar ventas, dando el mejor trato y un trato expedito a todos los usuario. teniendo siempre como foto la resolución de ventas",
+      "description": "Cooper es un chat con inteligencia artificial orientado a hacer un asesor de ventas para diversas empresas, diseñado y construido para concretar ventas, dando el mejor trato y un trato expedito a todos los usuarios. Teniendo siempre como foto la resolución de ventas.",
       "highlights": ["Nodejs", "OpenAI", "Llama2", "Api Whatsapp", "Javascript"],
       "url": null,
       "github": null 
@@ -356,7 +356,7 @@
       "name": "GeoTrail",
       "isActive": false,
       "status": "Done",
-      "description": "GeoTrail es un proyecto de prueba hecho en react native con expo, en donde te presenta el mapa mundi y donde puedes ubicar puntos de referencia",
+      "description": "GeoTrail es más que un simple proyecto de prueba. Es una aventura para descubrir el mundo a través de tu dispositivo móvil. Desarrollado en React Native con Expo, te presenta un mapa interactivo",
       "highlights": ["Nodejs", "Expo", "Javascript", "React Native"],
       "url": null,
       "github": "https://github.com/Alejocabeza/GeoTrail"
@@ -365,7 +365,7 @@
       "name": "Deepground Plugin",
       "isActive": true,
       "status": "Done",
-      "description": "This plugins is for management of login and register of the 'Deep Ground' company",
+      "description": "Este plugin está diseñado para gestionar el inicio de sesión y el registro de la empresa ‘Deep Ground’. Proporciona funcionalidades para que los usuarios puedan crear cuentas, iniciar sesión de manera segura y acceder a los servicios ofrecidos por la empresa. Además, permite la administración de perfiles de usuario, restablecimiento de contraseñas y otras características relacionadas con la autenticación.",
       "highlights": ["php", "wordpress", "javascript", "ajax", "Jqry", "bootstrap"],
       "url": "https://deepground.gg",
       "github": null 
