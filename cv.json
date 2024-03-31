@@ -1,0 +1,374 @@
+{
+  "basics": {
+    "name": "Alejandro Cabeza",
+    "label": "Full Stack Developer con mas de 3 años de experiencia",
+    "image": "https://github.com/Alejocabeza.png",
+    "available": true,
+    "email": "alejandrocabezaoficial@gmail.com",
+    "phone": "+58 414-7503510",
+    "url": "",
+    "summary": "+3 Años de experiencia como desarrollador full stack, tengo conocimientos en stacks de php full stack con symfony y react, ademas de stacks de javascript, soy venezolano, actualmente estoy cursando la ingenieria, ya soy TSU (Tecnico Superior en Informatica) en vista a sacar la ingenieria",
+    "location": {
+      "address": "",
+      "postalCode": "5001",
+      "city": "San Cristobal",
+      "countryCode": "ES",
+      "region": "Venezuela"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Alejandro Cabeza",
+        "url": "https://linkedin.com/in/alejandro-cabeza-ab86661bb"
+      },
+      {
+        "network": "GitHub",
+        "username": "Alejocabeza",
+        "url": "https://github.com/Alejocabeza"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Perfexya (España)",
+      "position": "Backend Developer",
+      "url": "",
+      "startDate": "2022-05-12",
+      "endDate": "2024-03-07",
+      "summary": "En este proyecto me dediqué a mejorar y mantener el código de backend, solucionando problemas y creando nuevas features. Dando soporte a conexiónes con APIS externas, Como “ZOHO CRM” y “ZOHO BOOKS”, Implemente una mejorar al entorno de desarrollo al integrar docker en el backend para una facil instalacion y una mejorar estabilidad del entorno",
+      "highlights": [],
+      "languages": ["Php", "Symfony", "Mysql", "Docker"]
+    },
+    {
+      "name": "Deepground (Suiza)",
+      "position": "Desarrollador de Wordpress",
+      "url": "",
+      "startDate": "2023-05-01",
+      "endDate": "2023-07-01",
+      "summary": "En este trabajo freelancer desarrolle un plugin de manejo de usuarios, en donde se generaba un dashboard para wordpress donde se podían ver la cantidad de usuarios registrados, también se podía filtrar y manipular datos, este plugin se hizo con php y javascript nativo, dado la complejidad de la plataforma web wordpress.",
+      "highlights": [],
+      "languages": [
+        "wordpress",
+        "php",
+        "javascript",
+        "bootstrap",
+        "jquery",
+        "ajax"
+      ]
+    },
+    {
+      "name": "SEO - Contenidos (Venezuela)",
+      "position": "Full Stack Developer Wordpress",
+      "url": "",
+      "startDate": "2021-10-8",
+      "endDate": "2022-05-12",
+      "summary": "Construcción de la página web de la marca Empresas Polar (Multinacional), construí lo que es el tema que se usa actualmente, para seguir su desarrollo, donde se usó typescript, sass, nodejs, php, Esto para mejorar y optimizar el código del anterior tema pasado. Para así mejorar su implementación dentro de wordpress para hacer mejorar las animaciones usando dependencias usadas en el theme",
+      "highlights": [],
+      "languages": [
+        "Wordpress",
+        "Php",
+        "Typescript",
+        "SASS",
+        "Nodejs",
+        "CSS",
+        "Ajax",
+        "Jquery",
+        "HTML"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Catolica Del Tachira",
+      "url": "https://www.uoc.edu/portal/es/index.html",
+      "area": "Derecho",
+      "studyType": "",
+      "startDate": "2016-09-01",
+      "endDate": "2021-09-01",
+      "score": "4.0",
+      "courses": []
+    },
+    {
+      "institution": "Universidad Politécnica Territorial Agroindustrial Del Estado Tachira",
+      "url": "",
+      "area": "Ingenieria Informatica",
+      "studyType": "",
+      "startDate": "2021-10-01",
+      "endDate": null,
+      "score": "4.0",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Diseño de Paginas Web con Wordpress",
+      "date": "2020-11-07",
+      "issuer": "Ingenieria Digital",
+      "url": null
+    },
+    {
+      "name": "Master en Javascript: JS, JQUERY, NODEJS",
+      "date": "2021-11-07",
+      "issuer": "Udemy",
+      "url": null
+    },
+    {
+      "name": "Master en php: PHP, SQL, POO, MVC, SYMFONY, WORDPRESS",
+      "date": "2022-11-07",
+      "issuer": "Udemy",
+      "url": null
+    },
+    {
+      "name": "Principio de Análisis y Diseño Orientado a Objetos Utilizando el Estándar UML",
+      "date": "2023-11-07",
+      "issuer": "Universidad Politécnica Territorial Agroindustrial Del Estado Tachira",
+      "url": null
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Php",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "UI"]
+    },
+    {
+      "name": "Symfony",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "PHP Framework", "UI"]
+    },
+    {
+      "name": "Docker",
+      "level": "Avanzado",
+      "keywords": []
+    },
+    {
+      "name": "Express",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Nestjs",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript Framework", "UI"]
+    },
+    {
+      "name": "Postgresql",
+      "level": "Avanzado",
+      "keywords": ["Database", "Almacenamiento de Datos", "SQL"]
+    },
+    {
+      "name": "Prisma",
+      "level": "Avanzado",
+      "keywords": ["Javascript Library", "Backend", "ORM"]
+    },
+    {
+      "name": "Doctrine",
+      "level": "Avanzado",
+      "keywords": ["PHP Library", "Backend", "ORM"]
+    },
+    {
+      "name": "Astro",
+      "level": "Avanzado",
+      "keywords": [
+        "Javascript Library",
+        "Backend",
+        "Frontend",
+        "JavaScript Framework"
+      ]
+    },
+    {
+      "name": "MongoDb",
+      "level": "Avanzado",
+      "keywords": ["Database", "NoSql", "Database No Relation"]
+    },
+    {
+      "name": "Expo",
+      "level": "Avanzado",
+      "keywords": []
+    },
+    {
+      "name": "React Native",
+      "level": "Avanzado",
+      "keywords": ["Application Movile", "Javascript Library", "UI"]
+    },
+    {
+      "name": "Redux",
+      "level": "Avanzado",
+      "keywords": ["State", "State Management", "UI"]
+    },
+    {
+      "name": "Linux",
+      "level": "Avanzado",
+      "keywords": ["Systema Operativo"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Idioma Nativo"
+    },
+    {
+      "language": "Ingles",
+      "fluency": "Basico (En Formación)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "pixelui",
+      "isActive": false,
+      "status": "In progress",
+      "description": "Catalogo de componentes para react, basada en las mejores librerias de componentes (chakraui, nextui, materialui, etc)",
+      "highlights": ["react", "monorepo", "typescript", "stitches/react", "clsx", "CSS", "Docusaurus"],
+      "url": "https://github.com/Alejocabeza/pixelui",
+      "github": "https://github.com/Alejocabeza/pixelui"
+    },
+    {
+      "name": "Cooper",
+      "isActive": false,
+      "status": "In progress",
+      "description": "Cooper es un chat con inteligencia artificial orientado a hacer un asesor de ventas para diversas empresas, diseño y contruido para concretar ventas, dando el mejor trato y un trato expedito a todos los usuario. teniendo siempre como foto la resolución de ventas",
+      "highlights": ["Nodejs", "OpenAI", "Llama2", "Api Whatsapp", "Javascript"],
+      "url": null,
+      "github": null 
+    },
+    {
+      "name": "GeoTrail",
+      "isActive": false,
+      "status": "Done",
+      "description": "GeoTrail es un proyecto de prueba hecho en react native con expo, en donde te presenta el mapa mundi y donde puedes ubicar puntos de referencia",
+      "highlights": ["Nodejs", "Expo", "Javascript", "React Native"],
+      "url": null,
+      "github": "https://github.com/Alejocabeza/GeoTrail"
+    },
+    {
+      "name": "Deepground Plugin",
+      "isActive": true,
+      "status": "Done",
+      "description": "This plugins is for management of login and register of the 'Deep Ground' company",
+      "highlights": ["php", "wordpress", "javascript", "ajax", "Jqry", "bootstrap"],
+      "url": "https://deepground.gg",
+      "github": null 
+    }
+  ]
+}
