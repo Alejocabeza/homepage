@@ -1,0 +1,92 @@
+---
+import HTML from "@/icons/html.astro";
+import CSS from "@/icons/css.astro";
+import JavaScript from "@/icons/javascript.astro";
+import TypeScript from "@/icons/type.astro";
+import React from "@/icons/react.astro";
+import Node from "@/icons/node.astro";
+import MySQL from "@/icons/sql.astro";
+import Git from "@/icons/git.astro";
+import GitHub from "@/icons/GitHub.astro";
+import Tailwind from "@/icons/tailwind.astro";
+import Next from "@/icons/next.astro";
+import { skills } from "@cv";
+import Doctrine from "@/icons/doctrine.astro";
+import Php from "@/icons/php.astro";
+import Nestjs from "@/icons/nestjs.astro";
+import Symfony from "@/icons/symfony.astro";
+import Express from "@/icons/express.astro";
+import Prisma from "@/icons/prisma.astro";
+import Docker from "@/icons/docker.astro";
+import Postgresql from "@/icons/Postgresql.astro";
+import MongoDb from "@/icons/mongodb.astro";
+import Expo from '@/icons/expo.astro'
+import ReactNavtive from '@/icons/react.astro'
+import Redux from '@/icons/Redux.astro'
+import Linux from '@/icons/ubuntu.astro'
+import Section from "@/components/CurriculumVitae/Section.astro";
+
+const SKILLS_ICONS: Record<string, any> = {
+  HTML,
+  CSS,
+  JavaScript,
+  TypeScript,
+  React,
+  Node,
+  MySQL,
+  Git,
+  GitHub,
+  Next,
+  Tailwind,
+  Doctrine,
+  Php,
+  Nestjs,
+  Symfony,
+  Express,
+  Prisma,
+  Docker,
+  Postgresql,
+  MongoDb,
+  Expo,
+  ReactNavtive,
+  Redux,
+  Linux
+};
+---
+
+<Section title="Habilidades">
+  <ul>
+    {
+      skills.map(({ name }) => {
+        const iconName = name === "Next.js" ? "Next" : name;
+        const Icon = SKILLS_ICONS[iconName];
+
+        return (
+          <li>
+            {Icon && <Icon />} <span>{name}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    align-items: center;
+    background: #ec4899;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
+  }
+</style>

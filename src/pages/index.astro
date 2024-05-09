@@ -1,45 +1,15 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import About from "@/components/sections/About.astro";
-import Education from "@/components/sections/Education.astro";
-import Experience from "@/components/sections/Experience.astro";
-import Hero from "@/components/sections/Hero.astro";
-import Projects from "@/components/sections/Projects.astro";
-import Skills from "@/components/sections/Skills.astro";
-import KeyboardManager from "@/components/KeyboardManager.astro";
-import Lenguages from '@/components/sections/Languages.astro'
-
-import { basics } from "@cv";
-import Certificates from "@/components/sections/Certificates.astro";
-import LayoutCV from "@/layouts/Layout.astro";
-const { name, label } = basics;
+import Layout from "@/layout/index.astro";
+import About from "@/sections/Home/About.astro";
+import Expirence from "@/sections/Home/Expirence.astro";
+import Hero from "@/sections/Home/Hero.astro";
 ---
 
-<LayoutCV title={`CV de ${name} - ${label}`}>
-  <main>
-    <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Certificates />
-    <Projects />
-    <Lenguages />
-    <Skills />
-  </main>
-  <KeyboardManager />
-</LayoutCV>
-
-<style>
-  main {
-    padding: 4rem;
-    margin: auto;
-    width: 100%;
-  }
-
-  @media (width <= 700px) {
-    main {
-      padding: 2rem;
-    }
-  }
-</style>
+<Layout
+  title="Alejandro Cabeza - Desarrollador y Programador"
+  description="Desarrollador backend con mas de 3 años de experiencia, especializado en sistemas de gestion y manejo de datos"
+>
+  <Hero />
+  <Expirence />
+  <About/>
+</Layout>
