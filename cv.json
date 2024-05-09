@@ -8,6 +8,11 @@
     "phone": "+58 414-7503510",
     "url": "",
     "summary": "Soy un apasionado del desarrollo web con más de 3 años de experiencia convirtiendo ideas en realidad. Domino PHP y JavaScript, y me adapto a las nuevas tecnologías con facilidad. Estudiante de Ingeniería Informática, con ganas de seguir creciendo y aportar valor a tu empresa.",
+    "aboutMe": [
+      "Soy un ciudadano venezolano, cuya curiosidad por el complejo tejido geopolítico me llevó a estudiar Derecho. Impulsado por la necesidad de comprender la delicada situación de mi país, me sumergí en el estudio de la naturaleza del Estado y el impacto que ejercemos en el ámbito político que nos rodea. Esta travesía académica no solo alimentó mi gusto por el aprendizaje, sino que también forjó en mí la habilidad de autodidacta, permitiéndome explorar y comprender una diversidad de temas con profundidad y pasión.",
+      "Desde mi infancia, la tecnología ha sido una chispa de curiosidad que se encendió en mi interior. Con el tiempo, esa chispa se transformó en una llama ardiente de pasión. Aprender a programar fue el catalizador que me llevó a un mundo de creación sin límites. Ahora, me dedico a tejer soluciones innovadoras y a expandir mi conocimiento, siempre en busca de nuevas y mejores formas de enfrentar los desafíos del mañana.",
+      "Soy un ferviente fanático del futbol me encanta ver partidos, el fervor de la hinchada y la mística que surge en cada partido es adictivo sobre todo la emoción de ganar y el dolor y la molestia de la derrota"
+    ],
     "location": {
       "address": "",
       "postalCode": "5001",
@@ -29,6 +34,16 @@
     ]
   },
   "work": [
+    {
+      "name": "Indi Creator",
+      "position": "Full Stack Developer",
+      "url": "",
+      "startDate": "2024-04-01",
+      "endDate": "",
+      "summary": "Con una pasión inquebrantable por la tecnología, me especializo en la creación y desarrollo de proyectos tanto personales como para clientes. Mi compromiso con la excelencia me lleva a una constante evolución, buscando siempre las últimas tendencias y avances para enriquecer mi arsenal tecnológico. Mi objetivo es no solo satisfacer las necesidades actuales, sino también anticipar las del futuro, asegurando que cada solución sea no solo funcional, sino también vanguardista y excepcional.",
+      "highlights": [],
+      "languages": ["Php", "Symfony", "Mysql", "Docker"]
+    },
     {
       "name": "Perfexya (España)",
       "position": "Backend Developer",
@@ -339,7 +354,7 @@
       "isActive": false,
       "status": "In progress",
       "description": "Construye React a tu Ritmo Olvida el código repetitivo. Nuestro catálogo de componentes te brinda libertad para enfocarte en la funcionalidad única de tu proyecto. Acelera el desarrollo, mejora la calidad y ¡disfruta la experiencia!",
-      "highlights": ["react", "monorepo", "typescript", "stitches/react", "clsx", "CSS", "Docusaurus"],
+      "highlights": ["react", "typescript", "CSS", "Docusaurus"],
       "url": "https://github.com/Alejocabeza/pixelui",
       "github": "https://github.com/Alejocabeza/pixelui"
     },
@@ -348,9 +363,9 @@
       "isActive": false,
       "status": "In progress",
       "description": "Cooper es un chat con inteligencia artificial orientado a hacer un asesor de ventas para diversas empresas, diseñado y construido para concretar ventas, dando el mejor trato y un trato expedito a todos los usuarios. Teniendo siempre como foto la resolución de ventas.",
-      "highlights": ["Nodejs", "OpenAI", "Llama2", "Api Whatsapp", "Javascript"],
+      "highlights": ["Nodejs", "OpenAI", "WhatsApp", "Javascript"],
       "url": null,
-      "github": null 
+      "github": null
     },
     {
       "name": "GeoTrail",
@@ -366,9 +381,15 @@
       "isActive": true,
       "status": "Done",
       "description": "Este plugin está diseñado para gestionar el inicio de sesión y el registro de la empresa ‘Deep Ground’. Proporciona funcionalidades para que los usuarios puedan crear cuentas, iniciar sesión de manera segura y acceder a los servicios ofrecidos por la empresa. Además, permite la administración de perfiles de usuario, restablecimiento de contraseñas y otras características relacionadas con la autenticación.",
-      "highlights": ["php", "wordpress", "javascript", "ajax", "Jqry", "bootstrap"],
+      "highlights": [
+        "php",
+        "wordpress",
+        "javascript",
+        "JQuery",
+        "bootstrap"
+      ],
       "url": "https://deepground.gg",
-      "github": null 
+      "github": null
     }
   ]
 }

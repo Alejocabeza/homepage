@@ -1,0 +1,21 @@
+---
+import Card from "@/components/Projects/Card.astro";
+import SectionContainer from "@/components/ui/SectionContainer.astro";
+import SectionTitle from "@/components/ui/SectionTitle.astro";
+import type { Projects } from "@/interfaces/repos.interface";
+import {projects} from '@cv'
+---
+
+<SectionContainer class="py-32 md:py-36 max-w-full">
+  <SectionTitle> Proyectos </SectionTitle>
+  <p class="mb-3">
+    Estos son algunos de mis proyectos.
+  </p>
+  <div class="grid sm:grid-cols-2 max-w-full gap-4">
+    {
+      projects.map((repo: Projects) => (
+        <Card {...repo} />
+      ))
+    }
+  </div>
+</SectionContainer>
