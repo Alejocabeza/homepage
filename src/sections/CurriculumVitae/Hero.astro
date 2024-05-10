@@ -5,10 +5,10 @@ import Section from '@/components/CurriculumVitae/Section.astro';
 ---
 
 <Section>
-    <div class="mt-32 flex flex-row items-center justify-between gap-4">
-        <div class="flex flex-col gap-2 pr-8">
+    <div class="mt-32 flex flex-col-reverse items-center justify-between gap-4 md:flex-row">
+        <div class="flex flex-col gap-2 pr-8 items-center md:items-start">
             <h1 class="text-[2rem] font-bold">{basics.name}</h1>
-            <h2 class="text-[1.1rem] text-[#444] font-medium text-wrap">{basics.label}</h2>
+            <h2 class="text-[1.1rem] text-[#444] font-medium text-center md:text-wrap">{basics.label}</h2>
             <span class="text-[#666] flex items-center gap-1 text-[.85rem] tracking-tighter">
                 {basics.location.city}, {basics.location.region}
             </span>

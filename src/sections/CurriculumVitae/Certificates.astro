@@ -4,22 +4,17 @@ import { certificates } from "@cv";
 ---
 
 <Section title="Certificados">
-  <ul>
+  <ul class='flex flex-col gap-[32px] px-4 md:px-0'>
     {
       certificates.map(({ date, name, issuer }) => {
         const year = new Date(date).getFullYear();
         return (
           <li>
             <article>
-              <header>
-                <div>
-                  <h3>{name}</h3>
-                </div>
-                <time>{year}</time>
+              <header class='flex flex-col items-center gap-1 mb-[4px] md:flex-row md:justify-between md:items-center'>
+                <h3 class='font-normal text-[#111] text-center'>{name}</h3>
+                <time class='text-[#555] text-[.85rem] min-w-[102px] text-center md:text-end'>{year}</time>
               </header>
-              <footer>
-                <p>{issuer}</p>
-              </footer>
             </article>
           </li>
         );
@@ -27,37 +22,3 @@ import { certificates } from "@cv";
     }
   </ul>
 </Section>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-    text-align: end;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-  }
-</style>

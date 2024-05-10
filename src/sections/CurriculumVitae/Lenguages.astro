@@ -6,25 +6,9 @@ import { languages } from "@cv";
 <Section title="Idiomas">
   {
     languages.map(({ language, fluency }) => (
-        <div>
-          <h3>{language}</h3> -<span>{fluency}</span>
+        <div class='flex justify-center items-center gap-1 mt-[.8rem] md:justify-start'>
+          <h3 class='font-bold'>{language}</h3> -<span class='text-[.8rem]'>{fluency}</span>
         </div>
     ))
   }
 </Section>
-
-<style>
-  div {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: .8rem;
-  }
-  div h3 {
-    font-weight: bold;
-  }
-  div span {
-    font-size: .8rem;
-  }
-</style>
