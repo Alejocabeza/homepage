@@ -14,9 +14,9 @@ export const NAVIGATION = [
     url: "/curriculum-vitae",
     icon: null,
   },
-  // {
-  //   title: "Blog",
-  //   url: "/blog",
-  //   icon: null,
-  // },
+  {
+    title: "Blog",
+    url: "/blog",
+    icon: null,
+  },
 ];
