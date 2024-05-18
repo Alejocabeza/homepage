@@ -26,7 +26,11 @@ console.log(blocks.results);
           return <h2>{block.heading_2?.rich_text[0].plain_text}</h2>;
         if (block.type === "heading_3")
           return <h3>{block.heading_3?.rich_text[0].plain_text}</h3>;
-        if (block.type === "paragraph" && block.paragraph?.rich_text.length > 0)
+        if (
+          block.type === "paragraph" &&
+          block.paragraph?.rich_text &&
+          block.paragraph?.rich_text.length > 0
+        )
           return <p>{block.paragraph?.rich_text[0].plain_text}</p>;
         if (block.type === "paragraph") return <br />;
         if (block.type === "bulleted_list_item")
@@ -66,7 +70,7 @@ console.log(blocks.results);
                 src={
                   block.image?.external
                     ? block.image?.external.url
-                    : block.image?.file.url
+                    : block.image?.file && block.image?.file.url
                 }
               />
             </figure>
