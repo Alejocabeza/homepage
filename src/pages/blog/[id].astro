@@ -8,16 +8,15 @@ import { boolean } from "astro/zod";
 const { id } = Astro.params;
 const post = await getPost(id);
 const blocks = await getBlocks(id);
-console.log(blocks.results);
 ---
 
-<Layout title="blog - id" description="description">
+<Layout title={`Blog - ${post.properties.name.title[0].plain_text}`} description={post.properties.description.rich_text[0].plain_text}>
   <SectionContainer
     class="py-32 md:py-36 w-full flex justify-center items-start flex-col max-w-full px-4 md:px-0"
   >
-    <SectionTitle>
+    <h1 class="text-[3rem] mb-8">
       {post.properties.name.title[0].plain_text}
-    </SectionTitle>
+    </h1>
     {
       blocks.results.map((block) => {
         if (block.type === "heading_1")
@@ -84,17 +83,43 @@ console.log(blocks.results);
   h1 {
     font-size: 3rem;
     font-weight: bold;
+    margin: 1rem 0;
   }
   h2 {
     font-size: 2rem;
     font-weight: bold;
+    margin: 1rem 0;
   }
   h3 {
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 1rem 0;
   }
   p {
     text-align: justify;
     line-height: 1.8rem;
+  }
+
+  ul > li {
+    list-style-type: disc;
+  }
+
+  ol > li {
+    list-style-type: decimal;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
   }
 </style>

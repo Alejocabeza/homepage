@@ -15,7 +15,7 @@ export async function getAllPosts(): Promise<AllPosts> {
         "notion-version": "2022-06-28",
         "Content-Type": "application/json",
       },
-    }
+    },
   );
   return await res.json();
 }
@@ -32,7 +32,7 @@ export async function getPost(id: string | undefined): Promise<Results> {
   return await res.json();
 }
 
-export async function getBlocks(id: string | undefined): Promise<Block>  {
+export async function getBlocks(id: string | undefined): Promise<Block> {
   const res = await fetch(`https://api.notion.com/v1/blocks/${id}/children`, {
     method: "GET",
     headers: {
