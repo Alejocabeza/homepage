@@ -1,15 +1,14 @@
 ---
-import Layout from "@/layout/index.astro";
-import About from "@/sections/Home/About.astro";
-import Expirence from "@/sections/Home/Expirence.astro";
-import Hero from "@/sections/Home/Hero.astro";
+import About from "@/section/home/about.astro";
+import Layout from "../layouts/Layout.astro";
+import Expirence from "@/section/home/expirence.astro";
+import Hero from "@/section/home/hero.astro";
 ---
 
 <Layout
-  title="Alejandro Cabeza - Desarrollador y Programador"
-  description="Desarrollador backend con mas de 3 años de experiencia, especializado en sistemas de gestion y manejo de datos"
->
+  title="Alejandro Cabeza - Home"
+  description="Desarrollador backend con mas de 3 años de experiencia, especializado en sistemas de gestion y manejo de datos">
   <Hero />
   <Expirence />
-  <About/>
+  <About />
 </Layout>

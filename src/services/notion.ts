@@ -1,45 +1,41 @@
-import type { Block } from "@/interfaces/blocks.interface";
-import type { Results } from "@/interfaces/post.interface";
-import type AllPosts from "@/interfaces/post.interface";
+const NOTION_KEY = import.meta.env.NOTION_API_KEY;
 
-const NOTION_KEY = import.meta.env.API_KEY_NOTION;
-const DATABASE_ID = import.meta.env.API_NOTION_DB_ID;
+export const PROJECTDB = "157943193f8780569083e7cc04d06d64";
+export const BLOGDB = import.meta.env.NOTION_BLOG_DB;
 
-export async function getAllPosts(): Promise<AllPosts> {
-  const res = await fetch(
-    `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${NOTION_KEY}`,
-        "notion-version": "2022-06-28",
-        "Content-Type": "application/json",
-      },
-    },
-  );
-  return await res.json();
-}
+const headers = {
+  Authorization: `Bearer ${NOTION_KEY}`,
+  "notion-version": "2022-06-28",
+  "Content-Type": "application/json",
+};
 
-export async function getPost(id: string | undefined): Promise<Results> {
-  const res = await fetch(`https://api.notion.com/v1/pages/${id}`, {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${NOTION_KEY}`,
-      "notion-version": "2022-06-28",
-      "Content-Type": "application/json",
-    },
+export async function findAllData(dbid: string) {
+  const url = genereateUrl("databases", dbid);
+  const res = await fetch(url + "/query", {
+    method: "POST",
+    headers,
   });
   return await res.json();
 }
 
-export async function getBlocks(id: string | undefined): Promise<Block> {
-  const res = await fetch(`https://api.notion.com/v1/blocks/${id}/children`, {
+export async function findOneData(id: string) {
+  const url = genereateUrl("pages", id);
+  const res = await fetch(url, {
     method: "GET",
-    headers: {
-      Authorization: `Bearer ${NOTION_KEY}`,
-      "notion-version": "2022-06-28",
-      "Content-Type": "application/json",
-    },
+    headers,
   });
   return await res.json();
+}
+
+export async function findOneBlock(id: string) {
+  const url = genereateUrl("blocks", id);
+  const res = await fetch(url + "/children", {
+    method: "GET",
+    headers,
+  });
+  return await res.json();
+}
+
+function genereateUrl(page: string, id: string) {
+  return `https://api.notion.com/v1/${page}/${id}`;
 }
