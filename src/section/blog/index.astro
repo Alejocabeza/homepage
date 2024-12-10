@@ -1,0 +1,32 @@
+---
+import { findAllData, BLOGDB } from "@/services/notion";
+import Container from "@/components/ui/container.astro";
+import Cards from "@/components/blog/ui/cards.astro";
+import type { Blog } from "@/interfaces/blog.interface";
+const blogs = await findAllData(BLOGDB);
+---
+
+<Container class="py-32 md:py-36 max-w-full px-4 md:px-0">
+  <h2
+    class="flex mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+  >
+    Blog
+  </h2>
+  <div class="grid md:grid-cols-2 gap-2">
+    {
+      blogs ? (
+        blogs.results.map((post: Blog) => {
+          if (
+            !post.archived &&
+            !post.in_trash &&
+            post.properties.Status.status.name === "Publicado"
+          ) {
+            return <Cards {...post} />;
+          }
+        })
+      ) : (
+        <span>Sin Publicaciones Recientes</span>
+      )
+    }
+  </div>
+</Container>

@@ -1,7 +1,7 @@
 const NOTION_KEY = import.meta.env.NOTION_API_KEY;
 
 export const PROJECTDB = "157943193f8780569083e7cc04d06d64";
-export const BLOGDB = import.meta.env.NOTION_BLOG_DB;
+export const BLOGDB = "157943193f8780e8a36df5bf33f03715";
 
 const headers = {
   Authorization: `Bearer ${NOTION_KEY}`,
@@ -27,7 +27,7 @@ export async function findOneData(id: string) {
   return await res.json();
 }
 
-export async function findOneBlock(id: string) {
+export async function findAllBlock(id: string) {
   const url = genereateUrl("blocks", id);
   const res = await fetch(url + "/children", {
     method: "GET",

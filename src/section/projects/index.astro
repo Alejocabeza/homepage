@@ -14,11 +14,15 @@ const projects = await findAllData(PROJECTDB);
   </h2>
   <div class="grid md:grid-cols-2 gap-2">
     {
-      projects.results.map((project: Project) => {
-        if (!project.archived && !project.in_trash) {
-          return <Cards {...project} />;
-        }
-      })
+      projects ? (
+        projects.results.map((project: Project) => {
+          if (!project.archived && !project.in_trash) {
+            return <Cards {...project} />;
+          }
+        })
+      ) : (
+        <span>Sin Proyectos Nuevos</span>
+      )
     }
   </div>
 </Container>

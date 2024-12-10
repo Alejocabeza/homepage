@@ -59,6 +59,18 @@ interface Properties {
         title: {
             plain_text: string
         }[]
+    },
+    Images: {
+        id: string,
+        types: string,
+        files: {
+            name: string,
+            type: string,
+            file: {
+                url: string,
+                expiry_time: string
+            }
+        }[]
     }
 }
 
