@@ -2,7 +2,7 @@
   "basics": {
     "name": "Alejandro Cabeza",
     "label": "Desarrollador back-end con más de 3 años de experiencia",
-    "image": "https://github.com/Alejocabeza.png",
+    "image": "",
     "available": true,
     "email": "alejandrocabezaoficial@gmail.com",
     "phone": "+58 414-7503510",
@@ -33,7 +33,7 @@
   },
   "work": [
     {
-      "name": "Residentia (Mexico)",
+      "name": "Miocondo (Mexico)",
       "position": "Lead Backend Ingineer",
       "url": "https://miocondo.com/",
       "startDate": "2024",
