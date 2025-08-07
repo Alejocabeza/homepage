@@ -1,7 +1,7 @@
 ---
 import "@fontsource-variable/onest";
 import Header from "@/components/ui/header.astro";
-
+import Analytics from '@vercel/analytics/astro'
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -22,6 +22,7 @@ const { description, title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
+    <Analytics />
   </head>
 
   <body class="relative text-black dark:text-white">
