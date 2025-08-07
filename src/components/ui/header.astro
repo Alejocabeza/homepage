@@ -6,13 +6,13 @@ import { NAVIGATION } from "@/lib/navigation";
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-[1rem] font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex px-3 text-[1rem] font-medium rounded-full text-text-secondary justify-center items-center"
   >
     {
       NAVIGATION.map(
         ({ title, url, icon }: { title: string; url: string; icon: any }) => (
           <a
-            class="relative block px-2 py-2 transition hover:text-rose-800 dark:hover:text-rose-400"
+            class="relative block px-2 py-2 transition hover:text-accent"
             aria-label={title}
             href={url}
           >
@@ -35,9 +35,9 @@ import { NAVIGATION } from "@/lib/navigation";
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("arial-label") === entry.target.id) {
-              item.classList.add("text-yellow-500");
+              item.classList.add("text-accent");
             } else {
-              item.classList.remove("text-yellow-500");
+              item.classList.remove("text-accent");
             }
           });
         }
@@ -75,7 +75,7 @@ import { NAVIGATION } from "@/lib/navigation";
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+      @apply shadow-lg ring-1 backdrop-blur bg-bg-secondary/90 ring-white/10;
     }
   }
 </style>
