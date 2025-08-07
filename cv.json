@@ -1,393 +1,375 @@
 {
-    "basics": {
-      "name": "Alejandro Cabeza",
-      "label": "Desarrollador back-end con más de 3 años de experiencia",
-      "image": "https://github.com/Alejocabeza.png",
-      "available": true,
-      "email": "alejandrocabezaoficial@gmail.com",
-      "phone": "+58 414-7503510",
-      "url": "",
-      "summary": "Soy un apasionado del desarrollo web con más de 3 años de experiencia convirtiendo ideas en realidad. Domino PHP y JavaScript, y me adapto a las nuevas tecnologías con facilidad. Estudiante de Ingeniería Informática, con ganas de seguir creciendo y aportar valor a tu empresa.",
-      "aboutMe": [
-        "Desde mi infancia, la tecnología ha sido una chispa de curiosidad que se encendió en mi interior. Con el tiempo, esa chispa se transformó en una llama ardiente de pasión. Aprender a programar fue el catalizador que me llevó a un mundo de creación sin límites. Ahora, me dedico a tejer soluciones innovadoras y a expandir mi conocimiento, siempre en busca de nuevas y mejores formas de enfrentar los desafíos del mañana."
-      ],
-      "location": {
-        "address": "",
-        "postalCode": "5001",
-        "city": "San Cristobal",
-        "countryCode": "ES",
-        "region": "Venezuela"
-      },
-      "profiles": [
-        {
-          "network": "LinkedIn",
-          "username": "Alejandro Cabeza",
-          "url": "https://linkedin.com/in/alejandro-cabeza-ab86661bb"
-        },
-        {
-          "network": "GitHub",
-          "username": "Alejocabeza",
-          "url": "https://github.com/Alejocabeza"
-        }
-      ]
+  "basics": {
+    "name": "Alejandro Cabeza",
+    "label": "Desarrollador back-end con más de 3 años de experiencia",
+    "image": "https://github.com/Alejocabeza.png",
+    "available": true,
+    "email": "alejandrocabezaoficial@gmail.com",
+    "phone": "+58 414-7503510",
+    "url": "",
+    "summary": "Soy un apasionado del desarrollo web con más de 3 años de experiencia convirtiendo ideas en realidad. Domino PHP y JavaScript, y me adapto a las nuevas tecnologías con facilidad. Estudiante de Ingeniería Informática, con ganas de seguir creciendo y aportar valor a tu empresa. !!!!!",
+    "aboutMe": [
+      "Desde pequeño, la tecnología fue la chispa que encendió mi imaginación y me invitó a soñar en grande. Con el tiempo, esa chispa se convirtió en una llama inagotable: descubrí en la programación una llave mágica capaz de abrir puertas a mundos antes inimaginables. Hoy, me dedico a tejer ideas y transformar desafíos en oportunidades, explorando sin miedo los límites de la innovación. Mi motor es la curiosidad y mi brújula, el deseo constante de aprender y reinventar el mañana."
+    ],
+    "location": {
+      "address": "",
+      "postalCode": "5001",
+      "city": "San Cristobal",
+      "countryCode": "ES",
+      "region": "Venezuela"
     },
-    "work": [
+    "profiles": [
       {
-        "name": "Freelancer",
-        "position": "Full Stack Developer",
-        "url": "",
-        "startDate": "2024-04-01",
-        "endDate": "",
-        "summary": "Con una pasión inquebrantable por la tecnología, me especializo en la creación y desarrollo de proyectos tanto personales como para clientes. Mi compromiso con la excelencia me lleva a una constante evolución, buscando siempre las últimas tendencias y avances para enriquecer mi arsenal tecnológico. Mi objetivo es no solo satisfacer las necesidades actuales, sino también anticipar las del futuro, asegurando que cada solución sea no solo funcional, sino también vanguardista y excepcional.",
-        "highlights": [],
-        "languages": ["Php", "Symfony", "Mysql", "Docker"]
+        "network": "LinkedIn",
+        "username": "Alejandro Cabeza",
+        "url": "https://linkedin.com/in/alejandro-cabeza-ab86661bb"
       },
       {
-        "name": "Perfexya (España)",
-        "position": "Backend Developer",
-        "url": "",
-        "startDate": "2022-05-12",
-        "endDate": "2024-03-07",
-        "summary": "En este proyecto me dediqué a mejorar y mantener el código de back-end, solucionando problemas y creando nuevas features. Dando soporte a conexiones con APIS externas, como “ZOHO CRM” y “ZOHO BOOKS”,  implementé una mejora al entorno de desarrollo al integrar Docker en el back-end y front-end para una fácil instalación y una mejora de estabilidad del entorno.",
-        "highlights": [],
-        "languages": ["Php", "Symfony", "Mysql", "Docker"]
-      },
-      {
-        "name": "Deepground (Suiza)",
-        "position": "Desarrollador de Wordpress",
-        "url": "",
-        "startDate": "2023-05-01",
-        "endDate": "2023-07-01",
-        "summary": "En este trabajo freelancer, desarrolle un plugin de manejo de usuarios, en donde se generaba un dashboard para WordPress donde se podían ver la cantidad de usuarios registrados, también se podía filtrar y manipular datos, este plugin se hizo con PHP y JavaScript nativo, dado la complejidad de la plataforma web WordPress.",
-        "highlights": [],
-        "languages": [
-          "wordpress",
-          "php",
-          "javascript",
-          "bootstrap",
-          "jquery",
-          "ajax"
-        ]
-      },
-      {
-        "name": "SEO - Contenidos (Venezuela)",
-        "position": "Full Stack Developer Wordpress",
-        "url": "",
-        "startDate": "2021-10-8",
-        "endDate": "2022-05-12",
-        "summary": "Construcción de la página web de la marca Empresas Polar (Multinacional), construí lo que es el tema que se usa actualmente, para seguir su desarrollo, donde se usó TypeScript, SASS, Node.js, PHP. Esto para mejorar y optimizar el código del anterior tema pasado. Para así mejorar su implementación dentro de WordPress para hacer mejorar las animaciones usando dependencias usadas en el tema.",
-        "highlights": [],
-        "languages": [
-          "Wordpress",
-          "Php",
-          "Typescript",
-          "SASS",
-          "Nodejs",
-          "CSS",
-          "Ajax",
-          "Jquery",
-          "HTML"
-        ]
-      }
-    ],
-    "volunteer": [
-      {
-        "organization": "Organization",
-        "position": "Volunteer",
-        "url": "https://organization.com/",
-        "startDate": "2012-01-01",
-        "endDate": "2013-01-01",
-        "summary": "Description…",
-        "highlights": ["Awarded 'Volunteer of the Month'"]
-      }
-    ],
-    "education": [
-      {
-        "institution": "Universidad Católica del Táchira",
-        "url": "https://www.uoc.edu/portal/es/index.html",
-        "area": "Derecho",
-        "studyType": "",
-        "startDate": "2016-09-01",
-        "endDate": "2021-09-01",
-        "score": "4.0",
-        "courses": []
-      },
-      {
-        "institution": "Universidad Politécnica Territorial Agroindustrial del Estado Táchira",
-        "url": "",
-        "area": "Ingeniería Informática",
-        "studyType": "",
-        "startDate": "2021-10-01",
-        "endDate": null,
-        "score": "4.0",
-        "courses": []
-      }
-    ],
-    "awards": [
-      {
-        "title": "Award",
-        "date": "2014-11-01",
-        "awarder": "Company",
-        "summary": "There is no spoon."
-      }
-    ],
-    "certificates": [
-      {
-        "name": "Diseño de páginas web con WordPress.",
-        "date": "2020-11-07",
-        "issuer": "Ingeniería Digital",
-        "url": null
-      },
-      {
-        "name": "Master en JavaScript: JS, jQuery, NODE.js",
-        "date": "2021-11-07",
-        "issuer": "Udemy",
-        "url": null
-      },
-      {
-        "name": "Master en php: SQL, POO, MVC, SYMFONY, WORDPRESS",
-        "date": "2022-11-07",
-        "issuer": "Udemy",
-        "url": null
-      },
-      {
-        "name": "Principio de Análisis y Diseño Orientado a Objetos Utilizando el Estándar UML",
-        "date": "2023-11-07",
-        "issuer": "Universidad Politécnica Territorial Agroindustrial Del Estado Tachira",
-        "url": null
-      }
-    ],
-    "publications": [
-      {
-        "name": "Publication",
-        "publisher": "Company",
-        "releaseDate": "2014-10-01",
-        "url": "https://publication.com",
-        "summary": "Description…"
-      }
-    ],
-    "skills": [
-      {
-        "name": "HTML",
-        "level": "Master",
-        "keywords": ["Desarrollo Web", "Frontend"]
-      },
-      {
-        "name": "CSS",
-        "level": "Master",
-        "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
-      },
-      {
-        "name": "JavaScript",
-        "level": "Master",
-        "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
-      },
-      {
-        "name": "Tailwind",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web",
-          "Frontend",
-          "CSS Framework",
-          "Diseño Responsive"
-        ]
-      },
-      {
-        "name": "TypeScript",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web",
-          "Frontend",
-          "Backend",
-          "JavaScript Superset"
-        ]
-      },
-      {
-        "name": "Node",
-        "level": "Avanzado",
-        "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
-      },
-      {
-        "name": "MySQL",
-        "level": "Avanzado",
-        "keywords": [
-          "Bases de Datos",
-          "SQL",
-          "Almacenamiento de Datos",
-          "Backend"
-        ]
-      },
-      {
-        "name": "Git",
-        "level": "Avanzado",
-        "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
-      },
-      {
-        "name": "GitHub",
-        "level": "Avanzado",
-        "keywords": [
-          "Control de Versiones",
-          "Colaboración",
-          "Código Fuente",
-          "Git"
-        ]
-      },
-      {
-        "name": "Next.js",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web",
-          "Frontend",
-          "React Framework",
-          "SSR",
-          "Static Generation"
-        ]
-      },
-      {
-        "name": "React",
-        "level": "Avanzado",
-        "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
-      },
-      {
-        "name": "Php",
-        "level": "Avanzado",
-        "keywords": ["Desarrollo Web", "Frontend", "Backend", "UI"]
-      },
-      {
-        "name": "Symfony",
-        "level": "Avanzado",
-        "keywords": ["Desarrollo Web", "Backend", "PHP Framework", "UI"]
-      },
-      {
-        "name": "Docker",
-        "level": "Avanzado",
-        "keywords": []
-      },
-      {
-        "name": "Express",
-        "level": "Avanzado",
-        "keywords": ["Desarrollo Web", "Backend", "JavaScript Library", "UI"]
-      },
-      {
-        "name": "Nestjs",
-        "level": "Avanzado",
-        "keywords": ["Desarrollo Web", "Backend", "JavaScript Framework", "UI"]
-      },
-      {
-        "name": "Postgresql",
-        "level": "Avanzado",
-        "keywords": ["Database", "Almacenamiento de Datos", "SQL"]
-      },
-      {
-        "name": "Prisma",
-        "level": "Avanzado",
-        "keywords": ["Javascript Library", "Backend", "ORM"]
-      },
-      {
-        "name": "Doctrine",
-        "level": "Avanzado",
-        "keywords": ["PHP Library", "Backend", "ORM"]
-      },
-      {
-        "name": "Astro",
-        "level": "Avanzado",
-        "keywords": [
-          "Javascript Library",
-          "Backend",
-          "Frontend",
-          "JavaScript Framework"
-        ]
-      },
-      {
-        "name": "MongoDb",
-        "level": "Avanzado",
-        "keywords": ["Database", "NoSql", "Database No Relation"]
-      },
-      {
-        "name": "Expo",
-        "level": "Avanzado",
-        "keywords": []
-      },
-      {
-        "name": "React Native",
-        "level": "Avanzado",
-        "keywords": ["Application Movile", "Javascript Library", "UI"]
-      },
-      {
-        "name": "Redux",
-        "level": "Avanzado",
-        "keywords": ["State", "State Management", "UI"]
-      },
-      {
-        "name": "Linux",
-        "level": "Avanzado",
-        "keywords": ["Systema Operativo"]
-      }
-    ],
-    "languages": [
-      {
-        "language": "Español",
-        "fluency": "Idioma nativo"
-      },
-      {
-        "language": "Inglés",
-        "fluency": "Basico (En Formación)"
-      }
-    ],
-    "interests": [
-      {
-        "name": "Wildlife",
-        "keywords": ["Ferrets", "Unicorns"]
-      }
-    ],
-    "references": [
-      {
-        "name": "Jane Doe",
-        "reference": "Reference…"
-      }
-    ],
-    "projects": [
-      {
-        "name": "pixelui",
-        "isActive": false,
-        "status": "In progress",
-        "description": "Construye React a tu Ritmo Olvida el código repetitivo. Nuestro catálogo de componentes te brinda libertad para enfocarte en la funcionalidad única de tu proyecto. Acelera el desarrollo, mejora la calidad y ¡disfruta la experiencia!",
-        "highlights": ["react", "typescript", "CSS", "Docusaurus"],
-        "url": "https://github.com/Alejocabeza/pixelui",
-        "github": "https://github.com/Alejocabeza/pixelui"
-      },
-      {
-        "name": "Cooper",
-        "isActive": false,
-        "status": "In progress",
-        "description": "Cooper es un chat con inteligencia artificial orientado a hacer un asesor de ventas para diversas empresas, diseñado y construido para concretar ventas, dando el mejor trato y un trato expedito a todos los usuarios. Teniendo siempre como foto la resolución de ventas.",
-        "highlights": ["Nodejs", "OpenAI", "WhatsApp", "Javascript"],
-        "url": null,
-        "github": null
-      },
-      {
-        "name": "GeoTrail",
-        "isActive": false,
-        "status": "Done",
-        "description": "GeoTrail es más que un simple proyecto de prueba. Es una aventura para descubrir el mundo a través de tu dispositivo móvil. Desarrollado en React Native con Expo, te presenta un mapa interactivo",
-        "highlights": ["Nodejs", "Expo", "Javascript", "React Native"],
-        "url": null,
-        "github": "https://github.com/Alejocabeza/GeoTrail"
-      },
-      {
-        "name": "Deepground Plugin",
-        "isActive": true,
-        "status": "Done",
-        "description": "Este plugin está diseñado para gestionar el inicio de sesión y el registro de la empresa ‘Deep Ground’. Proporciona funcionalidades para que los usuarios puedan crear cuentas, iniciar sesión de manera segura y acceder a los servicios ofrecidos por la empresa. Además, permite la administración de perfiles de usuario, restablecimiento de contraseñas y otras características relacionadas con la autenticación.",
-        "highlights": [
-          "php",
-          "wordpress",
-          "javascript",
-          "JQuery",
-          "bootstrap"
-        ],
-        "url": "https://deepground.gg",
-        "github": null
+        "network": "GitHub",
+        "username": "Alejocabeza",
+        "url": "https://github.com/Alejocabeza"
       }
     ]
-  }
+  },
+  "work": [
+    {
+      "name": "Residentia (Mexico)",
+      "position": "Lead Backend Ingineer",
+      "url": "https://miocondo.com/",
+      "startDate": "2024",
+      "endDate": "2024",
+      "summary": "Lideré el desarrollo del backend de una aplicación para condominios, optimizando la gestión administrativa y la comunicación entre residentes. Implementé Laravel y PostgreSQL para un sistema escalable y robusto que automatizó pagos, programación de servicios y comunicaciones, mejorando la eficiencia general y la experiencia del usuario. Prioricé patrones de diseño y un riguroso testing para asegurar la mantenibilidad y fiabilidad.",
+      "highlights": []
+    },
+    {
+      "name": "Wallsteam (Venezuela)",
+      "position": "Full Stack Developer",
+      "url": "https://wallsteam.com/",
+      "startDate": "2024",
+      "endDate": "",
+      "summary": "En este proyecto me dediqué a mejorar y mantener el código de back-end, solucionando problemas y creando nuevas features. Dando soporte a conexiones con APIS externas, como “ZOHO CRM” y “ZOHO BOOKS”,  implementé una mejora al entorno de desarrollo al integrar Docker en el back-end y front-end para una fácil instalación y una mejora de estabilidad del entorno.",
+      "highlights": []
+    },
+    {
+      "name": "Perfexya (España)",
+      "position": "Backend Developer",
+      "url": "https://landing.perfexya.com/",
+      "startDate": "2022",
+      "endDate": "2024",
+      "summary": "Lideré la mejora y el mantenimiento del código backend, resolviendo incidencias críticas que redujeron los tiempos de respuesta en un 90% y desarrollando nuevas funcionalidades que aumentaron la interacción del usuario en un 70%. Adicionalmente, implementé la conexión con APIs externas como 'ZOHO' utilizando Symfony y MySQL, y fui responsable de la implementación de Docker, lo que optimizó el entorno de desarrollo y mejoró la eficiencia del equipo.",
+      "highlights": []
+    },
+    {
+      "name": "Deepground (Suiza)",
+      "position": "Desarrollador de Wordpress",
+      "url": "",
+      "startDate": "2023",
+      "endDate": "2023",
+      "summary": "Como desarrollador freelancer, creé un plugin de gestión de usuarios para WordPress que resolvió la necesidad de un control detallado sobre la base de usuarios. El plugin incluía un dashboard con funcionalidades para visualizar el número de registros, segmentar usuarios mediante filtros avanzados y gestionar la información de manera centralizada. Utilicé PHP y JavaScript nativo para garantizar la compatibilidad y el rendimiento óptimo dentro del entorno WordPress.",
+      "highlights": []
+    },
+    {
+      "name": "SEO - Contenidos (Venezuela)",
+      "position": "Full Stack Developer Wordpress",
+      "url": "https://seocontenidos.net/",
+      "startDate": "2021",
+      "endDate": "2022",
+      "summary": "Lideré la construcción del tema actual de la página web para Empresas Polar (Multinacional), una plataforma de alto tráfico. Desarrollé este tema desde cero, utilizando TypeScript, Sass, Node.js y PHP, con el objetivo de mejorar significativamente el rendimiento y optimizar el código del tema anterior. Además, implementé mejoras en la integración dentro de WordPress y perfeccioné las animaciones utilizando dependencias específicas del tema.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Católica del Táchira",
+      "url": "https://www.uoc.edu/portal/es/index.html",
+      "area": "Derecho",
+      "studyType": "",
+      "startDate": "2016-09-01",
+      "endDate": "2021-09-01",
+      "score": "4.0",
+      "courses": []
+    },
+    {
+      "institution": "Universidad Politécnica Territorial Agroindustrial del Estado Táchira",
+      "url": "",
+      "area": "Ingeniería Informática",
+      "studyType": "",
+      "startDate": "2021-10-01",
+      "endDate": null,
+      "score": "4.0",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Diseño de páginas web con WordPress.",
+      "date": "2020-11-07",
+      "issuer": "Ingeniería Digital",
+      "url": null
+    },
+    {
+      "name": "Master en JavaScript: JS, jQuery, NODE.js",
+      "date": "2021-11-07",
+      "issuer": "Udemy",
+      "url": null
+    },
+    {
+      "name": "Master en php: SQL, POO, MVC, SYMFONY, WORDPRESS",
+      "date": "2022-11-07",
+      "issuer": "Udemy",
+      "url": null
+    },
+    {
+      "name": "Principio de Análisis y Diseño Orientado a Objetos Utilizando el Estándar UML",
+      "date": "2023-11-07",
+      "issuer": "Universidad Politécnica Territorial Agroindustrial Del Estado Tachira",
+      "url": null
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Php",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "UI"]
+    },
+    {
+      "name": "Symfony",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "PHP Framework", "UI"]
+    },
+    {
+      "name": "Docker",
+      "level": "Avanzado",
+      "keywords": []
+    },
+    {
+      "name": "Express",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Nestjs",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript Framework", "UI"]
+    },
+    {
+      "name": "Postgresql",
+      "level": "Avanzado",
+      "keywords": ["Database", "Almacenamiento de Datos", "SQL"]
+    },
+    {
+      "name": "Prisma",
+      "level": "Avanzado",
+      "keywords": ["Javascript Library", "Backend", "ORM"]
+    },
+    {
+      "name": "Doctrine",
+      "level": "Avanzado",
+      "keywords": ["PHP Library", "Backend", "ORM"]
+    },
+    {
+      "name": "Astro",
+      "level": "Avanzado",
+      "keywords": [
+        "Javascript Library",
+        "Backend",
+        "Frontend",
+        "JavaScript Framework"
+      ]
+    },
+    {
+      "name": "MongoDb",
+      "level": "Avanzado",
+      "keywords": ["Database", "NoSql", "Database No Relation"]
+    },
+    {
+      "name": "Expo",
+      "level": "Avanzado",
+      "keywords": []
+    },
+    {
+      "name": "React Native",
+      "level": "Avanzado",
+      "keywords": ["Application Movile", "Javascript Library", "UI"]
+    },
+    {
+      "name": "Redux",
+      "level": "Avanzado",
+      "keywords": ["State", "State Management", "UI"]
+    },
+    {
+      "name": "Linux",
+      "level": "Avanzado",
+      "keywords": ["Systema Operativo"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Idioma nativo"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Basico (En Formación)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "pixelui",
+      "isActive": false,
+      "status": "In progress",
+      "description": "Construye React a tu Ritmo Olvida el código repetitivo. Nuestro catálogo de componentes te brinda libertad para enfocarte en la funcionalidad única de tu proyecto. Acelera el desarrollo, mejora la calidad y ¡disfruta la experiencia!",
+      "highlights": ["react", "typescript", "CSS", "Docusaurus"],
+      "url": "https://github.com/Alejocabeza/pixelui",
+      "github": "https://github.com/Alejocabeza/pixelui"
+    },
+    {
+      "name": "Cooper",
+      "isActive": false,
+      "status": "In progress",
+      "description": "Cooper es un chat con inteligencia artificial orientado a hacer un asesor de ventas para diversas empresas, diseñado y construido para concretar ventas, dando el mejor trato y un trato expedito a todos los usuarios. Teniendo siempre como foto la resolución de ventas.",
+      "highlights": ["Nodejs", "OpenAI", "WhatsApp", "Javascript"],
+      "url": null,
+      "github": null
+    },
+    {
+      "name": "GeoTrail",
+      "isActive": false,
+      "status": "Done",
+      "description": "GeoTrail es más que un simple proyecto de prueba. Es una aventura para descubrir el mundo a través de tu dispositivo móvil. Desarrollado en React Native con Expo, te presenta un mapa interactivo",
+      "highlights": ["Nodejs", "Expo", "Javascript", "React Native"],
+      "url": null,
+      "github": "https://github.com/Alejocabeza/GeoTrail"
+    },
+    {
+      "name": "Deepground Plugin",
+      "isActive": true,
+      "status": "Done",
+      "description": "Este plugin está diseñado para gestionar el inicio de sesión y el registro de la empresa ‘Deep Ground’. Proporciona funcionalidades para que los usuarios puedan crear cuentas, iniciar sesión de manera segura y acceder a los servicios ofrecidos por la empresa. Además, permite la administración de perfiles de usuario, restablecimiento de contraseñas y otras características relacionadas con la autenticación.",
+      "highlights": ["php", "wordpress", "javascript", "JQuery", "bootstrap"],
+      "url": "https://deepground.gg",
+      "github": null
+    }
+  ]
+}
