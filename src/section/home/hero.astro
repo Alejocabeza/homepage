@@ -1,7 +1,15 @@
 ---
-import { basics } from "@cv";
+import { getCV } from "@/lib/navigation.ts";
 import Badge from "@/components/ui/section/hero/badge.astro";
 import Container from "@/components/ui/container.astro";
+
+interface Props {
+  lang: "es" | "en";
+}
+
+const { lang } = Astro.props;
+const cv = await getCV(lang);
+const { basics } = cv;
 ---
 
 <Container
@@ -15,7 +23,7 @@ import Container from "@/components/ui/container.astro";
         alt={basics.name}
       />
       <div class="flex justify-start items-center flex-col gap-3">
-        <Badge />
+        <Badge isAvailable={basics.available} availableText={basics.availableForWork} notAvailableText={basics.notAvailableForWork} />
         <p class="text-sm text-text-secondary">
           {basics.location.city} - {basics.location.region}
         </p>
@@ -25,11 +33,11 @@ import Container from "@/components/ui/container.astro";
   <h1
     class="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl"
   >
-    Hey, {basics.name}
+    {basics.name}
   </h1>
   <p
     class="mt-6 text-xl text-text-secondary [&>strong]:text-accent [&>strong]:font-semibold sm:w-full"
+    set:html={cv.basics.heroSummary}
   >
-<strong>Ingeniero Backend</strong> con experiencia en <strong>arquitecturas robustas y escalables</strong> utilizando <strong>Node.js (Nestjs, Express), PHP (Symfony, Laravel) y bases de datos PostgreSQL y MySQL</strong>. Como <strong>Lead Backend Engineer</strong>, he dirigido el desarrollo de aplicaciones enfocadas en <strong> calidad y eficiencia</strong>.
   </p>
 </Container>

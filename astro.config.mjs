@@ -8,9 +8,16 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [tailwind()],
   output: "server",
+  redirects: {
+    "/": "/es",
+  },
   adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
   }),
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+  },
 });

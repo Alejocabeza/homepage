@@ -1,15 +1,15 @@
 ---
 import "@fontsource-variable/onest";
 import Header from "@/components/ui/header.astro";
-import Analytics from '@vercel/analytics/astro'
-import { ViewTransitions } from "astro:transitions";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
   title: string;
   description: string;
+  lang: "es" | "en";
 }
 
-const { description, title } = Astro.props;
+const { description, title, lang } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +21,6 @@ const { description, title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
     <Analytics />
   </head>
 
@@ -31,7 +30,7 @@ const { description, title } = Astro.props;
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,255,218,0.2),rgba(255,255,255,0))]"
     >
     </div>
-    <Header />
+    <Header lang={lang} />
     <main class="max-w-[700px] mx-auto">
       <slot />
     </main>
@@ -46,7 +45,7 @@ const { description, title } = Astro.props;
       }
 
       body {
-        color: #CCD6F6;
+        color: #ccd6f6;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -69,7 +68,7 @@ const { description, title } = Astro.props;
         to {
           backdrop-filter: blur(20px);
           border-width: 1px;
-          border-color: #64FFDA;
+          border-color: #64ffda;
           padding: 0.25rem 0.75rem;
           display: flex;
           flex-direction: row;

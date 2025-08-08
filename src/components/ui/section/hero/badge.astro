@@ -1,7 +1,11 @@
 ---
-import { basics } from "@cv";
+interface Props {
+  isAvailable: boolean;
+  availableText: string;
+  notAvailableText: string;
+}
 
-const isAvailable = basics.available;
+const { isAvailable, availableText, notAvailableText } = Astro.props;
 ---
 
 <div class="flex items-center">
@@ -19,7 +23,7 @@ const isAvailable = basics.available;
         isAvailable ? "text-accent bg-accent/20" : "text-red-400 bg-red-400/20",
       ]}
     >
-      {isAvailable ? "Disponible para Trabajar" : "No Disponible Actualmente"}
+      {isAvailable ? availableText : notAvailableText}
     </div>
   </span>
 </div>

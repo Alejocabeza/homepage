@@ -1,13 +1,21 @@
 ---
-import { basics } from '@cv'
-import Container from '@/components/ui/container.astro'
+import { getCV } from "@/lib/navigation.ts";
+import Container from "@/components/ui/container.astro";
+
+interface Props {
+  lang: "es" | "en";
+}
+
+const { lang } = Astro.props;
+const cv = await getCV(lang);
+const { basics } = cv;
 ---
 
 <Container class="py-32 md:py-36 px-4 md:px-0">
   <h2
     class="flex mb-6 text-3xl font-semibold gap-x-3 text-text-primary"
   >
-    Sobre Mi
+    {cv.aboutMeTitle}
   </h2>
   <article
     class="flex flex-col items-center justify-center gap-8 text-text-secondary md:flex-row mt-16"

@@ -1,0 +1,362 @@
+{
+  "basics": {
+    "name": "Hey, Alejandro Cabeza",
+    "label": "Back-end Developer with over 3 years of experience",
+    "image": "",
+    "available": true,
+    "availableForWork": "Available for Work",
+    "notAvailableForWork": "Not Currently Available",
+    "email": "alejandrocabezaoficial@gmail.com",
+    "phone": "+58 414-7503510",
+    "url": "",
+    "summary": "I am passionate about web development with over 3 years of experience turning ideas into reality. I master PHP and JavaScript, and I adapt to new technologies with ease. Computer Engineering student, eager to continue growing and contribute value to your company. !!!!!",
+    "heroSummary": "<strong>Backend Engineer</strong> with experience in <strong>robust and scalable architectures</strong> using <strong>Node.js (Nestjs, Express), PHP (Symfony, Laravel) and PostgreSQL and MySQL databases</strong>. As a <strong>Lead Backend Engineer</strong>, I have led the development of applications focused on <strong>quality and efficiency</strong>.",
+    "aboutMe": [
+      "Since childhood, technology was the spark that ignited my imagination and invited me to dream big. Over time, that spark became an inexhaustible flame: I discovered in programming a magic key capable of opening doors to previously unimaginable worlds. Today, I dedicate myself to weaving ideas and transforming challenges into opportunities, fearlessly exploring the limits of innovation. My engine is curiosity and my compass, the constant desire to learn and reinvent tomorrow."
+    ],
+    "location": {
+      "address": "",
+      "postalCode": "5001",
+      "city": "San Cristobal",
+      "countryCode": "US",
+      "region": "Venezuela"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Alejandro Cabeza",
+        "url": "https://linkedin.com/in/alejandro-cabeza-ab86661bb"
+      },
+      {
+        "network": "GitHub",
+        "username": "Alejocabeza",
+        "url": "https://github.com/Alejocabeza"
+      }
+    ]
+  },
+  "experienceTitle": "Experience",
+  "aboutMeTitle": "About Me",
+  "projectsTitle": "My Projects",
+  "projectsDescription": "SaaS projects developed by Alejandro Cabeza.",
+  "work": [
+    {
+      "name": "Miocondo (Mexico)",
+      "position": "Lead Backend Engineer",
+      "url": "https://miocondo.com/",
+      "startDate": "2024",
+      "endDate": "2024",
+      "summary": "I led the backend development of a condominium application, optimizing administrative management and communication between residents. I implemented Laravel and PostgreSQL for a scalable and robust system that automated payments, service scheduling, and communications, improving overall efficiency and user experience. I prioritized design patterns and rigorous testing to ensure maintainability and reliability.",
+      "highlights": []
+    },
+    {
+      "name": "Wallsteam (Venezuela)",
+      "position": "Full Stack Developer",
+      "url": "https://wallsteam.com/",
+      "startDate": "2024",
+      "endDate": "",
+      "summary": "As a Freelancer Developer, I worked on a variety of web projects for different clients. My main responsibilities were development and maintenance using WordPress, JavaScript, and PHP, ranging from creating custom sites to implementing backend and optimization.",
+      "highlights": []
+    },
+    {
+      "name": "Perfexya (Spain)",
+      "position": "Backend Developer",
+      "url": "https://landing.perfexya.com/",
+      "startDate": "2022",
+      "endDate": "2024",
+      "summary": "I led the improvement and maintenance of the backend code, resolving critical incidents that reduced response times by 90% and developing new functionalities that increased user interaction by 70%. Additionally, I implemented the connection with external APIs such as 'ZOHO' using Symfony and MySQL, and I was responsible for the implementation of Docker, which optimized the development environment and improved team efficiency.",
+      "highlights": []
+    },
+    {
+      "name": "Deepground (Switzerland)",
+      "position": "Wordpress Developer",
+      "url": "",
+      "startDate": "2023",
+      "endDate": "2023",
+      "summary": "As a freelance developer, I created a user management plugin for WordPress that solved the need for detailed control over the user base. The plugin included a dashboard with functionalities to visualize the number of registrations, segment users using advanced filters, and manage information centrally. I used native PHP and JavaScript to ensure compatibility and optimal performance within the WordPress environment.",
+      "highlights": []
+    },
+    {
+      "name": "SEO - Contenidos (Venezuela)",
+      "position": "Full Stack Developer Wordpress",
+      "url": "https://seocontenidos.net/",
+      "startDate": "2021",
+      "endDate": "2022",
+      "summary": "I led the construction of the current website theme for Empresas Polar (Multinational), a high-traffic platform. I developed this theme from scratch, using TypeScript, Sass, Node.js, and PHP, with the aim of significantly improving performance and optimizing the code of the previous theme. In addition, I implemented improvements in the integration within WordPress and perfected animations using specific theme dependencies.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Católica del Táchira",
+      "url": "https://www.uoc.edu/portal/es/index.html",
+      "area": "Law",
+      "studyType": "",
+      "startDate": "2016-09-01",
+      "endDate": "2021-09-01",
+      "score": "4.0",
+      "courses": []
+    },
+    {
+      "institution": "Universidad Politécnica Territorial Agroindustrial del Estado Táchira",
+      "url": "",
+      "area": "Computer Engineering",
+      "studyType": "",
+      "startDate": "2021-10-01",
+      "endDate": null,
+      "score": "4.0",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Web page design with WordPress.",
+      "date": "2020-11-07",
+      "issuer": "Ingeniería Digital",
+      "url": null
+    },
+    {
+      "name": "Master in JavaScript: JS, jQuery, NODE.js",
+      "date": "2021-11-07",
+      "issuer": "Udemy",
+      "url": null
+    },
+    {
+      "name": "Master in php: SQL, POO, MVC, SYMFONY, WORDPRESS",
+      "date": "2022-11-07",
+      "issuer": "Udemy",
+      "url": null
+    },
+    {
+      "name": "Principle of Object-Oriented Analysis and Design Using the UML Standard",
+      "date": "2023-11-07",
+      "issuer": "Universidad Politécnica Territorial Agroindustrial Del Estado Tachira",
+      "url": null
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend", "Responsive Design"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "CSS Framework",
+        "Responsive Design"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Advanced",
+      "keywords": [
+        "Databases",
+        "SQL",
+        "Data Storage",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Advanced",
+      "keywords": ["Version Control", "Collaboration", "Source Code"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Advanced",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Php",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Frontend", "Backend", "UI"]
+    },
+    {
+      "name": "Symfony",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Backend", "PHP Framework", "UI"]
+    },
+    {
+      "name": "Docker",
+      "level": "Advanced",
+      "keywords": []
+    },
+    {
+      "name": "Express",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Backend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Nestjs",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Backend", "JavaScript Framework", "UI"]
+    },
+    {
+      "name": "Postgresql",
+      "level": "Advanced",
+      "keywords": ["Database", "Data Storage", "SQL"]
+    },
+    {
+      "name": "Prisma",
+      "level": "Advanced",
+      "keywords": ["Javascript Library", "Backend", "ORM"]
+    },
+    {
+      "name": "Doctrine",
+      "level": "Advanced",
+      "keywords": ["PHP Library", "Backend", "ORM"]
+    },
+    {
+      "name": "Astro",
+      "level": "Advanced",
+      "keywords": [
+        "Javascript Library",
+        "Backend",
+        "Frontend",
+        "JavaScript Framework"
+      ]
+    },
+    {
+      "name": "MongoDb",
+      "level": "Advanced",
+      "keywords": ["Database", "NoSql", "No Relation Database"]
+    },
+    {
+      "name": "Expo",
+      "level": "Advanced",
+      "keywords": []
+    },
+    {
+      "name": "React Native",
+      "level": "Advanced",
+      "keywords": ["Mobile Application", "Javascript Library", "UI"]
+    },
+    {
+      "name": "Redux",
+      "level": "Advanced",
+      "keywords": ["State", "State Management", "UI"]
+    },
+    {
+      "name": "Linux",
+      "level": "Advanced",
+      "keywords": ["Operating System"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Basic (In Training)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "bervio",
+      "isActive": true,
+      "status": "launched",
+      "description": "Brevio is designed to automatically summarize long documents in seconds, allowing the user to obtain key information without having to read all the original content. It uses advanced AI algorithms that understand the context and extract the most important ideas, maintaining the essence of the text.",
+      "highlights": [
+        "React",
+        "Nextjs",
+        "Tailwindcss",
+        "Shadcn",
+        "Prisma",
+        "Supabase",
+        "Nestjs"
+      ],
+      "url": "https://brevioof.digital"
+    }
+  ]
+}

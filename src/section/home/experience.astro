@@ -1,0 +1,28 @@
+---
+import { getCV } from "@/lib/navigation.ts";
+import Items from "@/components/ui/section/expirence/items.astro";
+import Container from "@/components/ui/container.astro";
+
+interface Props {
+  lang: "es" | "en";
+}
+
+const { lang } = Astro.props;
+const cv = await getCV(lang);
+const { work } = cv;
+---
+
+<Container class="px-4 md:px-0">
+  <h2 class="flex mb-6 text-3xl font-semibold gap-x-3 text-text-primary">
+    {cv.experienceTitle}
+  </h2>
+  <ol class="relative mt-16">
+    {
+      work.map((experiencie) => (
+        <li>
+          <Items {...experiencie} />
+        </li>
+      ))
+    }
+  </ol>
+</Container>

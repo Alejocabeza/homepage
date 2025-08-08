@@ -1,13 +1,16 @@
 {
   "basics": {
-    "name": "Alejandro Cabeza",
+    "name": "Hola, Alejandro Cabeza",
     "label": "Desarrollador back-end con más de 3 años de experiencia",
     "image": "",
     "available": true,
+    "availableForWork": "Disponible para Trabajar",
+    "notAvailableForWork": "No Disponible Actualmente",
     "email": "alejandrocabezaoficial@gmail.com",
     "phone": "+58 414-7503510",
     "url": "",
     "summary": "Soy un apasionado del desarrollo web con más de 3 años de experiencia convirtiendo ideas en realidad. Domino PHP y JavaScript, y me adapto a las nuevas tecnologías con facilidad. Estudiante de Ingeniería Informática, con ganas de seguir creciendo y aportar valor a tu empresa. !!!!!",
+    "heroSummary": "<strong>Ingeniero Backend</strong> con experiencia en <strong>arquitecturas robustas y escalables</strong> utilizando <strong>Node.js (Nestjs, Express), PHP (Symfony, Laravel) y bases de datos PostgreSQL y MySQL</strong>. Como <strong>Lead Backend Engineer</strong>, he dirigido el desarrollo de aplicaciones enfocadas en <strong> calidad y eficiencia</strong>.",
     "aboutMe": [
       "Desde pequeño, la tecnología fue la chispa que encendió mi imaginación y me invitó a soñar en grande. Con el tiempo, esa chispa se convirtió en una llama inagotable: descubrí en la programación una llave mágica capaz de abrir puertas a mundos antes inimaginables. Hoy, me dedico a tejer ideas y transformar desafíos en oportunidades, explorando sin miedo los límites de la innovación. Mi motor es la curiosidad y mi brújula, el deseo constante de aprender y reinventar el mañana."
     ],
@@ -31,6 +34,10 @@
       }
     ]
   },
+  "experienceTitle": "Experiencia",
+  "aboutMeTitle": "Sobre Mi",
+  "projectsTitle": "Mis Proyectos",
+  "projectsDescription": "Proyectos SaaS desarrollados por Alejandro Cabeza.",
   "work": [
     {
       "name": "Miocondo (Mexico)",

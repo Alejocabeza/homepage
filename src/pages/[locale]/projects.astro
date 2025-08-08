@@ -1,20 +1,28 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { projects } from "@cv";
+import { getCV } from "@/lib/navigation.ts";
 import ProjectCard from "@/components/ui/card/project.astro";
 
-const activeProjects = projects.filter((project) => project.isActive);
+interface Props {
+  lang: "es" | "en";
+}
+
+const { lang } = Astro.props;
+const { currentLocale } = Astro;
+const cv = await getCV(currentLocale);
+const activeProjects = cv.projects.filter((project) => project.isActive);
 ---
 
 <Layout
-  title="Proyectos - Alejandro Cabeza"
-  description="Proyectos SaaS desarrollados por Alejandro Cabeza."
+  title={cv.projectsTitle}
+  description={cv.projectsDescription}
+  lang={currentLocale}
 >
   <main class="py-32 md:py-36 px-4 md:px-0">
     <h1
       class="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl mb-10"
     >
-      Mis Proyectos
+      {cv.projectsTitle}
     </h1>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       {activeProjects.map((project) => <ProjectCard {...project} />)}
