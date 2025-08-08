@@ -15,10 +15,8 @@ const isAvailable = basics.available;
     }
     <div
       class:list={[
-        "inline-flex items-center justify-center w-full px-3 py-1 text-sm font-semibold rounded-full cursor-pointer backdrop-blur-3xl whitespace-nowrap",
-        isAvailable
-          ? "text-accent bg-accent/20"
-          : "text-red-400 bg-red-400/20",
+        "inline-flex items-center justify-center w-full px-3 py-1 text-sm font-semibold rounded-full cursor-default backdrop-blur-3xl whitespace-nowrap",
+        isAvailable ? "text-accent bg-accent/20" : "text-red-400 bg-red-400/20",
       ]}
     >
       {isAvailable ? "Disponible para Trabajar" : "No Disponible Actualmente"}
