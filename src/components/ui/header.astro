@@ -45,21 +45,29 @@ const newUrl = `/${newLang}${currentPath === "" ? "/" : currentPath}`;
 </header>
 
 <script>
-  const langToggleButton = document.getElementById("lang-toggle");
-  if (langToggleButton) {
-    console.log("Language toggle button found!", langToggleButton);
-    const newUrlFromData = langToggleButton.dataset.newUrl;
-    langToggleButton.addEventListener("click", () => {
-      console.log("Button clicked! Redirecting to:", newUrlFromData);
-      if (newUrlFromData) {
-        window.location.href = newUrlFromData;
-      } else {
-        console.error("newUrlFromData is undefined!");
-      }
-    });
-  } else {
-    console.error("Language toggle button not found!");
+  function initializeLangToggleButton() {
+    const langToggleButton = document.getElementById("lang-toggle");
+    if (langToggleButton) {
+      console.log("Language toggle button found!", langToggleButton);
+      const newUrlFromData = langToggleButton.dataset.newUrl;
+      langToggleButton.addEventListener("click", () => {
+        console.log("Button clicked! Redirecting to:", newUrlFromData);
+        if (newUrlFromData) {
+          window.location.href = newUrlFromData;
+        } else {
+          console.error("newUrlFromData is undefined!");
+        }
+      });
+    } else {
+      console.error("Language toggle button not found!");
+    }
   }
+
+  // Initialize on initial page load
+  initializeLangToggleButton();
+
+  // Re-initialize after View Transition swaps content
+  document.addEventListener("astro:after-swap", initializeLangToggleButton);
 
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section");
