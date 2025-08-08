@@ -47,7 +47,7 @@
       "url": "https://wallsteam.com/",
       "startDate": "2024",
       "endDate": "",
-      "summary": "En este proyecto me dediqué a mejorar y mantener el código de back-end, solucionando problemas y creando nuevas features. Dando soporte a conexiones con APIS externas, como “ZOHO CRM” y “ZOHO BOOKS”,  implementé una mejora al entorno de desarrollo al integrar Docker en el back-end y front-end para una fácil instalación y una mejora de estabilidad del entorno.",
+      "summary": "Como Freelancer Developer, trabajé en una variedad de proyectos web para diferentes clientes. Mis principales responsabilidades fueron el desarrollo y mantenimiento utilizando WordPress, JavaScript y PHP, abarcando desde la creación de sitios personalizados hasta la implementación de backend y la optimización.",
       "highlights": []
     },
     {
@@ -336,40 +336,20 @@
   ],
   "projects": [
     {
-      "name": "pixelui",
-      "isActive": false,
-      "status": "In progress",
-      "description": "Construye React a tu Ritmo Olvida el código repetitivo. Nuestro catálogo de componentes te brinda libertad para enfocarte en la funcionalidad única de tu proyecto. Acelera el desarrollo, mejora la calidad y ¡disfruta la experiencia!",
-      "highlights": ["react", "typescript", "CSS", "Docusaurus"],
-      "url": "https://github.com/Alejocabeza/pixelui",
-      "github": "https://github.com/Alejocabeza/pixelui"
-    },
-    {
-      "name": "Cooper",
-      "isActive": false,
-      "status": "In progress",
-      "description": "Cooper es un chat con inteligencia artificial orientado a hacer un asesor de ventas para diversas empresas, diseñado y construido para concretar ventas, dando el mejor trato y un trato expedito a todos los usuarios. Teniendo siempre como foto la resolución de ventas.",
-      "highlights": ["Nodejs", "OpenAI", "WhatsApp", "Javascript"],
-      "url": null,
-      "github": null
-    },
-    {
-      "name": "GeoTrail",
-      "isActive": false,
-      "status": "Done",
-      "description": "GeoTrail es más que un simple proyecto de prueba. Es una aventura para descubrir el mundo a través de tu dispositivo móvil. Desarrollado en React Native con Expo, te presenta un mapa interactivo",
-      "highlights": ["Nodejs", "Expo", "Javascript", "React Native"],
-      "url": null,
-      "github": "https://github.com/Alejocabeza/GeoTrail"
-    },
-    {
-      "name": "Deepground Plugin",
+      "name": "bervio",
       "isActive": true,
-      "status": "Done",
-      "description": "Este plugin está diseñado para gestionar el inicio de sesión y el registro de la empresa ‘Deep Ground’. Proporciona funcionalidades para que los usuarios puedan crear cuentas, iniciar sesión de manera segura y acceder a los servicios ofrecidos por la empresa. Además, permite la administración de perfiles de usuario, restablecimiento de contraseñas y otras características relacionadas con la autenticación.",
-      "highlights": ["php", "wordpress", "javascript", "JQuery", "bootstrap"],
-      "url": "https://deepground.gg",
-      "github": null
+      "status": "lanzado",
+      "description": "Brevio está pensado para resumir automáticamente documentos largos en cuestión de segundos, permitiendo que el usuario obtenga la información clave sin tener que leer todo el contenido original. Utiliza algoritmos avanzados de IA que comprenden el contexto y extraen las ideas más importantes, manteniendo la esencia del texto.",
+      "highlights": [
+        "React",
+        "Nextjs",
+        "Tailwindcss",
+        "Shadcn",
+        "Prisma",
+        "Supabase",
+        "Nestjs"
+      ],
+      "url": "https://brevioof.digital"
     }
   ]
 }

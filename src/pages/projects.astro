@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { projects } from "@cv";
+import ProjectCard from "@/components/ui/card/project.astro";
+
+const activeProjects = projects.filter((project) => project.isActive);
+---
+
+<Layout
+  title="Proyectos - Alejandro Cabeza"
+  description="Proyectos SaaS desarrollados por Alejandro Cabeza."
+>
+  <main class="py-32 md:py-36 px-4 md:px-0">
+    <h1
+      class="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl mb-10"
+    >
+      Mis Proyectos
+    </h1>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {activeProjects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </main>
+</Layout>

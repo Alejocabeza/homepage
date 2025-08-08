@@ -4,4 +4,9 @@ export const NAVIGATION = [
     url: "/",
     icon: null,
   },
+  {
+    title: "Proyectos",
+    url: "/projects",
+    icon: null,
+  },
 ];
