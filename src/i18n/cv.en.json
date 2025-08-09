@@ -43,8 +43,8 @@
       "name": "Miocondo (Mexico)",
       "position": "Lead Backend Engineer",
       "url": "https://miocondo.com/",
-      "startDate": "2024",
-      "endDate": "2024",
+      "startDate": "2025",
+      "endDate": "2025",
       "summary": "I led the backend development of a condominium application, optimizing administrative management and communication between residents. I implemented Laravel and PostgreSQL for a scalable and robust system that automated payments, service scheduling, and communications, improving overall efficiency and user experience. I prioritized design patterns and rigorous testing to ensure maintainability and reliability.",
       "highlights": []
     },
@@ -63,7 +63,7 @@
       "url": "https://landing.perfexya.com/",
       "startDate": "2022",
       "endDate": "2024",
-      "summary": "I led the improvement and maintenance of the backend code, resolving critical incidents that reduced response times by 90% and developing new functionalities that increased user interaction by 70%. Additionally, I implemented the connection with external APIs such as 'ZOHO' using Symfony and MySQL, and I was responsible for the implementation of Docker, which optimized the development environment and improved team efficiency.",
+      "summary": "I led the improvement and maintenance of the backend code, resolving critical incidents that reduced response times by 90% and developing new functionalities that increased user interaction by 69%. Additionally, I implemented the connection with external APIs such as 'ZOHO' using Symfony and MySQL, and I was responsible for the implementation of Docker, which optimized the development environment and improved team efficiency.",
       "highlights": []
     },
     {
