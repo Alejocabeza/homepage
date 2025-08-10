@@ -7,9 +7,20 @@ interface Props {
   startDate: string;
   endDate: string;
   position: string;
+  highlights?: string[];
+  url: string
 }
 
-const { name, summary, startDate, endDate, position } = Astro.props;
+const { name, summary, startDate, endDate, position, highlights, url } = Astro.props;
+
+const getDate = (startDate: string, endDate: string) => {
+  if (startDate === endDate) return startDate;
+  if (startDate && !endDate) return `${startDate} - Actualmente...`;
+  if (startDate && endDate) {
+    return `${startDate} - ${endDate}`;
+  }
+};
+
 ---
 
 <div
@@ -20,19 +31,48 @@ const { name, summary, startDate, endDate, position } = Astro.props;
       <span class="text-accent -left-[42px] absolute rounded-full text-5xl"
         >&bull;</span
       >
-
-      <h3 class="text-xl font-bold text-accent">{name}</h3>
+      <div class=" flex flex-row items-center gap-1">
+        <h3 class="text-2xl font-bold text-accent">{name}</h3>
+        {
+          url && (
+            <a
+            class="text-accent hover:text-accent/80 text-xl font-bold"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-up-right-from-square"
+              >
+                <>
+                <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
+                <path d="m21 3-9 9" />
+                <path d="M15 3h6v6" />
+              </>
+              </svg>
+            </a>
+          )
+        }
+      </div>
       <h4 class="font-semibold text-xl text-text-primary">
         {position}
       </h4>
-      <time class="p-0 m-0 text-sm text-text-secondary"
-        >{`${startDate} - ${endDate ? endDate : "Actualmente..."}`}</time
-      >
+      <time class="p-0 m-0 text-sm text-text-secondary">
+        {getDate(startDate, endDate)}
+      </time>
     </div>
   </div>
-  <div
-    class="relative flex flex-col gap-2 pb-4 text-text-secondary md:col-span-3 text-pretty"
-  >
-    {summary}
-  </div>
+  <p
+    class="relative pb-4 text-text-secondary md:col-span-3 text-pretty [&>span]:text-accent [&>span]:font-semibold"
+    set:html={summary}
+  />
 </div>
