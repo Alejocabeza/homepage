@@ -1,24 +1,24 @@
 {
   "basics": {
-    "name": "Hey, Alejandro Cabeza",
-    "label": "Back-end Developer with over 3 years of experience",
+    "name": "Hi, Alejandro Cabeza",
+    "label": "Back-end developer with more than 3 years of experience",
     "image": "",
     "available": true,
-    "availableForWork": "Available for Work",
+    "availableForWork": "Available to Work",
     "notAvailableForWork": "Not Currently Available",
     "email": "alejandrocabezaoficial@gmail.com",
     "phone": "+58 414-7503510",
     "url": "",
-    "summary": "I am passionate about web development with over 3 years of experience turning ideas into reality. I master PHP and JavaScript, and I adapt to new technologies with ease. Computer Engineering student, eager to continue growing and contribute value to your company. !!!!!",
-    "heroSummary": "<strong>Backend Engineer</strong> with experience in <strong>robust and scalable architectures</strong> using <strong>Node.js (Nestjs, Express), PHP (Symfony, Laravel) and PostgreSQL and MySQL databases</strong>. As a <strong>Lead Backend Engineer</strong>, I have led the development of applications focused on <strong>quality and efficiency</strong>.",
+    "summary": "I am passionate about web development with more than 3 years of experience turning ideas into reality. I master PHP and JavaScript, and I adapt easily to new technologies. Computer Engineering student, eager to keep growing and add value to your company. !!!!!",
+    "heroSummary": "<strong>Backend Engineer</strong> with experience in <strong>robust and scalable architectures</strong> using <strong>Node.js (NestJs, Express, AdonisJs), PHP (Symfony, Laravel) and PostgreSQL and MySQL databases</strong>. As a <strong>Lead Backend Engineer</strong>, I have led the development of applications focused on <strong>quality and efficiency</strong>.",
     "aboutMe": [
-      "Since childhood, technology was the spark that ignited my imagination and invited me to dream big. Over time, that spark became an inexhaustible flame: I discovered in programming a magic key capable of opening doors to previously unimaginable worlds. Today, I dedicate myself to weaving ideas and transforming challenges into opportunities, fearlessly exploring the limits of innovation. My engine is curiosity and my compass, the constant desire to learn and reinvent tomorrow."
+      "Since I was little, technology was the spark that ignited my imagination and invited me to dream big. Over time, that spark became an inexhaustible flame: I discovered in programming a magic key capable of opening doors to previously unimaginable worlds. Today, I dedicate myself to weaving ideas and transforming challenges into opportunities, fearlessly exploring the limits of innovation. My engine is curiosity and my compass is the constant desire to learn and reinvent tomorrow."
     ],
     "location": {
       "address": "",
       "postalCode": "5001",
       "city": "San Cristobal",
-      "countryCode": "US",
+      "countryCode": "ES",
       "region": "Venezuela"
     },
     "profiles": [
@@ -40,49 +40,52 @@
   "projectsDescription": "SaaS projects developed by Alejandro Cabeza.",
   "work": [
     {
-      "name": "Wallsteam (VE)",
+      "name": "Wallsteam",
       "position": "Full Stack Developer",
       "url": "https://wallsteam.com/",
       "startDate": "2024",
       "endDate": "",
-      "summary": "As a Freelancer Developer, I worked on a variety of web projects for different clients. My main responsibilities were development and maintenance using <span>WordPress</span>, <span>JavaScript</span>, and <span>PHP</span>, ranging from creating custom sites to implementing backend and optimization.",
-      "highlights": []
+      "summary": "As a Freelancer Developer, I developed and maintained web projects with <span>WordPress</span>, <span>NextJs</span>, <span>Laravel</span>, <span>Nestjs</span>, <span>Docker</span>, <span>Adonisjs</span>, <span>Express</span>, <span>MySQL</span> and <span>Mongodb</span>, from custom sites to backends and optimization. I collaborated on projects such as <a href='https://consultus.fairpay.pe' target='_blank'>Fairpay</a>, <a href='https://www.gotitjob.com/' target='_blank'>Gotitjob</a>, delivering complete, high-performance solutions."
     },
     {
-      "name": "Miocondo (MX)",
+      "name": "Athenadexfi",
+      "position": "DevOps Engineer",
+      "url": "https://athenadexfi.com",
+      "startDate": "2025",
+      "endDate": "2025",
+      "summary": "Responsible for deploying AthenadeXFi on a VPS (<span>DigitalOcean</span>) and configuring <span>CI/CD</span> for an agile and stable release process."
+    },
+    {
+      "name": "Miocondo",
       "position": "Lead Backend Engineer",
       "url": "https://miocondo.com/",
       "startDate": "2025",
       "endDate": "2025",
-      "summary": "I led the backend development of a condominium application, optimizing administrative management and communication between residents. I implemented <span>Laravel</span>, <span>PostgreSQL</span>, <span>Redis</span> and <span>Docker</span> for a scalable and robust system that automated payments, service scheduling, and communications, improving overall efficiency and user experience. I prioritized design patterns and rigorous testing to ensure maintainability and reliability.",
-      "highlights": []
+      "summary": "I led the development and deployment of the backend for a condominium application, optimizing management and communication. I implemented a robust architecture with <span>Laravel</span>, <span>PostgreSQL</span>, <span>Redis</span> and <span>Docker</span>, automating payments and services. I was responsible for the platform’s full deployment and CI/CD implementation, ensuring efficiency, reliability, and high-quality releases."
     },
     {
-      "name": "Perfexya (ES)",
+      "name": "Perfexya",
       "position": "Backend Developer",
       "url": "https://landing.perfexya.com/",
       "startDate": "2022",
       "endDate": "2024",
-      "summary": "I led the improvement and maintenance of the backend code, resolving critical incidents that reduced response times by 90% and developing new functionalities that increased user interaction by 69%. Additionally, I implemented the connection with external APIs such as <span>'ZOHO'</span> using <span>Symfony</span> and <span>MySQL</span>, and I was responsible for the implementation of <span>Docker</span>, which optimized the development environment and improved team efficiency.",
-      "highlights": []
+      "summary": "I led backend improvement and maintenance, resolving critical incidents that reduced response times by 90% and developing features that increased engagement by 70%. I integrated external APIs (e.g., <span>Zoho</span>) with <span>Symfony</span> and <span>MySQL</span>, and implemented <span>Docker</span> to standardize environments and improve team efficiency."
     },
     {
-      "name": "Deepground (BR)",
-      "position": "Wordpress Developer",
+      "name": "Deepground",
+      "position": "WordPress Developer",
       "url": "",
       "startDate": "2023",
       "endDate": "2023",
-      "summary": "As a freelance developer, I created a user management plugin for WordPress that solved the need for detailed control over the user base. The plugin included a dashboard with functionalities to visualize the number of registrations, segment users using advanced filters, and manage information centrally. I used native <span>PHP</span> and <span>JavaScript</span> to ensure compatibility and optimal performance within the <span>WordPress</span> environment.",
-      "highlights": []
+      "summary": "As a freelance developer, I created a user management plugin for <span>WordPress</span> in <span>PHP</span> and <span>vanilla JavaScript</span>. This plugin centralized user control, offering a dashboard to visualize records, segment with advanced filters, and manage information, optimizing user base administration."
     },
     {
-      "name": "SEO (VE)",
-      "position": "Full Stack Developer Wordpress",
+      "name": "SEO",
+      "position": "Full Stack Developer WordPress",
       "url": "https://seocontenidos.net/",
       "startDate": "2021",
       "endDate": "2022",
-      "summary": "I led the construction of the current website theme for Empresas Polar (Multinational), a high-traffic platform. I developed this theme from scratch, using <span>TypeScript</span>, <span>Sass</span>, <span>Node.js</span>, and <span>PHP</span>, with the aim of significantly improving performance and optimizing the code of the previous theme. In addition, I implemented improvements in the integration within <span>WordPress</span> and perfected animations using specific theme dependencies.",
-      "highlights": []
+      "summary": "I led the construction of the current theme for <a href='https://empresaspolar.com/' target='_blank'>Empresas Polar</a> (a high-traffic multinational), developed from scratch in <span>TypeScript</span>, <span>Sass</span>, <span>Node.js</span> and <span>PHP</span>. I improved performance and code quality compared to the previous theme, optimized the integration with WordPress, and refined animations with theme-specific dependencies."
     }
   ],
   "volunteer": [
@@ -92,8 +95,7 @@
       "url": "https://organization.com/",
       "startDate": "2012-01-01",
       "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "summary": "Description…"
     }
   ],
   "education": [
@@ -128,9 +130,9 @@
   ],
   "certificates": [
     {
-      "name": "Web page design with WordPress.",
+      "name": "Website design with WordPress.",
       "date": "2020-11-07",
-      "issuer": "Ingeniería Digital",
+      "issuer": "Digital Engineering",
       "url": null
     },
     {
@@ -140,15 +142,15 @@
       "url": null
     },
     {
-      "name": "Master in php: SQL, POO, MVC, SYMFONY, WORDPRESS",
+      "name": "Master in PHP: SQL, OOP, MVC, SYMFONY, WORDPRESS",
       "date": "2022-11-07",
       "issuer": "Udemy",
       "url": null
     },
     {
-      "name": "Principle of Object-Oriented Analysis and Design Using the UML Standard",
+      "name": "Principles of Object-Oriented Analysis and Design Using the UML Standard",
       "date": "2023-11-07",
-      "issuer": "Universidad Politécnica Territorial Agroindustrial Del Estado Tachira",
+      "issuer": "Universidad Politécnica Territorial Agroindustrial del Estado Táchira",
       "url": null
     }
   ],
@@ -276,7 +278,7 @@
     {
       "name": "Prisma",
       "level": "Advanced",
-      "keywords": ["Javascript Library", "Backend", "ORM"]
+      "keywords": ["JavaScript Library", "Backend", "ORM"]
     },
     {
       "name": "Doctrine",
@@ -287,7 +289,7 @@
       "name": "Astro",
       "level": "Advanced",
       "keywords": [
-        "Javascript Library",
+        "JavaScript Library",
         "Backend",
         "Frontend",
         "JavaScript Framework"
@@ -296,7 +298,7 @@
     {
       "name": "MongoDb",
       "level": "Advanced",
-      "keywords": ["Database", "NoSql", "No Relation Database"]
+      "keywords": ["Database", "NoSQL", "Non-Relational Database"]
     },
     {
       "name": "Expo",
@@ -306,7 +308,7 @@
     {
       "name": "React Native",
       "level": "Advanced",
-      "keywords": ["Mobile Application", "Javascript Library", "UI"]
+      "keywords": ["Mobile Application", "JavaScript Library", "UI"]
     },
     {
       "name": "Redux",
@@ -322,7 +324,7 @@
   "languages": [
     {
       "language": "Spanish",
-      "fluency": "Native speaker"
+      "fluency": "Native language"
     },
     {
       "language": "English",
@@ -346,7 +348,7 @@
       "name": "bervio",
       "isActive": true,
       "status": "launched",
-      "description": "Brevio is designed to automatically summarize long documents in seconds, allowing the user to obtain key information without having to read all the original content. It uses advanced AI algorithms that understand the context and extract the most important ideas, maintaining the essence of the text.",
+      "description": "Brevio is designed to automatically summarize long documents in seconds, allowing the user to obtain key information without having to read all the original content. It uses advanced AI algorithms that understand context and extract the most important ideas while preserving the essence of the text.",
       "highlights": [
         "React",
         "Nextjs",

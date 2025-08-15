@@ -10,7 +10,7 @@
     "phone": "+58 414-7503510",
     "url": "",
     "summary": "Soy un apasionado del desarrollo web con más de 3 años de experiencia convirtiendo ideas en realidad. Domino PHP y JavaScript, y me adapto a las nuevas tecnologías con facilidad. Estudiante de Ingeniería Informática, con ganas de seguir creciendo y aportar valor a tu empresa. !!!!!",
-    "heroSummary": "<strong>Ingeniero Backend</strong> con experiencia en <strong>arquitecturas robustas y escalables</strong> utilizando <strong>Node.js (Nestjs, Express), PHP (Symfony, Laravel) y bases de datos PostgreSQL y MySQL</strong>. Como <strong>Lead Backend Engineer</strong>, he dirigido el desarrollo de aplicaciones enfocadas en <strong> calidad y eficiencia</strong>.",
+    "heroSummary": "<strong>Ingeniero Backend</strong> con experiencia en <strong>arquitecturas robustas y escalables</strong> utilizando <strong>Node.js (NestJs, Express,AdonisJs), PHP (Symfony, Laravel) y bases de datos PostgreSQL y MySQL</strong>. Como <strong>Lead Backend Engineer</strong>, he dirigido el desarrollo de aplicaciones enfocadas en <strong> calidad y eficiencia</strong>.",
     "aboutMe": [
       "Desde pequeño, la tecnología fue la chispa que encendió mi imaginación y me invitó a soñar en grande. Con el tiempo, esa chispa se convirtió en una llama inagotable: descubrí en la programación una llave mágica capaz de abrir puertas a mundos antes inimaginables. Hoy, me dedico a tejer ideas y transformar desafíos en oportunidades, explorando sin miedo los límites de la innovación. Mi motor es la curiosidad y mi brújula, el deseo constante de aprender y reinventar el mañana."
     ],
@@ -40,56 +40,52 @@
   "projectsDescription": "Proyectos SaaS desarrollados por Alejandro Cabeza.",
   "work": [
     {
-      "name": "Wallsteam (VE)",
+      "name": "Wallsteam",
       "position": "Full Stack Developer",
       "url": "https://wallsteam.com/",
       "startDate": "2024",
       "endDate": "",
-      "summary": "Como Freelancer Developer, trabajé en una variedad de proyectos web para diferentes clientes. Mis principales responsabilidades fueron el desarrollo y mantenimiento utilizando <span>WordPress</span>, <span>JavaScript</span> y <span>PHP</span>, abarcando desde la creación de sitios personalizados hasta la implementación de backend y la optimización.",
-      "highlights": ["wordpress", "javascript", "php"]
+      "summary": "Como Freelancer Developer, desarrollé y mantuve proyectos web con <span>WordPress</span>, <span>NextJs</span>, <span>Laravel</span>, <span>Nestjs</span>, <span>Docker</span>, <span>Adonisjs</span>, <span>Express</span>, <span>MySQL</span> y <span>Mongodb</span>, desde sitios personalizados hasta backend y optimización. Colaboré en proyectos como <a href='https://consultus.fairpay.pe' target='_blank'>Fairpay</a>, <a href='https://www.gotitjob.com/' target='_blank'>Gotitjob</a>, entregando soluciones completas y de alto rendimiento."
     },
     {
-      "name": "Miocondo (MX)",
+      "name": "Athenadexfi",
+      "position": "DevOps Engineer",
+      "url": "https://athenadexfi.com",
+      "startDate": "2025",
+      "endDate": "2025",
+      "summary": "Responsable del despliegue de AthenadeXFi en VPS (<span>DigitalOcean</span>) y de la configuración de <span>CI/CD</span> para un release process ágil y estable."
+    },
+    {
+      "name": "Miocondo",
       "position": "Lead Backend Ingineer",
       "url": "https://miocondo.com/",
       "startDate": "2025",
       "endDate": "2025",
-      "summary": "Lideré el desarrollo del backend de una aplicación para condominios, optimizando la gestión administrativa y la comunicación entre residentes. Implementé <span>Laravel</span>, <span>PostgreSQL</span>, <span>Redis</span> y <span>Docker</span> para un sistema escalable y robusto que automatizó pagos, programación de servicios y comunicaciones, mejorando la eficiencia general y la experiencia del usuario. Prioricé patrones de diseño y un riguroso testing para asegurar la mantenibilidad y fiabilidad.",
-      "highlights": ["php", "laravel", "postgresql", "docker", "redis"]
+      "summary": "Lideré el desarrollo y despliegue del backend de una aplicación para condominios, optimizando la gestión y comunicación. Implementé una arquitectura robusta con <span>Laravel</span>, <span>PostgreSQL</span>, <span>Redis</span> y <span>Docker</span>, automatizando pagos y servicios. Fui responsable del despliegue completo de la plataforma y de la implementación de CI/CD, asegurando eficiencia, fiabilidad y releases de alta calidad."
     },
     {
-      "name": "Perfexya (ES)",
+      "name": "Perfexya",
       "position": "Backend Developer",
       "url": "https://landing.perfexya.com/",
       "startDate": "2022",
       "endDate": "2024",
-      "summary": "Lideré la mejora y el mantenimiento del código backend, resolviendo incidencias críticas que redujeron los tiempos de respuesta en un 90% y desarrollando nuevas funcionalidades que aumentaron la interacción del usuario en un 70%. Adicionalmente, implementé la conexión con APIs externas como <span>'ZOHO'</span> utilizando <span>Symfony</span> y <span>MySQL</span>, y fui responsable de la implementación de <span>Docker</span>, lo que optimizó el entorno de desarrollo y mejoró la eficiencia del equipo.",
-      "highlights": ["PHP", "Symfony", "Docker", "MYSQL"]
+      "summary": "Lideré la mejora y mantenimiento del backend, resolviendo incidencias críticas que redujeron los tiempos de respuesta en 90% y desarrollando funcionalidades que aumentaron la interacción en 70%. Integré APIs externas (p. ej., <span>Zoho</span>) con <span>Symfony</span> y <span>MySQL</span>, e implementé <span>Docker</span> para estandarizar entornos y mejorar la eficiencia del equipo."
     },
     {
-      "name": "Deepground (BR)",
+      "name": "Deepground",
       "position": "Desarrollador de Wordpress",
       "url": "",
       "startDate": "2023",
       "endDate": "2023",
-      "summary": "Como desarrollador freelancer, creé un plugin de gestión de usuarios para <span>WordPress</span> que resolvió la necesidad de un control detallado sobre la base de usuarios. El plugin incluía un dashboard con funcionalidades para visualizar el número de registros, segmentar usuarios mediante filtros avanzados y gestionar la información de manera centralizada. Utilicé <span>PHP</span> y <span>JavaScript</span> nativo para garantizar la compatibilidad y el rendimiento óptimo dentro del entorno <span>WordPress</span>.",
-      "highlights": ["PHP", "JavaScript", "WordPress", "MYSQL"]
+      "summary": "Como desarrollador freelancer, creé un plugin de gestión de usuarios para <span>WordPress</span> en <span>PHP</span> y <span>JavaScript nativo</span>. Este plugin centralizó el control de usuarios, ofreciendo un dashboard para visualizar registros, segmentar con filtros avanzados y gestionar información, optimizando la administración de la base de usuarios."
     },
     {
-      "name": "SEO (VE)",
+      "name": "SEO",
       "position": "Full Stack Developer Wordpress",
       "url": "https://seocontenidos.net/",
       "startDate": "2021",
       "endDate": "2022",
-      "summary": "Lideré la construcción del tema actual de la página web para Empresas Polar (Multinacional), una plataforma de alto tráfico. Desarrollé este tema desde cero, utilizando <span>TypeScript</span>, <span>Sass</span>, <span>Node.js</span> y <span>PHP</span>, con el objetivo de mejorar significativamente el rendimiento y optimizar el código del tema anterior. Además, implementé mejoras en la integración dentro de <span>WordPress</span> y perfeccioné las animaciones utilizando dependencias específicas del tema.",
-      "highlights": [
-        "PHP",
-        "TypeScript",
-        "Sass",
-        "Node.js",
-        "WordPress",
-        "Javascript"
-      ]
+      "summary": "Lideré la construcción del tema actual del sitio de <a href='https://empresaspolar.com/' target='_blank'>Empresas Polar</a> (multinacional de alto tráfico), desarrollado desde cero en <span>TypeScript</span>, <span>Sass</span>, <span>Node.js</span> y <span>PHP</span>. Mejoré el rendimiento y la calidad del código respecto al tema anterior, optimicé la integración con WordPress y perfeccioné las animaciones con dependencias específicas del tema."
     }
   ],
   "volunteer": [
@@ -99,8 +95,7 @@
       "url": "https://organization.com/",
       "startDate": "2012-01-01",
       "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "summary": "Description…"
     }
   ],
   "education": [
