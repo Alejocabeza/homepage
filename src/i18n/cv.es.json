@@ -58,7 +58,7 @@
     {
       "name": "Miocondo",
       "position": "Lead Backend Ingineer",
-      "url": "https://miocondo.com/",
+      "url": "https://app.miocondo.com/",
       "startDate": "2025",
       "endDate": "2025",
       "summary": "Lideré el desarrollo y despliegue del backend de una aplicación para condominios, optimizando la gestión y comunicación. Implementé una arquitectura robusta con <span>Laravel</span>, <span>PostgreSQL</span>, <span>Redis</span> y <span>Docker</span>, automatizando pagos y servicios. Fui responsable del despliegue completo de la plataforma y de la implementación de CI/CD, asegurando eficiencia, fiabilidad y releases de alta calidad."
