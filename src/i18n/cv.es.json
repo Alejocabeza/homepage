@@ -430,8 +430,7 @@
         "Tailwindcss",
         "Shadcn",
         "Prisma",
-        "Supabase",
-        "Nestjs"
+        "Supabase"
       ],
       "url": "https://brevioof.digital"
     },
