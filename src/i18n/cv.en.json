@@ -167,17 +167,29 @@
     {
       "name": "HTML",
       "level": "Master",
-      "keywords": ["Web Development", "Frontend"]
+      "keywords": [
+        "Web Development",
+        "Frontend"
+      ]
     },
     {
       "name": "CSS",
       "level": "Master",
-      "keywords": ["Web Development", "Frontend", "Responsive Design"]
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Responsive Design"
+      ]
     },
     {
       "name": "JavaScript",
       "level": "Master",
-      "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"]
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
     },
     {
       "name": "Tailwind",
@@ -202,7 +214,12 @@
     {
       "name": "Node",
       "level": "Advanced",
-      "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "JavaScript",
+        "Server"
+      ]
     },
     {
       "name": "MySQL",
@@ -217,7 +234,11 @@
     {
       "name": "Git",
       "level": "Advanced",
-      "keywords": ["Version Control", "Collaboration", "Source Code"]
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code"
+      ]
     },
     {
       "name": "GitHub",
@@ -243,17 +264,32 @@
     {
       "name": "React",
       "level": "Advanced",
-      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
     },
     {
       "name": "Php",
       "level": "Advanced",
-      "keywords": ["Web Development", "Frontend", "Backend", "UI"]
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "UI"
+      ]
     },
     {
       "name": "Symfony",
       "level": "Advanced",
-      "keywords": ["Web Development", "Backend", "PHP Framework", "UI"]
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "PHP Framework",
+        "UI"
+      ]
     },
     {
       "name": "Docker",
@@ -263,27 +299,49 @@
     {
       "name": "Express",
       "level": "Advanced",
-      "keywords": ["Web Development", "Backend", "JavaScript Library", "UI"]
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "JavaScript Library",
+        "UI"
+      ]
     },
     {
       "name": "Nestjs",
       "level": "Advanced",
-      "keywords": ["Web Development", "Backend", "JavaScript Framework", "UI"]
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "JavaScript Framework",
+        "UI"
+      ]
     },
     {
       "name": "Postgresql",
       "level": "Advanced",
-      "keywords": ["Database", "Data Storage", "SQL"]
+      "keywords": [
+        "Database",
+        "Data Storage",
+        "SQL"
+      ]
     },
     {
       "name": "Prisma",
       "level": "Advanced",
-      "keywords": ["JavaScript Library", "Backend", "ORM"]
+      "keywords": [
+        "JavaScript Library",
+        "Backend",
+        "ORM"
+      ]
     },
     {
       "name": "Doctrine",
       "level": "Advanced",
-      "keywords": ["PHP Library", "Backend", "ORM"]
+      "keywords": [
+        "PHP Library",
+        "Backend",
+        "ORM"
+      ]
     },
     {
       "name": "Astro",
@@ -298,7 +356,11 @@
     {
       "name": "MongoDb",
       "level": "Advanced",
-      "keywords": ["Database", "NoSQL", "Non-Relational Database"]
+      "keywords": [
+        "Database",
+        "NoSQL",
+        "Non-Relational Database"
+      ]
     },
     {
       "name": "Expo",
@@ -308,17 +370,27 @@
     {
       "name": "React Native",
       "level": "Advanced",
-      "keywords": ["Mobile Application", "JavaScript Library", "UI"]
+      "keywords": [
+        "Mobile Application",
+        "JavaScript Library",
+        "UI"
+      ]
     },
     {
       "name": "Redux",
       "level": "Advanced",
-      "keywords": ["State", "State Management", "UI"]
+      "keywords": [
+        "State",
+        "State Management",
+        "UI"
+      ]
     },
     {
       "name": "Linux",
       "level": "Advanced",
-      "keywords": ["Operating System"]
+      "keywords": [
+        "Operating System"
+      ]
     }
   ],
   "languages": [
@@ -334,7 +406,10 @@
   "interests": [
     {
       "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
     }
   ],
   "references": [
@@ -359,6 +434,20 @@
         "Nestjs"
       ],
       "url": "https://brevioof.digital"
+    },
+    {
+      "name": "Distribuidora Zafiro",
+      "isActive": true,
+      "status": "lanzado",
+      "description": "Zafiro is designed to centralize business management, allowing administrators to have complete control and a unified view of the company. Through its comprehensive platform, it connects areas such as sales, finance, and inventory into a single system, facilitating strategic decision-making and optimizing operational efficiency.",
+      "highlights": [
+        "Laravel",
+        "Filament",
+        "PHP",
+        "Tailwindcss",
+        "Supabase"
+      ],
+      "url": "https://distribuidorazafiro.online"
     }
   ]
 }
