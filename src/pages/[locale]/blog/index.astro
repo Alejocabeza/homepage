@@ -4,6 +4,8 @@ import { getPublishedPosts, type Post } from "@/lib/notion";
 import ProjectCard from "@/components/ui/card/project.astro";
 
 const { currentLocale } = Astro;
+// Normalize locale to a typed lang with fallback to 'en'
+const lang: "es" | "en" = (currentLocale ?? "en") as "es" | "en";
 
 // Obtenemos los posts desde Notion en lugar de archivos locales
 const posts: Omit<Post, "content">[] = await getPublishedPosts();
@@ -12,7 +14,7 @@ const posts: Omit<Post, "content">[] = await getPublishedPosts();
 <Layout
   title="Blog"
   description="Artículos y tutoriales sobre desarrollo de software."
-  lang={currentLocale}
+  lang={lang}
 >
   <main class="py-32 md:py-36 px-4 md:px-0">
     <h1
@@ -26,11 +28,13 @@ const posts: Omit<Post, "content">[] = await getPublishedPosts();
           <ProjectCard
             title={post.title}
             description={post.excerpt}
-            href={`/${currentLocale}/blog/${post.slug}`}
+            href={`/${lang}/blog/${post.slug}`}
             tags={post.tags}
             status={post.category}
             author={post.author}
             author_avatar={post.author_avatar}
+            slug={post.slug}
+            lang={lang}
           />
         ))
       }

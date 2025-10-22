@@ -1,25 +1,31 @@
-import mermaid from "mermaid";
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    // Import mermaid as an ESM module from a CDN so the browser can load it directly.
+    const { default: mermaid } = await import(
+      "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"
+    );
 
-document.addEventListener("DOMContentLoaded", () => {
-  mermaid.initialize({
-    startOnLoad: false,
-    themeVariables: {
-      background: "#ffffff",
-    },
-    theme: "default",
-  });
+    mermaid.initialize({
+      startOnLoad: false,
+      themeVariables: {
+        background: "#ffffff",
+      },
+      theme: "default",
+    });
 
-  const mermaidBlocks = document.querySelectorAll("pre code.language-mermaid");
-  const mermaidDivs = document.querySelectorAll("div.mermaid");
+    const mermaidBlocks = document.querySelectorAll(
+      "pre code.language-mermaid"
+    );
+    const mermaidDivs = document.querySelectorAll("div.mermaid");
 
-  const processBlock = (element, index) => {
-    try {
-      const source = element.textContent || "";
-      const id = "mermaid-svg-" + Math.random().toString(36).substr(2, 9);
+    const processBlock = async (element, index) => {
+      try {
+        const source = (element.textContent || "").trim();
+        if (!source) return;
+        const id = "mermaid-svg-" + Math.random().toString(36).slice(2, 11);
 
-      mermaid
-        .render(id, source)
-        .then(({ svg, bindFunctions }) => {
+        try {
+          const { svg, bindFunctions } = await mermaid.render(id, source);
           if (svg) {
             const svgContainer = document.createElement("div");
             svgContainer.innerHTML = svg;
@@ -36,19 +42,21 @@ document.addEventListener("DOMContentLoaded", () => {
               `Mermaid render returned empty SVG for block ${index}`
             );
           }
-        })
-        .catch((error) => {
+        } catch (error) {
           console.error(`Error rendering mermaid block ${index}:`, error);
-        });
-    } catch (e) {
-      console.error(`Error processing mermaid block ${index}:`, e);
-    }
-  };
+        }
+      } catch (e) {
+        console.error(`Error processing mermaid block ${index}:`, e);
+      }
+    };
 
-  mermaidBlocks.forEach((block, index) => {
-    const pre = block.parentNode;
-    processBlock(pre, index);
-  });
+    mermaidBlocks.forEach((block, index) => {
+      const pre = block.parentNode;
+      if (pre) processBlock(pre, index);
+    });
 
-  mermaidDivs.forEach((div, idx) => processBlock(div, `div-${idx}`));
+    mermaidDivs.forEach((div, idx) => processBlock(div, `div-${idx}`));
+  } catch (err) {
+    console.error("Failed to load mermaid module:", err);
+  }
 });

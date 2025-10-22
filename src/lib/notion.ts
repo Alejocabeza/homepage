@@ -77,12 +77,19 @@ export const getPostBySlug = async (slug: string): Promise<Post | null> => {
   });
 
   const page = response.results[0];
-  if (!page) {
-    return null;
-  }
+  if (!page) return null;
 
+  const post = mapNotionPageToPost(page);
+  const mdblocks = await n2m.pageToMarkdown(page.id);
   const mdString = n2m.toMarkdownString(mdblocks);
-  let preprocessedContent = mdString.parent;
+
+  // mdString can be either a plain string or an object with a `parent` property
+  let preprocessedContent: string = "";
+  if (typeof mdString === "string") {
+    preprocessedContent = mdString;
+  } else if (mdString && typeof mdString.parent === "string") {
+    preprocessedContent = mdString.parent;
+  }
 
   // Aggressively remove [object Object]
   preprocessedContent = preprocessedContent.replace(/\[object Object\]/g, "");
@@ -90,7 +97,7 @@ export const getPostBySlug = async (slug: string): Promise<Post | null> => {
   return {
     ...post,
     content: preprocessedContent,
-    htmlPlaceholders: htmlPlaceholders, // Pass placeholders to the Astro component
+    htmlPlaceholders: [],
   };
 };
 
@@ -153,20 +160,25 @@ export const getServiceBySlug = async (
   });
 
   const page = response.results[0];
-  if (!page) {
-    return null;
+  if (!page) return null;
+
+  const service = mapNotionPageToService(page);
+  const mdblocks = await n2m.pageToMarkdown(page.id);
+  const mdString = n2m.toMarkdownString(mdblocks);
+
+  let preprocessedContent: string = "";
+  if (typeof mdString === "string") {
+    preprocessedContent = mdString;
+  } else if (mdString && typeof mdString.parent === "string") {
+    preprocessedContent = mdString.parent;
   }
 
-  const mdString = n2m.toMarkdownString(mdblocks);
-  let preprocessedContent = mdString.parent;
-
-  // Aggressively remove [object Object]
   preprocessedContent = preprocessedContent.replace(/\[object Object\]/g, "");
 
   return {
     ...service,
     content: preprocessedContent,
-    htmlPlaceholders: htmlPlaceholders,
+    htmlPlaceholders: [],
   };
 };
 
@@ -239,14 +251,18 @@ export const getProjectBySlug = async (
   });
 
   const page = response.results[0];
-  if (!page) {
-    return null;
-  }
+  if (!page) return null;
 
   const project = mapNotionPageToProject(page);
   const mdblocks = await n2m.pageToMarkdown(page.id);
   const mdString = n2m.toMarkdownString(mdblocks);
-  let preprocessedContent = mdString.parent;
+
+  let preprocessedContent: string = "";
+  if (typeof mdString === "string") {
+    preprocessedContent = mdString;
+  } else if (mdString && typeof mdString.parent === "string") {
+    preprocessedContent = mdString.parent;
+  }
 
   // Aggressively remove [object Object]
   preprocessedContent = preprocessedContent.replace(/\[object Object\]/g, "");

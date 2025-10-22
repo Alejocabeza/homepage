@@ -1,12 +1,16 @@
 ---
-import marked from '@/lib/marked';
-import Layout from '../../../layouts/Layout.astro';
-import { getPublishedProjects, getProjectBySlug, type Project } from '@/lib/notion.ts';
+import marked from "@/lib/marked";
+import Layout from "../../../layouts/Layout.astro";
+import {
+  getPublishedProjects,
+  getProjectBySlug,
+  type Project,
+} from "@/lib/notion.ts";
 
 export async function getStaticPaths() {
   const projects = await getPublishedProjects();
-  const locales = ['en', 'es']; // Asumimos que cada proyecto está disponible en ambos idiomas
-  
+  const locales = ["en", "es"]; // Asumimos que cada proyecto está disponible en ambos idiomas
+
   const paths = [];
   for (const project of projects) {
     for (const locale of locales) {
@@ -21,67 +25,82 @@ export async function getStaticPaths() {
 const { slug, locale } = Astro.params;
 
 if (!slug) {
-  return Astro.redirect('/404');
+  return Astro.redirect("/404");
 }
 
 const project = await getProjectBySlug(slug);
 
 if (!project) {
-  return Astro.redirect('/404');
+  return Astro.redirect("/404");
 }
 
 const { currentLocale } = Astro;
+const lang: "es" | "en" = (currentLocale ?? "en") as "es" | "en";
 
-let renderedContent = marked(project.content || '');
+let renderedContent = await marked(project.content || "");
 if (project.htmlPlaceholders) {
   project.htmlPlaceholders.forEach((originalHtml, index) => {
     const placeholder = `__HTML_CODE_PLACEHOLDER_${index}__`;
-    renderedContent = renderedContent.replace(placeholder, originalHtml);
+    if (typeof renderedContent === "string") {
+      renderedContent = renderedContent.replace(placeholder, originalHtml);
+    }
   });
 }
 ---
 
-<Layout title={project.name} description={project.description} lang={currentLocale}>
+<Layout title={project.name} description={project.description} lang={lang}>
   <main class="py-32 md:py-36 px-4 md:px-0 max-w-3xl mx-auto">
     <article>
-      <h1 class="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl mb-4">{project.name}</h1>
+      <h1
+        class="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl mb-4"
+      >
+        {project.name}
+      </h1>
 
       <div class="flex flex-wrap gap-2 mb-4">
-        {project.stack && project.stack.map((tech) => (
-          <span class="bg-accent/10 text-accent text-xs font-medium px-3 py-1 rounded-full">
-            {tech}
-          </span>
-        ))}
+        {
+          project.stack &&
+            project.stack.map((tech) => (
+              <span class="bg-accent/10 text-accent text-xs font-medium px-3 py-1 rounded-full">
+                {tech}
+              </span>
+            ))
+        }
       </div>
 
-      {project.url && (
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-text-secondary hover:text-accent transition-colors duration-300 z-10 inline-flex items-center gap-1 mb-8"
-        >
-          Ver proyecto en vivo
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-arrow-up-right-from-square"
+      {
+        project.url && (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-text-secondary hover:text-accent transition-colors duration-300 z-10 inline-flex items-center gap-1 mb-8"
           >
-            <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
-            <path d="m21 3-9 9" />
-            <path d="M15 3h6v6" />
-          </svg>
-        </a>
-      )}
-      
-      <div class="prose prose-lg max-w-none text-text-secondary mt-10" set:html={renderedContent} />
+            Ver proyecto en vivo
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right-from-square"
+            >
+              <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
+              <path d="m21 3-9 9" />
+              <path d="M15 3h6v6" />
+            </svg>
+          </a>
+        )
+      }
+
+      <div
+        class="prose prose-lg max-w-none text-text-secondary mt-10"
+        set:html={renderedContent}
+      />
     </article>
   </main>
 </Layout>

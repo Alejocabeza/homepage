@@ -7,13 +7,11 @@ const NAVIGATION_TRANSLATIONS: Record<
   es: [
     { title: "Inicio", url: "/", icon: null },
     { title: "Proyectos", url: "/projects", icon: null },
-    { title: "Servicios", url: "/services", icon: null },
     { title: "Blog", url: "/blog", icon: null },
   ],
   en: [
     { title: "Home", url: "/", icon: null },
     { title: "Projects", url: "/projects", icon: null },
-    { title: "Services", url: "/services", icon: null },
     { title: "Blog", url: "/blog", icon: null },
   ],
 };
