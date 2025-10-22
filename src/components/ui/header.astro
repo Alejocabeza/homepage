@@ -24,14 +24,14 @@ const newUrl = `/${newLang}${currentPath === "" ? "/" : currentPath}`;
           <a
             class="relative block px-2 py-2 transition hover:text-accent"
             aria-label={title}
-            href={`/${lang}${url === '/' ? '' : url}`}
+            href={`/${lang}${url === "/" ? "" : url}`}
           >
             {title}
           </a>
         )
       )
     }
-    <div class="ml-4"> 
+    <div class="ml-4">
       <button
         id="lang-toggle"
         class="relative block px-2 py-2 transition hover:text-accent"
@@ -48,10 +48,8 @@ const newUrl = `/${newLang}${currentPath === "" ? "/" : currentPath}`;
   function initializeLangToggleButton() {
     const langToggleButton = document.getElementById("lang-toggle");
     if (langToggleButton) {
-      console.log("Language toggle button found!", langToggleButton);
       const newUrlFromData = langToggleButton.dataset.newUrl;
       langToggleButton.addEventListener("click", () => {
-        console.log("Button clicked! Redirecting to:", newUrlFromData);
         if (newUrlFromData) {
           window.location.href = newUrlFromData;
         } else {

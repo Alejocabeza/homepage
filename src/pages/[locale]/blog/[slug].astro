@@ -1,0 +1,83 @@
+---
+
+import marked from '@/lib/marked';
+import Layout from '@/layouts/Layout.astro';
+import { getPublishedPosts, getPostBySlug, type Post } from '@/lib/notion';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  const locales = ['en', 'es']; // Asumimos que cada post está disponible en ambos idiomas
+  
+  const paths = [];
+  for (const post of posts) {
+    for (const locale of locales) {
+      paths.push({
+        params: { slug: post.slug, locale },
+      });
+    }
+  }
+  return paths;
+}
+
+const { slug, locale } = Astro.params;
+
+if (!slug) {
+  return Astro.redirect('/404');
+}
+
+const post = await getPostBySlug(slug);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const { currentLocale } = Astro;
+
+let renderedContent = marked(post.content || '');
+if (post.htmlPlaceholders) {
+  post.htmlPlaceholders.forEach((originalHtml, index) => {
+    const placeholder = `__HTML_CODE_PLACEHOLDER_${index}__`;
+    renderedContent = renderedContent.replace(placeholder, originalHtml);
+  });
+}
+---
+
+<Layout title={post.title} description={post.excerpt} lang={currentLocale}>
+  <main class="py-32 md:py-36 px-4 md:px-0 max-w-3xl mx-auto">
+    <article>
+      <h1 class="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl mb-4">{post.title}</h1>
+
+      <div class="flex flex-wrap gap-2 mb-4">
+        {post.category && (
+          <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-3 py-1 rounded-full">
+            {post.category}
+          </span>
+        )}
+        {post.tags && post.tags.map((tag) => (
+          <span class="bg-accent/10 text-accent text-xs font-medium px-3 py-1 rounded-full">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <time datetime={new Date(post.date).toISOString()} class="text-sm text-text-secondary mb-2 block">
+        Fecha de Publicación: {new Date(post.date).toLocaleDateString(currentLocale, {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </time>
+
+      {post.author && (
+        <div class="flex items-center gap-2 mb-8">
+          {post.author_avatar && <img src={post.author_avatar} alt={post.author} class="w-8 h-8 rounded-full" />}
+          <p class="text-sm text-text-secondary"><span class="font-semibold">{post.author}</span></p>
+        </div>
+      )}
+      
+      <div class="prose prose-lg max-w-none text-text-secondary mt-28" set:html={renderedContent} />
+    </article>
+  </main>
+</Layout>
+
+

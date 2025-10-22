@@ -1,0 +1,38 @@
+---
+title: 'Despliegue CI/CD'
+description: 'Implementación de pipelines de integración y despliegue continuo con Docker y GitHub Actions.'
+---
+
+### Filosofía DevOps
+
+Mi enfoque DevOps se centra en la automatización, la colaboración y la creación de un ciclo de vida de desarrollo de software (SDLC) rápido y fiable. El objetivo es simple: permitir que los equipos de desarrollo entreguen valor a los usuarios finales de forma más rápida y segura.
+
+### Contenerización con Docker
+
+Docker es la base de mi estrategia de DevOps. Permite crear entornos de desarrollo, prueba y producción consistentes y reproducibles.
+
+- **Dockerfiles Optimizados:** Escribo Dockerfiles multi-etapa (`multi-stage builds`) para crear imágenes ligeras y seguras, separando las dependencias de construcción de las de ejecución.
+- **Docker Compose:** Utilizo Docker Compose para orquestar aplicaciones multi-contenedor en el entorno de desarrollo local, definiendo servicios, redes y volúmenes de forma declarativa.
+
+### Integración Continua (CI)
+
+La CI es crucial para detectar problemas de integración de forma temprana. Mi herramienta preferida es **GitHub Actions**.
+
+- **Workflows Automatizados:** Configuro workflows que se disparan en cada `push` o `pull request`.
+- **Pasos del Pipeline de CI:**
+  1.  **Checkout del Código:** Clonar el repositorio.
+  2.  **Instalación de Dependencias:** Utilizando cachés para acelerar el proceso.
+  3.  **Análisis de Código Estático (Linting):** Asegurar que el código cumple con las guías de estilo.
+  4.  **Ejecución de Pruebas:** Correr pruebas unitarias, de integración y de extremo a extremo (E2E).
+  5.  **Construcción de Artefactos:** Compilar el código y/o construir las imágenes de Docker.
+
+### Despliegue Continuo (CD)
+
+Una vez que el código ha pasado la fase de CI, el Despliegue Continuo se encarga de ponerlo en producción de forma automática y segura.
+
+- **Estrategias de Despliegue:** Implemento estrategias como Blue-Green o Canary para minimizar el riesgo y el tiempo de inactividad durante los despliegues.
+- **Despliegue en Servidores VPS (DigitalOcean):** Configuro pipelines de GitHub Actions que se conectan de forma segura a servidores VPS a través de SSH para:
+  1.  Hacer `pull` de la última imagen de Docker desde un registro (como Docker Hub o GitHub Container Registry).
+  2.  Detener el contenedor antiguo.
+  3.  Iniciar el nuevo contenedor con la versión actualizada.
+- **Gestión de Secretos:** Utilizo los secretos encriptados de GitHub Actions para gestionar de forma segura las claves de API, credenciales de base de datos y claves SSH.

@@ -1,13 +1,17 @@
 ---
 interface Props {
-  name: string;
+  title: string;
   description: string;
-  status: string;
-  highlights: string[];
-  url: string | null;
+  status?: string;
+  tags?: string[];
+  slug: string;
+  href: string | null;
+  author?: string;
+  author_avatar?: string;
+  lang: "es" | "en";
 }
 
-const { name, description, status, highlights, url } = Astro.props;
+const { title, description, status, tags, slug, href, author, author_avatar, lang } = Astro.props;
 ---
 
 <div
@@ -19,23 +23,21 @@ const { name, description, status, highlights, url } = Astro.props;
         class="text-xl font-bold text-text-primary group-hover:text-accent transition-colors duration-300"
       >
         <a
-          href={url ?? github}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={`/${lang}/projects/${slug}`}
           class="after:absolute after:inset-0"
         >
-          {name}
+          {title}
         </a>
       </h3>
       <div class="flex items-center gap-4">
         {
-          url && (
+          href && (
             <a
-              href={url}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
               class="text-text-secondary hover:text-accent transition-colors duration-300 z-10"
-              aria-label={`Ver el proyecto ${name} en vivo`}
+              aria-label={`Ver el proyecto ${title} en vivo`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,15 +63,24 @@ const { name, description, status, highlights, url } = Astro.props;
       </div>
     </header>
     <p class="text-text-secondary mb-4 text-sm">{description}</p>
+    {author && (
+      <div class="flex items-center gap-2 mb-4">
+        {author_avatar && <img src={author_avatar} alt={author} class="w-6 h-6 rounded-full" />}
+        <p class="text-xs text-text-secondary">{author}</p>
+      </div>
+    )}
   </div>
 
   <footer class="flex flex-wrap gap-2 mt-auto">
-    {
-      highlights.map((highlight) => (
+    {status && (
+      <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-3 py-1 rounded-full">
+        {status}
+      </span>
+    )}
+    {tags && tags.map((highlight) => (
         <span class="bg-accent/10 text-accent text-xs font-medium px-3 py-1 rounded-full">
           {highlight}
         </span>
-      ))
-    }
+      ))}
   </footer>
 </div>

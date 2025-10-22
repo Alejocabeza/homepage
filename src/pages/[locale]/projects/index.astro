@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { getCV } from "@/lib/navigation.ts";
 import ProjectCard from "@/components/ui/card/project.astro";
+import { getPublishedProjects } from "@/lib/notion.ts";
 
 interface Props {
   lang: "es" | "en";
@@ -10,7 +11,7 @@ interface Props {
 const { lang } = Astro.props;
 const { currentLocale } = Astro;
 const cv = await getCV(currentLocale);
-const activeProjects = cv.projects.filter((project) => project.isActive);
+const projects = await getPublishedProjects();
 ---
 
 <Layout
@@ -25,7 +26,14 @@ const activeProjects = cv.projects.filter((project) => project.isActive);
       {cv.projectsTitle}
     </h1>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      {activeProjects.map((project) => <ProjectCard {...project} />)}
+      {projects.map((project) => <ProjectCard 
+        title={project.name} 
+        description={project.description} 
+        href={project.url} 
+        tags={project.stack}
+        lang={lang}
+        slug={project.slug}
+      />)}
     </div>
   </main>
 </Layout>

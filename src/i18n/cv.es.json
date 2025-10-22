@@ -38,6 +38,34 @@
   "aboutMeTitle": "Sobre Mi",
   "projectsTitle": "Mis Proyectos",
   "projectsDescription": "Proyectos SaaS desarrollados por Alejandro Cabeza.",
+  "servicesTitle": "Servicios",
+  "services": [
+    {
+      "name": "Desarrollo de APIs REST/GraphQL",
+      "description": "Diseño y desarrollo de APIs robustas, seguras y escalables para conectar tus aplicaciones y servicios.",
+      "slug": "desarrollo-api"
+    },
+    {
+      "name": "Despliegue CI/CD",
+      "description": "Implementación de pipelines de integración y despliegue continuo con Docker y GitHub Actions.",
+      "slug": "despliegue-cicd"
+    },
+    {
+      "name": "Desarrollo Full Stack",
+      "description": "Capacidad para llevar una idea desde el concepto hasta el producto final, trabajando tanto en el backend como en el frontend.",
+      "slug": "full-stack"
+    },
+    {
+      "name": "Desarrollo Frontend Interactivo",
+      "description": "Creación de interfaces de usuario dinámicas y ricas con frameworks modernos como React y Next.js.",
+      "slug": "frontend-interactivo"
+    },
+    {
+      "name": "Temas y Plugins para Wordpress",
+      "description": "Desarrollo a medida de temas y plugins para WordPress, optimizados para rendimiento y SEO.",
+      "slug": "wordpress"
+    }
+  ],
   "work": [
     {
       "name": "Wallsteam",
@@ -423,7 +451,7 @@
       "name": "Brevio",
       "isActive": true,
       "status": "lanzado",
-      "description": "Brevio está pensado para resumir automáticamente documentos largos en cuestión de segundos, permitiendo que el usuario obtenga la información clave sin tener que leer todo el contenido original. Utiliza algoritmos avanzados de IA que comprenden el contexto y extraen las ideas más importantes, manteniendo la esencia del texto.",
+      "description": "Desarrollé la arquitectura backend y frontend de Brevio, una aplicación SaaS para resumir documentos con IA. Implementé un sistema de cuentas de usuario y procesamiento de documentos en segundo plano. La tecnología principal se basa en Next.js para el frontend y Supabase (PostgreSQL) para la base de datos y autenticación, con Prisma como ORM.",
       "highlights": [
         "React",
         "Nextjs",
@@ -438,7 +466,7 @@
       "name": "Distribuidora Zafiro",
       "isActive": true,
       "status": "lanzado",
-      "description": "Zafiro está diseñado para centralizar la gestión de un negocio, permitiendo a los administradores tener un control total y una visión unificada de la empresa. A través de su plataforma integral, conecta áreas como ventas, finanzas e inventario en un solo sistema, lo que facilita la toma de decisiones estratégicas y optimiza la eficiencia operativa.",
+      "description": "Construí el backend para Zafiro, un sistema ERP para la gestión de negocios. La plataforma, desarrollada en PHP con Laravel y Filament, centraliza ventas, finanzas e inventario. Diseñé la base de datos en Supabase (PostgreSQL) y la API RESTful para conectar las diferentes áreas del negocio, optimizando la eficiencia operativa.",
       "highlights": [
         "Laravel",
         "Filament",
