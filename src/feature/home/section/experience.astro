@@ -1,0 +1,17 @@
+---
+import { work } from "@/shared/data/cv.json";
+import Items from "@/feature/home/components/items.astro";
+---
+
+<div class="">
+  <h2 class="flex mb-6 text-3xl font-semibold gap-x-3">Experiencia</h2>
+  <ol class="relative mt-16">
+    {
+      work.map((experience) => (
+        <li>
+          <Items {...experience} />
+        </li>
+      ))
+    }
+  </ol>
+</div>

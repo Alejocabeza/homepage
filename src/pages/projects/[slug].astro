@@ -1,0 +1,51 @@
+---
+import marked from "@/shared/lib/marked";
+import {
+  getPublishedProjects,
+  getProjectBySlug,
+  type Project,
+} from "@/shared/lib/notion";
+import Layout from "@/shared/layouts/index.layout.astro";
+import ProjectItemPage from "@/feature/projects/pages/project-item.astro";
+
+export async function getStaticPaths() {
+  const projects = await getPublishedProjects();
+  const locales = ["en", "es"]; // Asumimos que cada proyecto está disponible en ambos idiomas
+
+  const paths = [];
+  for (const project of projects) {
+    for (const locale of locales) {
+      paths.push({
+        params: { slug: project.slug, locale },
+      });
+    }
+  }
+  return paths;
+}
+
+const { slug, locale } = Astro.params;
+
+if (!slug) {
+  return Astro.redirect("/404");
+}
+
+const project = await getProjectBySlug(slug);
+
+if (!project) {
+  return Astro.redirect("/404");
+}
+
+let renderedContent = await marked(project.content || "");
+if (project.htmlPlaceholders) {
+  project.htmlPlaceholders.forEach((originalHtml, index) => {
+    const placeholder = `__HTML_CODE_PLACEHOLDER_${index}__`;
+    if (typeof renderedContent === "string") {
+      renderedContent = renderedContent.replace(placeholder, originalHtml);
+    }
+  });
+}
+---
+
+<Layout title="Proyectos">
+  <ProjectItemPage project={project} renderedContent={renderedContent} />
+</Layout>

@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin '@midudev/tailwind-animations';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-primary: #0a192f;
+  --color-secondary: rgb(2 12 27);
+  --color-accent: #64ffda;
+  --text-primary: #ccd6f6;
+  --text-secondary: #8892b0;
+}
+
+@utility prose {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a,
+  strong,
+  blockquote,
+  code {
+    color: var(--text-primary);
+  }
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  font-family: "Onest Variable", system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+#header-nav {
+  animation: blur linear both 0.5s;
+  animation-timeline: scroll();
+  animation-range: 0 500px;
+}
+
+@keyframes blur {
+  to {
+    backdrop-filter: blur(20px);
+    border-width: 1px;
+    border-color: #64ffda;
+    padding: 0.25rem 0.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(10, 25, 47, 0.85);
+    border-radius: 9999px;
+  }
+}
+
+code {
+  color: #ffffff !important;
+  background-color: transparent;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+}
