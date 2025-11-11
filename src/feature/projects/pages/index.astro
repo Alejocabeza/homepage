@@ -1,8 +1,8 @@
 ---
-import { getPublishedProjects } from "@/shared/lib/notion";
-import ProjectCard from "@/feature/projects/components/card.astro";
+import { getPublishedProjects, type Project } from "@/shared/lib/notion";
+import Card from '@/shared/components/ui/card.astro';
 
-const projects = await getPublishedProjects();
+const projects: Omit<Project, 'content'>[] = await getPublishedProjects();
 ---
 
 <main class="py-32 md:py-36 px-4 md:px-0">
@@ -12,10 +12,10 @@ const projects = await getPublishedProjects();
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     {
       projects.map((project) => (
-        <ProjectCard
+        <Card
           title={project.name}
           description={project.description}
-          href={project.url}
+          href={`/projects/${project.slug}`}
           tags={project.stack}
           slug={project.slug}
         />

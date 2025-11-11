@@ -1,0 +1,30 @@
+---
+import {getPublishedPosts, type Post} from '@/shared/lib/notion';
+import Card from '@/shared/components/ui/card.astro';
+
+const posts: Omit<Post, "content">[] = await getPublishedPosts();
+---
+
+<main class="py-32 md:py-36 px-4 md:px-0">
+  <h1
+    class="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl mb-10"
+  >
+    Blog
+  </h1>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    {
+      posts.map((post) => (
+        <Card
+          title={post.title}
+          description={post.excerpt}
+          href={`/blog/${post.slug}`}
+          tags={post.tags}
+          status={post.category}
+          author={post.author}
+          author_avatar={post.author_avatar}
+          slug={post.slug}
+        />
+      ))
+    }
+  </div>
+</main>

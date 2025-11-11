@@ -29,7 +29,7 @@ if (!slug) {
   return Astro.redirect("/404");
 }
 
-const project = await getProjectBySlug(slug);
+const project: Project|null = await getProjectBySlug(slug);
 
 if (!project) {
   return Astro.redirect("/404");
@@ -46,6 +46,6 @@ if (project.htmlPlaceholders) {
 }
 ---
 
-<Layout title="Proyectos">
+<Layout title={project.name}>
   <ProjectItemPage project={project} renderedContent={renderedContent} />
 </Layout>

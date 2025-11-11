@@ -1,0 +1,45 @@
+---
+import marked from "@/shared/lib/marked";
+import Layout from "@/shared/layouts/index.layout.astro";
+import { getPublishedPosts, getPostBySlug, type Post } from '@/shared/lib/notion';
+import BlogItemPage from '@/feature/blog/pages/blog-item.astro';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  const locales = ['en', 'es']; // Asumimos que cada post está disponible en ambos idiomas
+  
+  const paths = [];
+  for (const post of posts) {
+    for (const locale of locales) {
+      paths.push({
+        params: { slug: post.slug, locale },
+      });
+    }
+  }
+  return paths;
+}
+
+const { slug, locale } = Astro.params;
+
+if (!slug) {
+  return Astro.redirect('/404');
+}
+
+const post: Post|null = await getPostBySlug(slug);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+let renderedContent = marked(post.content || '');
+if (post.htmlPlaceholders) {
+  post.htmlPlaceholders.forEach((originalHtml, index) => {
+    const placeholder = `__HTML_CODE_PLACEHOLDER_${index}__`;
+    renderedContent = renderedContent.replace(placeholder, originalHtml);
+  });
+}
+---
+
+<Layout title={post.name}>
+  <BlogItemPage post={post} renderedContent={renderedContent} />
+</Layout>
