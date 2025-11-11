@@ -1,24 +1,17 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
-import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
-import mdx from "@astrojs/mdx";
+import tailwindcss from "@tailwindcss/vite";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx()],
-  output: "server",
-  redirects: {
-    "/": "/es",
+  vite: {
+    plugins: [tailwindcss()],
   },
   adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
   }),
-  i18n: {
-    defaultLocale: "es",
-    locales: ["es", "en"],
-  },
 });

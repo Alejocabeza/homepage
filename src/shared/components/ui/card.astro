@@ -1,0 +1,96 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  status?: string;
+  tags?: string[];
+  slug: string;
+  href: string | null;
+  author?: string;
+  author_avatar?: string;
+}
+
+const { title, description, status, tags, slug, href, author, author_avatar } =
+  Astro.props;
+---
+
+<div
+  class="group relative bg-secondary rounded-lg shadow-lg p-6 flex flex-col justify-between transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-accent/10 border border-slate-800 hover:border-accent/20"
+>
+  <div class="grow">
+    <header class="flex justify-between items-start mb-4">
+      <h3
+        class="text-xl font-bold text-text-primary group-hover:text-accent transition-colors duration-300"
+      >
+        <a href={href} class="after:absolute after:inset-0">
+          {title}
+        </a>
+      </h3>
+      <div class="flex items-center gap-4">
+        {
+          href && (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-text-secondary hover:text-accent transition-colors duration-300 z-10"
+              aria-label={`Ver el proyecto ${title} en vivo`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-up-right-from-square"
+              >
+                <>
+                  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
+                  <path d="m21 3-9 9" />
+                  <path d="M15 3h6v6" />
+                </>
+              </svg>
+            </a>
+          )
+        }
+      </div>
+    </header>
+    <p class="text-text-secondary mb-4 text-sm">{description}</p>
+    {
+      author && (
+        <div class="flex items-center gap-2 mb-4">
+          {author_avatar && (
+            <img
+              src={author_avatar}
+              alt={author}
+              class="w-6 h-6 rounded-full"
+            />
+          )}
+          <p class="text-xs text-text-secondary">{author}</p>
+        </div>
+      )
+    }
+  </div>
+
+  <footer class="flex flex-wrap gap-2 mt-auto">
+    {
+      status && (
+        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-3 py-1 rounded-full">
+          {status}
+        </span>
+      )
+    }
+    {
+      tags &&
+        tags.map((highlight) => (
+          <span class="bg-accent/10 text-accent text-xs font-medium px-3 py-1 rounded-full">
+            {highlight}
+          </span>
+        ))
+    }
+  </footer>
+</div>
