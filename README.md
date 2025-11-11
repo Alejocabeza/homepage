@@ -1,43 +1,114 @@
-# Astro Starter Kit: Minimal
+# Mi Portfolio Personal
 
-```sh
-pnpm create astro@latest -- --template minimal
+¡Bienvenido a mi portfolio personal! Este es un sitio web moderno y minimalista construido con Astro, diseñado para mostrar mis proyectos, experiencia y blog.
+
+## ✨ Características
+
+- **Diseño Responsivo**: Optimizado para dispositivos móviles y de escritorio
+- **Rendimiento Optimizado**: Construido con Astro para una carga rápida
+- **Contenido Dinámico**: Blog y proyectos gestionados con Notion
+- **Tema Personalizable**: Estilos CSS globales y componentes reutilizables
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Astro**: Framework web moderno para sitios estáticos
+- **TypeScript**: JavaScript con tipado estático
+- **Tailwind CSS**: Framework de estilos utilitarios
+- **Notion API**: Para gestionar contenido del blog
+- **Mermaid**: Para diagramas y visualizaciones
+
+## 🚀 Instalación y Uso
+
+### Prerrequisitos
+
+- Node.js (versión 18 o superior)
+- pnpm
+
+### Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/Alejocabeza/homepage.git
+cd homepage
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+2. Instala las dependencias:
 
-## 🚀 Project Structure
+```bash
+pnpm install
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+3. Inicia el servidor de desarrollo:
 
-```text
+```bash
+pnpm dev
+```
+
+4. Abre tu navegador en `http://localhost:4321`
+
+### Comandos Disponibles
+
+| Comando             | Acción                             |
+| ------------------- | ---------------------------------- |
+| `pnpm install`      | Instala las dependencias           |
+| `pnpm dev`          | Inicia el servidor de desarrollo   |
+| `pnpm build`        | Construye el sitio para producción |
+| `pnpm preview`      | Previsualiza la build localmente   |
+| `pnpm astro check`  | Verifica el código con Astro       |
+| `pnpm astro --help` | Muestra ayuda de la CLI de Astro   |
+
+## 📁 Estructura del Proyecto
+
+```
 /
-├── public/
+├── public/                    # Archivos estáticos
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── feature/               # Funcionalidades principales
+│   │   ├── blog/              # Páginas del blog
+│   │   ├── home/              # Página principal y componentes
+│   │   └── projects/          # Páginas de proyectos
+│   ├── pages/                 # Rutas de Astro
+│   │   ├── index.astro        # Página principal
+│   │   ├── blog/              # Rutas del blog
+│   │   └── projects/          # Rutas de proyectos
+│   └── shared/                # Recursos compartidos
+│       ├── components/        # Componentes reutilizables
+│       ├── data/              # Datos estáticos (CV, etc.)
+│       ├── layouts/           # Layouts de página
+│       ├── lib/               # Utilidades y librerías
+│       ├── scripts/           # Scripts JavaScript
+│       └── styles/            # Estilos globales
+├── astro.config.mjs           # Configuración de Astro
+├── package.json               # Dependencias y scripts
+├── tsconfig.json              # Configuración de TypeScript
+└── README.md                  # Este archivo
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🎨 Personalización
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Estilos
 
-Any static assets, like images, can be placed in the `public/` directory.
+Los estilos globales se encuentran en `src/shared/styles/global.css`. Puedes modificar colores, fuentes y otros estilos aquí.
 
-## 🧞 Commands
+### Contenido
 
-All commands are run from the root of the project, from a terminal:
+- **CV**: Edita `src/shared/data/cv.json`
+- **Blog**: Gestiona el contenido en Notion (ver `src/shared/lib/notion.ts`)
+- **Proyectos**: Modifica las páginas en `src/feature/projects/`
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## 📧 Contacto
 
-## 👀 Want to learn more?
+¿Te gusta mi trabajo? ¡Me encantaría escucharte!
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Email**: alejandrocabezaoficial@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/alejandro-cabeza-ab86661bb/
+- **GitHub**: https://github.com/Alejocabeza
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+---
+
+Hecho con ❤️ usando Astro
