@@ -1,23 +1,147 @@
 ---
 import "@/shared/styles/global.css";
 import Header from "@/shared/components/header.astro";
+import siteMetadata, { absoluteUrl } from "@/shared/config/site";
 
-type Props = {
-  title: string;
+type SeoProps = {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  type?: "website" | "article" | "profile" | string;
+  locale?: string;
+  noindex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  datePublished?: string;
+  dateModified?: string;
+  keywords?: string[];
 };
 
-const { title }: Props = Astro.props;
+type Props = SeoProps;
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  type = "website",
+  locale,
+  noindex,
+  structuredData,
+  datePublished,
+  dateModified,
+  keywords,
+}: Props = Astro.props as Props;
+
+const resolvedLocale = locale ?? siteMetadata.locale ?? "es";
+const pageTitle = title
+  ? `${title} | ${siteMetadata.siteName}`
+  : siteMetadata.title;
+const metaDescription = description ?? siteMetadata.description;
+const currentUrl = Astro.url;
+const defaultCanonical =
+  canonical ||
+  (siteMetadata.baseUrl
+    ? new URL(
+        `${currentUrl.pathname}${currentUrl.search}`,
+        siteMetadata.baseUrl
+      ).toString()
+    : currentUrl.href);
+const canonicalUrl = canonical ?? defaultCanonical;
+const ogImageUrl = ogImage
+  ? absoluteUrl(ogImage)
+  : siteMetadata.defaultOgImage;
+const robotsContent = noindex ? "noindex, nofollow" : "index, follow";
+const resolvedKeywords = keywords ?? siteMetadata.keywords;
+
+const schemaEntries = Array.isArray(structuredData)
+  ? structuredData
+  : structuredData
+    ? [structuredData]
+    : [];
+
+const defaultSchemas: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteMetadata.siteName,
+    url: siteMetadata.baseUrl,
+    description: metaDescription,
+    inLanguage: resolvedLocale,
+    publisher: {
+      "@type": "Person",
+      name: siteMetadata.author,
+    },
+    sameAs: siteMetadata.sameAs,
+  },
+];
+
+const jsonLdSchemas = [...defaultSchemas, ...schemaEntries];
 const mermaidScriptSrc = (await import("../scripts/mermaid-init.js?url"))
   .default;
 ---
-
-<html lang="en">
+<html lang={resolvedLocale}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta name="robots" content={robotsContent} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={metaDescription} />
+    {resolvedKeywords.length > 0 && (
+      <meta name="keywords" content={resolvedKeywords.join(", ")} />
+    )}
+    <meta name="author" content={siteMetadata.author} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <meta name="theme-color" content="#03112b" />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={siteMetadata.siteName} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={metaDescription} />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    {siteMetadata.ogLocale && (
+      <meta property="og:locale" content={siteMetadata.ogLocale} />
+    )}
+    {siteMetadata.alternateLocales?.map((altLocale) => (
+      <meta property="og:locale:alternate" content={altLocale} />
+    ))}
+    {ogImageUrl && (
+      <>
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={ogImageUrl} />
+      </>
+    )}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    {siteMetadata.twitterHandle && (
+      <>
+        <meta name="twitter:site" content={siteMetadata.twitterHandle} />
+        <meta name="twitter:creator" content={siteMetadata.twitterHandle} />
+      </>
+    )}
+
+    {type === "article" && datePublished && (
+      <meta property="article:published_time" content={datePublished} />
+    )}
+    {type === "article" && (dateModified ?? datePublished) && (
+      <meta
+        property="article:modified_time"
+        content={dateModified ?? datePublished}
+      />
+    )}
+
+    {jsonLdSchemas.map((schema) => (
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    ))}
   </head>
   <body class="relative text-primary bg-primary">
     <div

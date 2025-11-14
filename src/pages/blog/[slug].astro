@@ -3,6 +3,7 @@ import marked from "@/shared/lib/marked";
 import Layout from "@/shared/layouts/index.layout.astro";
 import { getPublishedPosts, getPostBySlug, type Post } from '@/shared/lib/notion';
 import BlogItemPage from '@/feature/blog/pages/blog-item.astro';
+import siteMetadata, { absoluteUrl } from "@/shared/config/site";
 
 export async function getStaticPaths() {
   const posts = await getPublishedPosts();
@@ -25,21 +26,78 @@ if (!slug) {
   return Astro.redirect('/404');
 }
 
-const post: Post|null = await getPostBySlug(slug);
+const post: Post | null = await getPostBySlug(slug);
 
 if (!post) {
   return Astro.redirect('/404');
 }
 
-let renderedContent = marked(post.content || '');
+let renderedContent = await marked(post.content || "");
 if (post.htmlPlaceholders) {
   post.htmlPlaceholders.forEach((originalHtml, index) => {
     const placeholder = `__HTML_CODE_PLACEHOLDER_${index}__`;
     renderedContent = renderedContent.replace(placeholder, originalHtml);
   });
 }
----
+const articleUrl = absoluteUrl(Astro.url.pathname || `/blog/${slug}`);
+const articleDescription = post.excerpt || siteMetadata.description;
 
-<Layout title={post.name}>
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": `${articleUrl}#publicacion`,
+  url: articleUrl,
+  headline: post.title,
+  description: articleDescription,
+  datePublished: post.date,
+  dateModified: post.date,
+  author: {
+    "@type": "Person",
+    name: post.author || siteMetadata.author,
+    url: siteMetadata.baseUrl,
+  },
+  publisher: {
+    "@type": "Person",
+    name: siteMetadata.author,
+    url: siteMetadata.baseUrl,
+  },
+  mainEntityOfPage: articleUrl,
+  inLanguage: siteMetadata.locale,
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: siteMetadata.baseUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: absoluteUrl("/blog"),
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: post.title,
+      item: articleUrl,
+    },
+  ],
+};
+
+<Layout
+  title={post.title}
+  description={articleDescription}
+  structuredData={[articleSchema, breadcrumbSchema]}
+  type="article"
+  datePublished={post.date}
+  dateModified={post.date}
+  keywords={[...siteMetadata.keywords, ...(post.tags ?? [])]}
+>
   <BlogItemPage post={post} renderedContent={renderedContent} />
 </Layout>

@@ -1,8 +1,47 @@
 ---
 import Layout from "@/shared/layouts/index.layout.astro";
 import ProjectPage from "@/feature/projects/pages/index.astro";
+import siteMetadata, { absoluteUrl } from "@/shared/config/site";
+
+const pageUrl = absoluteUrl(Astro.url.pathname || "/projects");
+const pageDescription =
+  "Selección de proyectos destacados que demuestran experiencia en backend, arquitectura cloud y despliegues automatizados.";
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${pageUrl}#projects`,
+  url: pageUrl,
+  name: "Proyectos de Alejandro Cabeza",
+  description: pageDescription,
+  inLanguage: siteMetadata.locale,
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: siteMetadata.baseUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Proyectos",
+      item: pageUrl,
+    },
+  ],
+};
 ---
 
-<Layout title="Proyectos">
+<Layout
+  title="Proyectos"
+  description={pageDescription}
+  structuredData={[collectionSchema, breadcrumbSchema]}
+  keywords={[...siteMetadata.keywords, "portafolio", "proyectos backend"]}
+>
   <ProjectPage />
 </Layout>

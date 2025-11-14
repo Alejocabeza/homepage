@@ -1,8 +1,52 @@
 ---
-import Layout from '@/shared/layouts/index.layout.astro';
-import BlogPage from '@/feature/blog/pages/index.astro'
+import Layout from "@/shared/layouts/index.layout.astro";
+import BlogPage from "@/feature/blog/pages/index.astro";
+import siteMetadata, { absoluteUrl } from "@/shared/config/site";
+
+const pageUrl = absoluteUrl(Astro.url.pathname || "/blog");
+const pageDescription =
+  "Experiencias, guías y aprendizajes sobre desarrollo backend, DevOps y arquitectura de software.";
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": `${pageUrl}#blog`,
+  url: pageUrl,
+  name: "Blog de Alejandro Cabeza",
+  description: pageDescription,
+  inLanguage: siteMetadata.locale,
+  author: {
+    "@type": "Person",
+    name: siteMetadata.author,
+    url: siteMetadata.baseUrl,
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: siteMetadata.baseUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: pageUrl,
+    },
+  ],
+};
 ---
 
-<Layout title="Blog">
+<Layout
+  title="Blog"
+  description={pageDescription}
+  structuredData={[blogSchema, breadcrumbSchema]}
+  keywords={[...siteMetadata.keywords, "blog de desarrollo", "blog backend"]}
+>
   <BlogPage />
 </Layout>

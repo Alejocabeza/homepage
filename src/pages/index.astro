@@ -1,8 +1,50 @@
 ---
 import Layout from "@/shared/layouts/index.layout.astro";
 import HomePage from "@/feature/home/page/index.astro";
+import siteMetadata, {
+  absoluteUrl,
+  buildPersonSchema,
+} from "@/shared/config/site";
+
+const homeUrl = absoluteUrl(Astro.url.pathname || "/");
+const personSchema = {
+  ...buildPersonSchema(),
+  "@id": `${homeUrl}#perfil`,
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${homeUrl}#homepage`,
+  url: homeUrl,
+  name: `${siteMetadata.author} | Portafolio`,
+  description: siteMetadata.description,
+  inLanguage: siteMetadata.locale,
+  about: {
+    "@id": personSchema["@id"],
+  },
+  primaryImageOfPage: siteMetadata.defaultOgImage,
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: homeUrl,
+    },
+  ],
+};
 ---
 
-<Layout title="Homepage">
+<Layout
+  title="Ingeniero Backend en Latinoamérica"
+  description={siteMetadata.description}
+  structuredData={[personSchema, webPageSchema, breadcrumbSchema]}
+  keywords={[...siteMetadata.keywords, "Alejandro Cabeza"]}
+>
   <HomePage />
 </Layout>

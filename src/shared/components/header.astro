@@ -4,9 +4,11 @@ import { NAVIGATION } from "@/shared/lib/navigation";
 
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  role="banner"
 >
   <nav
     class="flex px-3 text-[16px] font-medium rounded-full text-text-secondary justify-center items-center"
+    aria-label="Navegación principal"
   >
     {
       NAVIGATION.map(
@@ -62,7 +64,7 @@ import { NAVIGATION } from "@/shared/lib/navigation";
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
-            if (item.getAttribute("arial-label") === entry.target.id) {
+            if (item.getAttribute("aria-label") === entry.target.id) {
               item.classList.add("text-accent");
             } else {
               item.classList.remove("text-accent");

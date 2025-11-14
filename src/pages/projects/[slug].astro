@@ -7,6 +7,7 @@ import {
 } from "@/shared/lib/notion";
 import Layout from "@/shared/layouts/index.layout.astro";
 import ProjectItemPage from "@/feature/projects/pages/project-item.astro";
+import siteMetadata, { absoluteUrl } from "@/shared/config/site";
 
 export async function getStaticPaths() {
   const projects = await getPublishedProjects();
@@ -44,8 +45,58 @@ if (project.htmlPlaceholders) {
     }
   });
 }
----
 
-<Layout title={project.name}>
+const projectUrl = absoluteUrl(Astro.url.pathname || `/projects/${slug}`);
+const projectDescription = project.description || siteMetadata.description;
+
+const projectSchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "@id": `${projectUrl}#proyecto`,
+  url: projectUrl,
+  name: project.name,
+  description: projectDescription,
+  creator: {
+    "@type": "Person",
+    name: siteMetadata.author,
+    url: siteMetadata.baseUrl,
+  },
+  inLanguage: siteMetadata.locale,
+  keywords: project.stack,
+  about: project.stack,
+  sameAs: project.url ? [project.url] : undefined,
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: siteMetadata.baseUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Proyectos",
+      item: absoluteUrl("/projects"),
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: project.name,
+      item: projectUrl,
+    },
+  ],
+};
+---
+<Layout
+  title={project.name}
+  description={projectDescription}
+  structuredData={[projectSchema, breadcrumbSchema]}
+  keywords={[...siteMetadata.keywords, ...(project.stack ?? [])]}
+>
   <ProjectItemPage project={project} renderedContent={renderedContent} />
 </Layout>
