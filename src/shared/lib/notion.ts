@@ -47,7 +47,8 @@ export const getPublishedPosts = async (): Promise<Omit<Post, "content">[]> => {
     filter: {
       property: "Status",
       select: {
-        equals: "Published",
+        equals:
+          import.meta.env.NODE_ENV === "production" ? "Publicado" : "Borrador",
       },
     },
     sorts: [
@@ -219,7 +220,8 @@ export const getPublishedProjects = async (): Promise<
     filter: {
       property: "Status",
       select: {
-        equals: "Published",
+        equals:
+          import.meta.env.NODE_ENV === "production" ? "Publicado" : "Pendiente",
       },
     },
     sorts: [
