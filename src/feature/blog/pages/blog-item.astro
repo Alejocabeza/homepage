@@ -1,12 +1,14 @@
 ---
 import {type Post} from '@/shared/lib/notion';
+import SocialShare from '@/shared/components/social-share.astro'; // Import the SocialShare component
 
 type Props = {
-  post: Post
-  renderedContent: string | null
+  post: Post;
+  renderedContent: string | null;
+  articleUrl: string; // Add articleUrl to props
 }
 
-const {post, renderedContent}: Props = Astro.props as Props;
+const {post, renderedContent, articleUrl}: Props = Astro.props as Props; // Destructure articleUrl
 
 ---
 
@@ -41,7 +43,8 @@ const {post, renderedContent}: Props = Astro.props as Props;
         <p class="text-sm text-text-secondary"><span class="font-semibold">{post.author}</span></p>
       </div>
     )}
-    
+
     <div class="prose prose-lg max-w-none text-text-secondary mt-28" set:html={renderedContent} />
   </article>
+  <SocialShare title={post.title} url={articleUrl} /> {/* Add the SocialShare component here */}
 </main>

@@ -99,5 +99,5 @@ const breadcrumbSchema = {
   dateModified={post.date}
   keywords={[...siteMetadata.keywords, ...(post.tags ?? [])]}
 >
-  <BlogItemPage post={post} renderedContent={renderedContent} />
+  <BlogItemPage post={post} renderedContent={renderedContent} articleUrl={articleUrl} />
 </Layout>

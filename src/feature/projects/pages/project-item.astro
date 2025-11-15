@@ -1,9 +1,12 @@
 ---
+import SocialShare from '@/shared/components/social-share.astro'; // Import the SocialShare component
+
 type Props = {
   project: any;
   renderedContent: string | null;
+  projectUrl: string; // Add projectUrl to props
 };
-const { project, renderedContent } = Astro.props as Props;
+const { project, renderedContent, projectUrl } = Astro.props as Props; // Destructure projectUrl
 ---
 
 <main class="py-32 md:py-36 px-4 md:px-0 max-w-3xl mx-auto">
@@ -57,4 +60,5 @@ const { project, renderedContent } = Astro.props as Props;
       set:html={renderedContent}
     />
   </article>
+  <SocialShare title={project.name} url={projectUrl} /> {/* Add the SocialShare component here */}
 </main>

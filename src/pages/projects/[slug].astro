@@ -98,5 +98,5 @@ const breadcrumbSchema = {
   structuredData={[projectSchema, breadcrumbSchema]}
   keywords={[...siteMetadata.keywords, ...(project.stack ?? [])]}
 >
-  <ProjectItemPage project={project} renderedContent={renderedContent} />
+  <ProjectItemPage project={project} renderedContent={renderedContent} projectUrl={projectUrl} />
 </Layout>
