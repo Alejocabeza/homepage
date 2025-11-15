@@ -1,14 +1,18 @@
 ---
 import marked from "@/shared/lib/marked";
 import Layout from "@/shared/layouts/index.layout.astro";
-import { getPublishedPosts, getPostBySlug, type Post } from '@/shared/lib/notion';
-import BlogItemPage from '@/feature/blog/pages/blog-item.astro';
+import {
+  getPublishedPosts,
+  getPostBySlug,
+  type Post,
+} from "@/shared/lib/notion";
+import BlogItemPage from "@/feature/blog/pages/blog-item.astro";
 import siteMetadata, { absoluteUrl } from "@/shared/config/site";
 
 export async function getStaticPaths() {
   const posts = await getPublishedPosts();
-  const locales = ['en', 'es']; // Asumimos que cada post está disponible en ambos idiomas
-  
+  const locales = ["en", "es"]; // Asumimos que cada post está disponible en ambos idiomas
+
   const paths = [];
   for (const post of posts) {
     for (const locale of locales) {
@@ -23,13 +27,13 @@ export async function getStaticPaths() {
 const { slug, locale } = Astro.params;
 
 if (!slug) {
-  return Astro.redirect('/404');
+  return Astro.redirect("/404");
 }
 
 const post: Post | null = await getPostBySlug(slug);
 
 if (!post) {
-  return Astro.redirect('/404');
+  return Astro.redirect("/404");
 }
 
 let renderedContent = await marked(post.content || "");
@@ -89,7 +93,6 @@ const breadcrumbSchema = {
     },
   ],
 };
-
 ---
 
 <Layout
@@ -101,5 +104,9 @@ const breadcrumbSchema = {
   dateModified={post.date}
   keywords={[...siteMetadata.keywords, ...(post.tags ?? [])]}
 >
-  <BlogItemPage post={post} renderedContent={renderedContent} articleUrl={articleUrl} />
+  <BlogItemPage
+    post={post}
+    renderedContent={renderedContent}
+    articleUrl={articleUrl}
+  />
 </Layout>
