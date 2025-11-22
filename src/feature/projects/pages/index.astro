@@ -9,7 +9,7 @@ const projects: Omit<Project, 'content'>[] = await getPublishedProjects();
   <h1 class="text-4xl font-bold tracking-tight sm:text-5xl mb-10">
     Mis Proyectos
   </h1>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {
       projects.map((project) => (
         <Card

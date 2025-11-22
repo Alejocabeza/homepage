@@ -150,7 +150,7 @@ const mermaidScriptSrc = (await import("../scripts/mermaid-init.js?url"))
     >
     </div>
     <Header />
-    <main class="max-w-[700px] mx-auto">
+    <main class="max-w-full sm:max-w-[700px] mx-auto">
       <slot />
     </main>
     <script type="module" src={mermaidScriptSrc}></script>

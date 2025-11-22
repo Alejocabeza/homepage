@@ -7,14 +7,14 @@ import { NAVIGATION } from "@/shared/lib/navigation";
   role="banner"
 >
   <nav
-    class="flex px-3 text-[16px] font-medium rounded-full text-text-secondary justify-center items-center"
+    class="flex px-2 sm:px-3 text-sm sm:text-base font-medium rounded-full text-text-secondary justify-center items-center"
     aria-label="Navegación principal"
   >
     {
       NAVIGATION.map(
         ({ title, url, icon }: { title: string; url: string; icon: any }) => (
           <a
-            class="relative block px-2 py-2 transition hover:text-accent"
+            class="relative block px-1 py-1 sm:px-2 sm:py-2 transition hover:text-accent"
             aria-label={title}
             href={url}
           >
