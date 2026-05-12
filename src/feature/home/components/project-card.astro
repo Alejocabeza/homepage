@@ -4,11 +4,11 @@ import TechBadge from "./tech-badge.astro";
 interface Props {
   name: string;
   description: string;
-  status: "lanzado" | "abandonado" | "en-progreso";
+  status: string;
   highlights: string[];
   whatWorked: string;
   whatFailed: string;
-  url?: string;
+  url?: string | null;
 }
 
 const { name, description, status, highlights, whatWorked, whatFailed, url } = Astro.props;
@@ -41,7 +41,7 @@ const currentStatus = statusConfig[status] || statusConfig.lanzado;
   <!-- Tech stack -->
   <div class="flex flex-wrap gap-2 mb-5">
     {highlights.map((tech) => (
-      <TechBadge name={tech} category="secondary" />
+      <TechBadge name={tech} category="secondary" showDots={false} />
     ))}
   </div>
 

@@ -2,15 +2,8 @@
 import TechBadge from "@/feature/home/components/tech-badge.astro";
 import { skills } from "@/shared/data/cv.json";
 
-interface Skill {
-  name: string;
-  level: string;
-  category: string;
-  keywords?: string[];
-}
-
-const primarySkills = skills.filter((s: Skill) => s.category === "primary");
-const secondarySkills = skills.filter((s: Skill) => s.category === "secondary");
+const primarySkills = skills.primary || [];
+const secondarySkills = skills.secondary || [];
 ---
 
 <section id="stack" class="py-16">
@@ -18,17 +11,22 @@ const secondarySkills = skills.filter((s: Skill) => s.category === "secondary");
     Mi Stack
   </h2>
   <p class="text-text-muted mb-10 max-w-xl">
-    Tecnologías con las que construyo aplicaciones robustas y escalables
+   -stack TALL (Tailwind, Alpine, Livewire, Laravel) + tecnologías que uso para construir productos robustos
   </p>
 
-  <!-- Primary technologies -->
+  <!-- Primary technologies - Stack TALL -->
   <div class="mb-8">
     <h3 class="text-sm font-medium text-text-muted uppercase tracking-wide mb-4">
-      Tecnologías Principales
+      Stack TALL
     </h3>
     <div class="flex flex-wrap gap-3">
-      {primarySkills.map((skill: Skill) => (
-        <TechBadge name={skill.name} category="primary" level={skill.level} />
+      {primarySkills.map((skill: any) => (
+        <TechBadge 
+          name={skill.name} 
+          category="primary" 
+          level={skill.level}
+          showDots={true}
+        />
       ))}
     </div>
   </div>
@@ -36,11 +34,16 @@ const secondarySkills = skills.filter((s: Skill) => s.category === "secondary");
   <!-- Secondary technologies -->
   <div>
     <h3 class="text-sm font-medium text-text-muted uppercase tracking-wide mb-4">
-      Herramientas de Soporte
+      Tecnologías Adicionales
     </h3>
     <div class="flex flex-wrap gap-3">
-      {secondarySkills.map((skill: Skill) => (
-        <TechBadge name={skill.name} category="secondary" level={skill.level} />
+      {secondarySkills.map((skill: any) => (
+        <TechBadge 
+          name={skill.name} 
+          category="secondary" 
+          level={skill.level}
+          showDots={false}
+        />
       ))}
     </div>
   </div>

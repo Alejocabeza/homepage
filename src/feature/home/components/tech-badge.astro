@@ -3,13 +3,14 @@ interface Props {
   name: string;
   category?: "primary" | "secondary";
   level?: string;
+  showDots?: boolean;
 }
 
-const { name, category = "secondary", level } = Astro.props;
+const { name, category = "secondary", level, showDots = true } = Astro.props;
 
 const getLevelDots = (lvl: string | undefined) => {
-  if (!lvl) return null;
-  const filled = lvl === "Avanzado" ? 3 : 2;
+  if (!lvl || !showDots) return null;
+  const filled = lvl === "Avanzado" ? 3 : lvl === "Intermedio" ? 2 : 1;
   return Array.from({ length: 3 }, (_, i) => i < filled);
 };
 const levelDots = getLevelDots(level);

@@ -1,21 +1,22 @@
 {
   "basics": {
     "name": "Alejandro Cabeza",
-    "label": "Especialista en Laravel",
+    "label": "Senior Software Engineer - Stack TALL",
     "image": "https://avatars.githubusercontent.com/u/84131436?s=96&v=4",
     "available": true,
     "availableForWork": "Disponible para Trabajar",
     "notAvailableForWork": "No Disponible Actualmente",
     "email": "alejandrocabezaoficial@gmail.com",
     "phone": "+58 414-7503510",
-    "url": "",
+    "url": "https://alejandrocabeza.dev",
     "cvUrl": "https://docs.google.com/document/d/1yd1Qc6YvXOhOf-IbyddNbQIsteAsGJSFfftaBVS_Uqc/edit?usp=sharing",
-    "summary": "Especialista en Laravel con más de 3 años de experiencia construyendo aplicaciones robustas y escalables. Me enfoco en el ecosistema Laravel—PHP, Laravel, Tailwind CSS, Livewire—y entrego código de calidad que escala. Basado en Venezuela, trabajando remotamente con clientes internacionales.",
-    "heroSummary": "<strong>Especialista en Laravel</strong> con más de 3 años construyendo <strong>aplicaciones SaaS, ERP y web robustas</strong>. Experto en <strong>Laravel, Tailwind CSS y el ecosistema PHP</strong>. Construyo productos reales, no solo código.",
+    "summary": "Senior Software Engineer especializado en el Stack TALL (Tailwind, Alpine, Livewire, Laravel). Más de 5 años construyendo arquitecturas backend escalables y productos digitales de alto impacto. Experto en DDD, Event-Driven Architecture y principios SOLID.",
+    "heroSummary": "<strong>Senior Software Engineer</strong> especializado en el <strong>Stack TALL</strong> (Tailwind, Alpine, Livewire, Laravel). Más de <strong>5 años</strong> transformando reglas de negocio complejas en sistemas técnicos robustos.",
     "aboutMe": [
-      "Especialista en Laravel con más de 3 años construyendo arquitecturas backend escalables",
-      "Experto en Laravel, Tailwind CSS, PHP 8.x y el ecosistema Laravel",
-      "Comparto mis fracasos porque me hicieron mejor"
+      "No soy solo código. Soy alguien que construye cosas que importan.",
+      "Empecé en Derecho porque mis papás lo querían. Terminé en Ingeniería porque mi cerebro lo necesitaba. Esa dualidad me enseñó a ver problemas desde múltiples ángulos.",
+      "Trabajo desde Venezuela para el mundo. El timezone es un detalle, la calidad no.",
+      "El fracaso no me define, me informa. Cada proyecto que no funcionó me enseñó qué preguntas hacer antes de empezar."
     ],
     "location": {
       "address": "",
@@ -40,111 +41,88 @@
   "services": [
     {
       "name": "Desarrollo con Laravel",
-      "description": "Construcción de aplicaciones Laravel robustas y escalables desde cero o mantenimiento de proyectos existentes.",
+      "description": "Construcción de aplicaciones Laravel robustas y escalables, desde APIs RESTful hasta aplicaciones complejas con Livewire.",
       "slug": "desarrollo-laravel"
     },
     {
-      "name": "Aplicaciones SaaS",
-      "description": "Desarrollo completo de SaaS con Laravel incluyendo autenticación, suscripciones e integraciones de terceros.",
-      "slug": "aplicaciones-saas"
-    },
-    {
-      "name": "Desarrollo de APIs",
-      "description": "Diseño e implementación de APIs RESTful con Laravel, incluyendo autenticación y documentación.",
-      "slug": "desarrollo-api"
+      "name": "Stack TALL",
+      "description": "Desarrollo full-stack con Tailwind CSS, Alpine.js y Livewire 3. Interfaces reactivas centralizando lógica en el servidor.",
+      "slug": "stack-tall"
     },
     {
       "name": "Arquitectura Backend",
-      "description": "Arquitectura backend escalable usando Laravel, colas, eventos y patrones modernos de PHP.",
+      "description": "Diseño de arquitecturas escalables usando DDD, Event-Driven Architecture y principios SOLID. Transformo reglas de negocio en sistemas técnicos.",
       "slug": "arquitectura-backend"
+    },
+    {
+      "name": "DevOps & CI/CD",
+      "description": "Automatización de pipelines de despliegue, gestión de contenedores con Docker y orquestación en la nube.",
+      "slug": "devops-cicd"
     }
   ],
   "work": [
     {
-      "name": "Wallsteam",
-      "position": "Desarrollador Full Stack (Freelance/Contrato)",
-      "url": "https://wallsteam.com/",
+      "name": "Aludespagroup",
+      "position": "Senior Full-Stack Engineer & DevOps",
+      "url": "https://aludespagroup.com",
+      "startDate": "2026",
+      "endDate": null,
+      "summary": "Liderazgo técnico en el desarrollo de productos 'end-to-end' utilizando Laravel 12 y Livewire 3. Diseño y automatización integral de pipelines de CI/CD.",
+      "highlights": [
+        "Desarrollo de productos end-to-end con Laravel 12 y Livewire 3",
+        "Diseño y automatización de pipelines CI/CD",
+        "Optimización de infraestructura para alta disponibilidad"
+      ],
+      "stack": [
+        "Laravel 12",
+        "Livewire 3",
+        "Docker",
+        "CI/CD",
+        "PostgreSQL"
+      ],
+      "metrics": []
+    },
+    {
+      "name": "WallsTeam",
+      "position": "Senior Full-Stack Engineer",
+      "url": "https://wallsteam.com",
       "startDate": "2024",
-      "endDate": "2025",
-      "summary": "Desarrollo y mantenimiento de proyectos web con WordPress, NextJs, Laravel, Nestjs, Docker, Adonisjs, Express, MySQL y MongoDB, desde sitios personalizados hasta backend y optimización.",
+      "endDate": "2026",
+      "summary": "Liderazgo en desarrollo de soluciones empresariales de alto rendimiento. Colaboración en proyectos de impacto como Fairpay y Gotitjob.",
       "highlights": [
-        "Colaboración en proyectos de alto impacto: Fairpay y Gotitjob",
-        "Entrega de soluciones completas y de alto rendimiento"
+        "Proyectos de alto impacto: Fairpay y Gotitjob",
+        "Implementación de arquitecturas modernas y sistemas orientados a eventos",
+        "Optimización de respuesta del servidor"
       ],
       "stack": [
-        "WordPress",
-        "NextJs",
         "Laravel",
-        "NestJS",
+        "Livewire",
+        "Tailwind CSS",
         "Docker",
-        "AdonisJS",
-        "Express",
         "MySQL",
-        "MongoDB"
-      ],
-      "metrics": []
-    },
-    {
-      "name": "Athenadexfi",
-      "position": "Ingeniero DevOps (Freelance/Contrato)",
-      "url": "https://athenadexfi.com",
-      "startDate": "2025",
-      "endDate": "2025",
-      "summary": "Responsable del despliegue en VPS DigitalOcean y configuración de CI/CD para un proceso de release ágil y estable.",
-      "highlights": [
-        "Despliegue en VPS con DigitalOcean",
-        "Implementación de pipelines CI/CD"
-      ],
-      "stack": [
-        "DigitalOcean",
-        "CI/CD",
-        "Docker"
-      ],
-      "metrics": []
-    },
-    {
-      "name": "Miocondo",
-      "position": "Lead Backend Engineer (Freelance/Contrato)",
-      "url": "https://app.miocondo.com/",
-      "startDate": "2025",
-      "endDate": "2025",
-      "summary": "Lideré el desarrollo y despliegue del backend de una aplicación para condominios, optimizando la gestión y comunicación. Implementé una arquitectura robusta, automatizando pagos y servicios.",
-      "highlights": [
-        "Arquitectura robusta con Laravel, PostgreSQL, Redis y Docker",
-        "Automatización de pagos y servicios",
-        "Despliegue completo de plataforma",
-        "Implementación de CI/CD para releases de alta calidad"
-      ],
-      "stack": [
-        "Laravel",
-        "PostgreSQL",
-        "Redis",
-        "Docker",
-        "CI/CD",
-        "PHP"
+        "PostgreSQL"
       ],
       "metrics": []
     },
     {
       "name": "Perfexya",
-      "position": "Desarrollador Backend",
-      "url": "https://landing.perfexya.com/",
+      "position": "Senior Backend Developer",
+      "url": "https://landing.perfexya.com",
       "startDate": "2022",
-      "endDate": "2024",
-      "summary": "Lideré la mejora y mantenimiento del backend, resolviendo incidencias críticas e integrando APIs externas.",
+      "endDate": "2023",
+      "summary": "Desarrollo backend con Symfony y Laravel. Logré una reducción del 90% en tiempos de respuesta y 70% más interacción de usuarios.",
       "highlights": [
-        "Reducción de tiempos de respuesta en 90%",
-        "Aumento de interacción de usuarios en 70%",
+        "Reducción del 90% en tiempos de respuesta del sistema",
+        "Incremento del 70% en interacción de usuarios",
         "Integración de APIs externas (Zoho) con Symfony y MySQL",
-        "Implementación de Docker para estandarizar entornos"
+        "Docker para estandarizar entornos"
       ],
       "stack": [
+        "Laravel",
         "Symfony",
         "MySQL",
         "Docker",
-        "Zoho API",
-        "React",
-        "Material UI"
+        "Zoho API"
       ],
       "metrics": [
         {
@@ -158,40 +136,19 @@
       ]
     },
     {
-      "name": "Deepground",
-      "position": "Desarrollador de WordPress",
-      "url": "",
-      "startDate": "2023",
-      "endDate": "2023",
-      "summary": "Creación de un plugin de gestión de usuarios para WordPress que centralizó el control y administración.",
-      "highlights": [
-        "Plugin de gestión de usuarios personalizado",
-        "Dashboard para visualizar registros y segmentar con filtros avanzados",
-        "Optimización de administración de base de usuarios"
-      ],
-      "stack": [
-        "WordPress",
-        "PHP",
-        "JavaScript",
-        "Bootstrap"
-      ],
-      "metrics": []
-    },
-    {
       "name": "SEO Contenidos",
-      "position": "Desarrollador Full Stack",
-      "url": "https://seocontenidos.net/",
+      "position": "Full Stack Developer",
+      "url": "https://seocontenidos.net",
       "startDate": "2021",
       "endDate": "2022",
-      "summary": "Lideré la construcción del tema actual del sitio de Empresas Polar (multinacional de alto tráfico), optimizando rendimiento y calidad del código.",
+      "summary": "Reingeniería de la plataforma de Empresas Polar. Desarrollo de módulos desde cero en TypeScript, Node.js y PHP.",
       "highlights": [
-        "Desarrollo desde cero en TypeScript, Sass, Node.js y PHP",
-        "Mejora de rendimiento respecto al tema anterior",
-        "Optimización de integración con WordPress"
+        "Reingeniería de plataforma Empresas Polar (multinacional)",
+        "Desarrollo desde cero en TypeScript, Node.js y PHP",
+        "Optimización de integraciones para alto tráfico"
       ],
       "stack": [
         "TypeScript",
-        "Sass",
         "Node.js",
         "PHP",
         "WordPress",
@@ -200,164 +157,153 @@
       "metrics": []
     }
   ],
-  "volunteer": [],
+  "skills": {
+    "primary": [
+      {
+        "name": "Laravel",
+        "level": "Avanzado",
+        "years": "5+",
+        "keywords": ["Backend", "PHP", "Framework"]
+      },
+      {
+        "name": "Livewire",
+        "level": "Avanzado",
+        "years": "3+",
+        "keywords": ["Frontend", "PHP", "Reactive"]
+      },
+      {
+        "name": "Alpine.js",
+        "level": "Avanzado",
+        "years": "2+",
+        "keywords": ["Frontend", "JavaScript", "Lightweight"]
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": "Avanzado",
+        "years": "4+",
+        "keywords": ["CSS", "Frontend", "Design"]
+      },
+      {
+        "name": "PHP",
+        "level": "Avanzado",
+        "years": "5+",
+        "keywords": ["Backend", "Language", "OOP"]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Filament v3",
+        "level": "Avanzado",
+        "keywords": ["Admin Panel", "Laravel", "TALL Stack"]
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Avanzado",
+        "keywords": ["Database", "SQL", "Relations"]
+      },
+      {
+        "name": "Docker",
+        "level": "Avanzado",
+        "keywords": ["Containers", "DevOps", "Deployment"]
+      },
+      {
+        "name": "GitHub Actions",
+        "level": "Avanzado",
+        "keywords": ["CI/CD", "Automation"]
+      },
+      {
+        "name": "TypeScript",
+        "level": "Intermedio",
+        "keywords": ["Frontend", "Type Safety"]
+      },
+      {
+        "name": "Node.js",
+        "level": "Intermedio",
+        "keywords": ["Backend", "JavaScript"]
+      },
+      {
+        "name": "SOLID",
+        "level": "Avanzado",
+        "keywords": ["Architecture", "Design Patterns"]
+      },
+      {
+        "name": "DDD",
+        "level": "Intermedio",
+        "keywords": ["Architecture", "Domain"]
+      }
+    ]
+  },
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Técnico (lectura/escritura de documentación técnica)"
+    }
+  ],
   "education": [
     {
-      "institution": "Universidad Católica del Táchira",
-      "url": "https://www.uoc.edu/portal/es/index.html",
-      "area": "Derecho",
-      "studyType": "",
-      "startDate": "2016-09-01",
-      "endDate": "2021-09-01",
-      "score": "4.0",
+      "institution": "IUPTAI",
+      "url": "https://www.iuptai.edu.ve",
+      "area": "Ingeniería en Informática",
+      "studyType": "En curso",
+      "startDate": "2024-01-01",
+      "endDate": null,
+      "score": "En progreso",
       "courses": []
     },
     {
-      "institution": "Universidad Politécnica Territorial Agroindustrial del Estado Táchira",
-      "url": "",
-      "area": "Ingeniería Informática",
-      "studyType": "",
-      "startDate": "2021-10-01",
-      "endDate": null,
+      "institution": "IUPTAI",
+      "url": "https://www.iuptai.edu.ve",
+      "area": "TSU en Informática",
+      "studyType": "Graduado",
+      "startDate": "2021-01-01",
+      "endDate": "2024-12-31",
       "score": "4.0",
       "courses": []
     }
   ],
-  "awards": [],
   "certificates": [
     {
-      "name": "Diseño de páginas web con WordPress",
+      "name": "Desarrollo de páginas web con WordPress",
       "date": "2020-11-07",
-      "issuer": "Ingeniería Digital",
-      "url": null
+      "issuer": "Ingeniería Digital"
     },
     {
       "name": "Master en JavaScript: JS, jQuery, Node.js",
       "date": "2021-11-07",
-      "issuer": "Udemy",
-      "url": null
+      "issuer": "Udemy"
     },
     {
       "name": "Master en PHP: SQL, POO, MVC, Symfony, WordPress",
       "date": "2022-11-07",
-      "issuer": "Udemy",
-      "url": null
+      "issuer": "Udemy"
     },
     {
-      "name": "Principio de Análisis y Diseño Orientado a Objetos Utilizando el Estándar UML",
+      "name": "Principio de Análisis y Diseño Orientado a Objetos - UML",
       "date": "2023-11-07",
-      "issuer": "Universidad Politécnica Territorial Agroindustrial del Estado Táchira",
-      "url": null
+      "issuer": "IUPTAI"
+    },
+    {
+      "name": "Laravel 12 - Nuevo Curso oficial",
+      "date": "2026-01-15",
+      "issuer": "Laravel"
     }
   ],
-  "publications": [],
-  "skills": [
+  "interests": [
     {
-      "name": "Laravel",
-      "level": "Avanzado",
-      "category": "primary",
-      "keywords": [
-        "Desarrollo Web",
-        "Backend",
-        "PHP Framework"
-      ]
+      "name": "Arquitectura de Software",
+      "keywords": ["DDD", "Event-Driven", "Microservices"]
     },
     {
-      "name": "PHP",
-      "level": "Avanzado",
-      "category": "primary",
-      "keywords": [
-        "Desarrollo Web",
-        "Backend",
-        "PHP"
-      ]
+      "name": "DevOps",
+      "keywords": ["CI/CD", "Docker", "Cloud"]
     },
     {
-      "name": "Tailwind CSS",
-      "level": "Avanzado",
-      "category": "primary",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "CSS Framework"
-      ]
-    },
-    {
-      "name": "Livewire",
-      "level": "Intermedio",
-      "category": "primary",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "Laravel",
-        "PHP Framework"
-      ]
-    },
-    {
-      "name": "PostgreSQL",
-      "level": "Avanzado",
-      "category": "secondary",
-      "keywords": [
-        "Base de Datos",
-        "SQL"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Avanzado",
-      "category": "secondary",
-      "keywords": [
-        "Bases de Datos",
-        "SQL"
-      ]
-    },
-    {
-      "name": "SQLite",
-      "level": "Avanzado",
-      "category": "secondary",
-      "keywords": [
-        "Bases de Datos",
-        "SQL"
-      ]
-    },
-    {
-      "name": "Docker",
-      "level": "Avanzado",
-      "category": "secondary",
-      "keywords": [
-        "Contenedores",
-        "DevOps"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Avanzado",
-      "category": "secondary",
-      "keywords": [
-        "Control de Versiones"
-      ]
-    },
-    {
-      "name": "Linux",
-      "level": "Intermedio",
-      "category": "secondary",
-      "keywords": [
-        "Sistema Operativo",
-        "Servidores"
-      ]
+      "name": "Aprendizaje Continuo",
+      "keywords": ["Nuevas tecnologías", "Mejora de procesos"]
     }
-  ],
-  "languages": [
-    {
-      "language": "Español",
-      "fluency": "Idioma nativo"
-    },
-    {
-      "language": "Inglés",
-      "fluency": "Básico (En Formación)"
-    }
-  ],
-  "interests": [],
-  "references": [],
-  "projects": []
+  ]
 }
