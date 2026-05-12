@@ -1,4 +1,8 @@
 ---
+interface Metric {
+  value: string;
+  label: string;
+}
 
 interface Props {
   name: string;
@@ -7,71 +11,90 @@ interface Props {
   endDate: string;
   position: string;
   highlights?: string[];
+  stack?: string[];
+  metrics?: Metric[];
   url: string;
 }
 
-const { name, summary, startDate, endDate, position, highlights, url } =
-  Astro.props;
+const { name, summary, startDate, endDate, position, highlights, stack, metrics, url } = Astro.props;
 
 const getDate = (startDate: string, endDate: string) => {
   if (startDate === endDate) return startDate;
-  if (startDate && !endDate) return `${startDate} - Actualmente...`;
+  if (startDate && !endDate) return `${startDate} - Actualmente`;
   if (startDate && endDate) {
     return `${startDate} - ${endDate}`;
   }
+  return "";
 };
 ---
 
-<div
-  class="relative mx-4 sm:mx-8 md:mx-12 pb-12 grid before:absolute before:left-[-20px] sm:before:left-[-35px] before:block before:h-full before:border-l-2 before:border-[#ffffff30] before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
->
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
-      <span class="text-accent -left-[24px] sm:-left-[42px] absolute rounded-full text-3xl sm:text-5xl"
-        >&bull;</span
-      >
-      <div class="flex flex-row items-center gap-1">
-        <h3 class="text-2xl font-bold text-accent">{name}</h3>
+<div class="relative py-8 group">
+  <!-- Timeline indicator -->
+  <div class="absolute left-0 top-2 w-2 h-2 rounded-full bg-border group-hover:bg-laravel transition-colors"></div>
+  
+  <!-- Content -->
+  <div class="pl-8">
+    <!-- Header: Company + Role + Date -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+      <div class="flex items-center gap-3">
+        <h3 class="text-xl font-semibold text-gray-900">{name}</h3>
         {
           url && (
             <a
-              class="text-accent hover:text-accent/80 text-xl font-bold"
               href={url}
               target="_blank"
               rel="noopener noreferrer"
+              class="text-text-muted hover:text-laravel transition-colors"
+              aria-label={`Ver ${name}`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
-              >
-                <>
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                  <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                </>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
               </svg>
             </a>
           )
         }
       </div>
-      <h4 class="font-semibold text-xl text-text-primary">
-        {position}
-      </h4>
-      <time class="p-0 m-0 text-sm text-text-secondary">
-        {getDate(startDate, endDate)}
-      </time>
+      <time class="text-sm text-text-muted">{getDate(startDate, endDate)}</time>
     </div>
+    
+    <!-- Role -->
+    <p class="text-base text-text-secondary mb-4">{position}</p>
+    
+    <!-- Impact metrics (if exist) -->
+    {metrics && metrics.length > 0 && (
+      <div class="flex flex-wrap gap-3 mb-4">
+        {metrics.map((metric) => (
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium bg-laravel/10 text-laravel rounded-md border border-laravel/20">
+            <span class="text-base font-semibold">{metric.value}</span>
+            <span class="text-xs text-text-secondary">{metric.label}</span>
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- Highlights as bullet points -->
+    {highlights && highlights.length > 0 && (
+      <ul class="space-y-2 mb-4">
+        {highlights.map((highlight) => (
+          <li class="flex items-start gap-3 text-sm text-text-secondary">
+            <span class="text-laravel mt-0.5">▸</span>
+            <span>{highlight}</span>
+          </li>
+        ))}
+      </ul>
+    )}
+
+    <!-- Tech stack -->
+    {stack && stack.length > 0 && (
+      <div class="flex flex-wrap gap-2">
+        {stack.map((tech) => (
+          <span class="px-2.5 py-1 text-xs text-text-muted bg-secondary rounded border border-border">
+            {tech}
+          </span>
+        ))}
+      </div>
+    )}
   </div>
-  <p
-    class="relative pb-4 text-text-secondary md:col-span-3 text-pretty [&>span]:text-accent [&>span]:font-semibold [&>a]:text-blue-500 [&>a]:transition-colors [&>a]:duration-150 [&>a]:hover:text-blue-400"
-    set:html={summary}
-  />
 </div>

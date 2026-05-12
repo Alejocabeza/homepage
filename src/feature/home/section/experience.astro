@@ -3,20 +3,21 @@ import { work } from "@/shared/data/cv.json";
 import Items from "@/feature/home/components/items.astro";
 ---
 
-<section id="experiencia" class="">
-  <h2
-    id="experiencia-heading"
-    class="flex mb-6 text-3xl font-semibold gap-x-3"
-  >
+<section id="experiencia" class="py-16">
+  <h2 class="text-2xl font-semibold text-text-primary mb-12">
     Experiencia
   </h2>
-  <ol class="relative mt-16">
-    {
-      work.map((experience) => (
-        <li>
+  
+  <div class="relative">
+    <!-- Timeline line -->
+    <div class="absolute left-[7px] top-2 bottom-0 w-px bg-border"></div>
+    
+    <div class="space-y-2">
+      {
+        work.map((experience) => (
           <Items {...experience} />
-        </li>
-      ))
-    }
-  </ol>
+        ))
+      }
+    </div>
+  </div>
 </section>

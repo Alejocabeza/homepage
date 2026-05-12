@@ -1,7 +1,7 @@
 {
   "basics": {
-    "name": "Hola, Alejandro Cabeza",
-    "label": "Desarrollador back-end con más de 3 años de experiencia",
+    "name": "Alejandro Cabeza",
+    "label": "Especialista en Laravel",
     "image": "https://avatars.githubusercontent.com/u/84131436?s=96&v=4",
     "available": true,
     "availableForWork": "Disponible para Trabajar",
@@ -10,16 +10,18 @@
     "phone": "+58 414-7503510",
     "url": "",
     "cvUrl": "https://docs.google.com/document/d/1yd1Qc6YvXOhOf-IbyddNbQIsteAsGJSFfftaBVS_Uqc/edit?usp=sharing",
-    "summary": "Soy un apasionado del desarrollo web con más de 3 años de experiencia convirtiendo ideas en realidad. Domino PHP y JavaScript, y me adapto a las nuevas tecnologías con facilidad. Estudiante de Ingeniería Informática, con ganas de seguir creciendo y aportar valor a tu empresa. !!!!!",
-    "heroSummary": "<strong>Ingeniero Backend</strong> con experiencia en <strong>arquitecturas robustas y escalables</strong> utilizando <strong>Node.js (NestJs, Express,AdonisJs), PHP (Symfony, Laravel) y bases de datos PostgreSQL y MySQL</strong>. Como <strong>Lead Backend Engineer</strong>, he dirigido el desarrollo de aplicaciones enfocadas en <strong> calidad y eficiencia</strong>.",
+    "summary": "Especialista en Laravel con más de 3 años de experiencia construyendo aplicaciones robustas y escalables. Me enfoco en el ecosistema Laravel—PHP, Laravel, Tailwind CSS, Livewire—y entrego código de calidad que escala. Basado en Venezuela, trabajando remotamente con clientes internacionales.",
+    "heroSummary": "<strong>Especialista en Laravel</strong> con más de 3 años construyendo <strong>aplicaciones SaaS, ERP y web robustas</strong>. Experto en <strong>Laravel, Tailwind CSS y el ecosistema PHP</strong>. Construyo productos reales, no solo código.",
     "aboutMe": [
-      "Desde pequeño, la tecnología fue la chispa que encendió mi imaginación y me invitó a soñar en grande. Con el tiempo, esa chispa se convirtió en una llama inagotable: descubrí en la programación una llave mágica capaz de abrir puertas a mundos antes inimaginables. Hoy, me dedico a tejer ideas y transformar desafíos en oportunidades, explorando sin miedo los límites de la innovación. Mi motor es la curiosidad y mi brújula, el deseo constante de aprender y reinventar el mañana."
+      "Especialista en Laravel con más de 3 años construyendo arquitecturas backend escalables",
+      "Experto en Laravel, Tailwind CSS, PHP 8.x y el ecosistema Laravel",
+      "Comparto mis fracasos porque me hicieron mejor"
     ],
     "location": {
       "address": "",
       "postalCode": "5001",
-      "city": "San Cristobal",
-      "countryCode": "ES",
+      "city": "San Cristóbal",
+      "countryCode": "VE",
       "region": "Venezuela"
     },
     "profiles": [
@@ -37,91 +39,168 @@
   },
   "services": [
     {
-      "name": "Desarrollo de APIs REST/GraphQL",
-      "description": "Diseño y desarrollo de APIs robustas, seguras y escalables para conectar tus aplicaciones y servicios.",
+      "name": "Desarrollo con Laravel",
+      "description": "Construcción de aplicaciones Laravel robustas y escalables desde cero o mantenimiento de proyectos existentes.",
+      "slug": "desarrollo-laravel"
+    },
+    {
+      "name": "Aplicaciones SaaS",
+      "description": "Desarrollo completo de SaaS con Laravel incluyendo autenticación, suscripciones e integraciones de terceros.",
+      "slug": "aplicaciones-saas"
+    },
+    {
+      "name": "Desarrollo de APIs",
+      "description": "Diseño e implementación de APIs RESTful con Laravel, incluyendo autenticación y documentación.",
       "slug": "desarrollo-api"
     },
     {
-      "name": "Despliegue CI/CD",
-      "description": "Implementación de pipelines de integración y despliegue continuo con Docker y GitHub Actions.",
-      "slug": "despliegue-cicd"
-    },
-    {
-      "name": "Desarrollo Full Stack",
-      "description": "Capacidad para llevar una idea desde el concepto hasta el producto final, trabajando tanto en el backend como en el frontend.",
-      "slug": "full-stack"
-    },
-    {
-      "name": "Desarrollo Frontend Interactivo",
-      "description": "Creación de interfaces de usuario dinámicas y ricas con frameworks modernos como React y Next.js.",
-      "slug": "frontend-interactivo"
-    },
-    {
-      "name": "Temas y Plugins para Wordpress",
-      "description": "Desarrollo a medida de temas y plugins para WordPress, optimizados para rendimiento y SEO.",
-      "slug": "wordpress"
+      "name": "Arquitectura Backend",
+      "description": "Arquitectura backend escalable usando Laravel, colas, eventos y patrones modernos de PHP.",
+      "slug": "arquitectura-backend"
     }
   ],
   "work": [
     {
       "name": "Wallsteam",
-      "position": "Full Stack Developer",
+      "position": "Desarrollador Full Stack (Freelance/Contrato)",
       "url": "https://wallsteam.com/",
       "startDate": "2024",
       "endDate": "2025",
-      "summary": "Como Freelancer Developer, desarrollé y mantuve proyectos web con <span>WordPress</span>, <span>NextJs</span>, <span>Laravel</span>, <span>Nestjs</span>, <span>Docker</span>, <span>Adonisjs</span>, <span>Express</span>, <span>MySQL</span> y <span>Mongodb</span>, desde sitios personalizados hasta backend y optimización. Colaboré en proyectos como <a href='https://consultus.fairpay.pe' target='_blank'>Fairpay</a>, <a href='https://www.gotitjob.com/' target='_blank'>Gotitjob</a>, entregando soluciones completas y de alto rendimiento."
+      "summary": "Desarrollo y mantenimiento de proyectos web con WordPress, NextJs, Laravel, Nestjs, Docker, Adonisjs, Express, MySQL y MongoDB, desde sitios personalizados hasta backend y optimización.",
+      "highlights": [
+        "Colaboración en proyectos de alto impacto: Fairpay y Gotitjob",
+        "Entrega de soluciones completas y de alto rendimiento"
+      ],
+      "stack": [
+        "WordPress",
+        "NextJs",
+        "Laravel",
+        "NestJS",
+        "Docker",
+        "AdonisJS",
+        "Express",
+        "MySQL",
+        "MongoDB"
+      ],
+      "metrics": []
     },
     {
       "name": "Athenadexfi",
-      "position": "DevOps Engineer",
+      "position": "Ingeniero DevOps (Freelance/Contrato)",
       "url": "https://athenadexfi.com",
       "startDate": "2025",
       "endDate": "2025",
-      "summary": "Responsable del despliegue de AthenadeXFi en VPS (<span>DigitalOcean</span>) y de la configuración de <span>CI/CD</span> para un release process ágil y estable."
+      "summary": "Responsable del despliegue en VPS DigitalOcean y configuración de CI/CD para un proceso de release ágil y estable.",
+      "highlights": [
+        "Despliegue en VPS con DigitalOcean",
+        "Implementación de pipelines CI/CD"
+      ],
+      "stack": [
+        "DigitalOcean",
+        "CI/CD",
+        "Docker"
+      ],
+      "metrics": []
     },
     {
       "name": "Miocondo",
-      "position": "Lead Backend Ingineer",
+      "position": "Lead Backend Engineer (Freelance/Contrato)",
       "url": "https://app.miocondo.com/",
       "startDate": "2025",
       "endDate": "2025",
-      "summary": "Lideré el desarrollo y despliegue del backend de una aplicación para condominios, optimizando la gestión y comunicación. Implementé una arquitectura robusta con <span>Laravel</span>, <span>PostgreSQL</span>, <span>Redis</span> y <span>Docker</span>, automatizando pagos y servicios. Fui responsable del despliegue completo de la plataforma y de la implementación de CI/CD, asegurando eficiencia, fiabilidad y releases de alta calidad."
+      "summary": "Lideré el desarrollo y despliegue del backend de una aplicación para condominios, optimizando la gestión y comunicación. Implementé una arquitectura robusta, automatizando pagos y servicios.",
+      "highlights": [
+        "Arquitectura robusta con Laravel, PostgreSQL, Redis y Docker",
+        "Automatización de pagos y servicios",
+        "Despliegue completo de plataforma",
+        "Implementación de CI/CD para releases de alta calidad"
+      ],
+      "stack": [
+        "Laravel",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "CI/CD",
+        "PHP"
+      ],
+      "metrics": []
     },
     {
       "name": "Perfexya",
-      "position": "Backend Developer",
+      "position": "Desarrollador Backend",
       "url": "https://landing.perfexya.com/",
       "startDate": "2022",
       "endDate": "2024",
-      "summary": "Lideré la mejora y mantenimiento del backend, resolviendo incidencias críticas que redujeron los tiempos de respuesta en 90% y desarrollando funcionalidades que aumentaron la interacción en 70%. Integré APIs externas (p. ej., <span>Zoho</span>) con <span>Symfony</span> y <span>MySQL</span>, e implementé <span>Docker</span> para estandarizar entornos y mejorar la eficiencia del equipo."
+      "summary": "Lideré la mejora y mantenimiento del backend, resolviendo incidencias críticas e integrando APIs externas.",
+      "highlights": [
+        "Reducción de tiempos de respuesta en 90%",
+        "Aumento de interacción de usuarios en 70%",
+        "Integración de APIs externas (Zoho) con Symfony y MySQL",
+        "Implementación de Docker para estandarizar entornos"
+      ],
+      "stack": [
+        "Symfony",
+        "MySQL",
+        "Docker",
+        "Zoho API",
+        "React",
+        "Material UI"
+      ],
+      "metrics": [
+        {
+          "value": "90%",
+          "label": "reducción tiempos de respuesta"
+        },
+        {
+          "value": "70%",
+          "label": "aumento interacción usuarios"
+        }
+      ]
     },
     {
       "name": "Deepground",
-      "position": "Desarrollador de Wordpress",
+      "position": "Desarrollador de WordPress",
       "url": "",
       "startDate": "2023",
       "endDate": "2023",
-      "summary": "Como desarrollador freelancer, creé un plugin de gestión de usuarios para <span>WordPress</span> en <span>PHP</span> y <span>JavaScript nativo</span>. Este plugin centralizó el control de usuarios, ofreciendo un dashboard para visualizar registros, segmentar con filtros avanzados y gestionar información, optimizando la administración de la base de usuarios."
+      "summary": "Creación de un plugin de gestión de usuarios para WordPress que centralizó el control y administración.",
+      "highlights": [
+        "Plugin de gestión de usuarios personalizado",
+        "Dashboard para visualizar registros y segmentar con filtros avanzados",
+        "Optimización de administración de base de usuarios"
+      ],
+      "stack": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "metrics": []
     },
     {
-      "name": "SEO",
-      "position": "Full Stack Developer Wordpress",
+      "name": "SEO Contenidos",
+      "position": "Desarrollador Full Stack",
       "url": "https://seocontenidos.net/",
       "startDate": "2021",
       "endDate": "2022",
-      "summary": "Lideré la construcción del tema actual del sitio de <a href='https://empresaspolar.com/' target='_blank'>Empresas Polar</a> (multinacional de alto tráfico), desarrollado desde cero en <span>TypeScript</span>, <span>Sass</span>, <span>Node.js</span> y <span>PHP</span>. Mejoré el rendimiento y la calidad del código respecto al tema anterior, optimicé la integración con WordPress y perfeccioné las animaciones con dependencias específicas del tema."
+      "summary": "Lideré la construcción del tema actual del sitio de Empresas Polar (multinacional de alto tráfico), optimizando rendimiento y calidad del código.",
+      "highlights": [
+        "Desarrollo desde cero en TypeScript, Sass, Node.js y PHP",
+        "Mejora de rendimiento respecto al tema anterior",
+        "Optimización de integración con WordPress"
+      ],
+      "stack": [
+        "TypeScript",
+        "Sass",
+        "Node.js",
+        "PHP",
+        "WordPress",
+        "JavaScript"
+      ],
+      "metrics": []
     }
   ],
-  "volunteer": [
-    {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…"
-    }
-  ],
+  "volunteer": [],
   "education": [
     {
       "institution": "Universidad Católica del Táchira",
@@ -144,29 +223,22 @@
       "courses": []
     }
   ],
-  "awards": [
-    {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }
-  ],
+  "awards": [],
   "certificates": [
     {
-      "name": "Diseño de páginas web con WordPress.",
+      "name": "Diseño de páginas web con WordPress",
       "date": "2020-11-07",
       "issuer": "Ingeniería Digital",
       "url": null
     },
     {
-      "name": "Master en JavaScript: JS, jQuery, NODE.js",
+      "name": "Master en JavaScript: JS, jQuery, Node.js",
       "date": "2021-11-07",
       "issuer": "Udemy",
       "url": null
     },
     {
-      "name": "Master en php: SQL, POO, MVC, SYMFONY, WORDPRESS",
+      "name": "Master en PHP: SQL, POO, MVC, Symfony, WordPress",
       "date": "2022-11-07",
       "issuer": "Udemy",
       "url": null
@@ -174,175 +246,105 @@
     {
       "name": "Principio de Análisis y Diseño Orientado a Objetos Utilizando el Estándar UML",
       "date": "2023-11-07",
-      "issuer": "Universidad Politécnica Territorial Agroindustrial Del Estado Tachira",
+      "issuer": "Universidad Politécnica Territorial Agroindustrial del Estado Táchira",
       "url": null
     }
   ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
-    }
-  ],
+  "publications": [],
   "skills": [
     {
-      "name": "HTML",
-      "level": "Master",
-      "keywords": ["Desarrollo Web", "Frontend"]
-    },
-    {
-      "name": "CSS",
-      "level": "Master",
-      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
-    },
-    {
-      "name": "JavaScript",
-      "level": "Master",
-      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
-    },
-    {
-      "name": "Tailwind",
+      "name": "Laravel",
       "level": "Avanzado",
+      "category": "primary",
       "keywords": [
         "Desarrollo Web",
-        "Frontend",
-        "CSS Framework",
-        "Diseño Responsive"
-      ]
-    },
-    {
-      "name": "TypeScript",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
         "Backend",
-        "JavaScript Superset"
+        "PHP Framework"
       ]
     },
     {
-      "name": "Node",
+      "name": "PHP",
       "level": "Avanzado",
-      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+      "category": "primary",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend",
+        "PHP"
+      ]
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": "Avanzado",
+      "category": "primary",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework"
+      ]
+    },
+    {
+      "name": "Livewire",
+      "level": "Intermedio",
+      "category": "primary",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Laravel",
+        "PHP Framework"
+      ]
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "Avanzado",
+      "category": "secondary",
+      "keywords": [
+        "Base de Datos",
+        "SQL"
+      ]
     },
     {
       "name": "MySQL",
       "level": "Avanzado",
+      "category": "secondary",
       "keywords": [
         "Bases de Datos",
-        "SQL",
-        "Almacenamiento de Datos",
-        "Backend"
+        "SQL"
+      ]
+    },
+    {
+      "name": "SQLite",
+      "level": "Avanzado",
+      "category": "secondary",
+      "keywords": [
+        "Bases de Datos",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Docker",
+      "level": "Avanzado",
+      "category": "secondary",
+      "keywords": [
+        "Contenedores",
+        "DevOps"
       ]
     },
     {
       "name": "Git",
       "level": "Avanzado",
-      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
-    },
-    {
-      "name": "GitHub",
-      "level": "Avanzado",
+      "category": "secondary",
       "keywords": [
-        "Control de Versiones",
-        "Colaboración",
-        "Código Fuente",
-        "Git"
+        "Control de Versiones"
       ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Avanzado",
-      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
-    },
-    {
-      "name": "Php",
-      "level": "Avanzado",
-      "keywords": ["Desarrollo Web", "Frontend", "Backend", "UI"]
-    },
-    {
-      "name": "Symfony",
-      "level": "Avanzado",
-      "keywords": ["Desarrollo Web", "Backend", "PHP Framework", "UI"]
-    },
-    {
-      "name": "Docker",
-      "level": "Avanzado",
-      "keywords": []
-    },
-    {
-      "name": "Express",
-      "level": "Avanzado",
-      "keywords": ["Desarrollo Web", "Backend", "JavaScript Library", "UI"]
-    },
-    {
-      "name": "Nestjs",
-      "level": "Avanzado",
-      "keywords": ["Desarrollo Web", "Backend", "JavaScript Framework", "UI"]
-    },
-    {
-      "name": "Postgresql",
-      "level": "Avanzado",
-      "keywords": ["Database", "Almacenamiento de Datos", "SQL"]
-    },
-    {
-      "name": "Prisma",
-      "level": "Avanzado",
-      "keywords": ["Javascript Library", "Backend", "ORM"]
-    },
-    {
-      "name": "Doctrine",
-      "level": "Avanzado",
-      "keywords": ["PHP Library", "Backend", "ORM"]
-    },
-    {
-      "name": "Astro",
-      "level": "Avanzado",
-      "keywords": [
-        "Javascript Library",
-        "Backend",
-        "Frontend",
-        "JavaScript Framework"
-      ]
-    },
-    {
-      "name": "MongoDb",
-      "level": "Avanzado",
-      "keywords": ["Database", "NoSql", "Database No Relation"]
-    },
-    {
-      "name": "Expo",
-      "level": "Avanzado",
-      "keywords": []
-    },
-    {
-      "name": "React Native",
-      "level": "Avanzado",
-      "keywords": ["Application Movile", "Javascript Library", "UI"]
-    },
-    {
-      "name": "Redux",
-      "level": "Avanzado",
-      "keywords": ["State", "State Management", "UI"]
     },
     {
       "name": "Linux",
-      "level": "Avanzado",
-      "keywords": ["Systema Operativo"]
+      "level": "Intermedio",
+      "category": "secondary",
+      "keywords": [
+        "Sistema Operativo",
+        "Servidores"
+      ]
     }
   ],
   "languages": [
@@ -352,44 +354,10 @@
     },
     {
       "language": "Inglés",
-      "fluency": "Basico (En Formación)"
+      "fluency": "Básico (En Formación)"
     }
   ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Brevio",
-      "isActive": true,
-      "status": "lanzado",
-      "description": "Desarrollé la arquitectura backend y frontend de Brevio, una aplicación SaaS para resumir documentos con IA. Implementé un sistema de cuentas de usuario y procesamiento de documentos en segundo plano. La tecnología principal se basa en Next.js para el frontend y Supabase (PostgreSQL) para la base de datos y autenticación, con Prisma como ORM.",
-      "highlights": [
-        "React",
-        "Nextjs",
-        "Tailwindcss",
-        "Shadcn",
-        "Prisma",
-        "Supabase"
-      ],
-      "url": "https://brevioof.digital"
-    },
-    {
-      "name": "Distribuidora Zafiro",
-      "isActive": true,
-      "status": "lanzado",
-      "description": "Construí el backend para Zafiro, un sistema ERP para la gestión de negocios. La plataforma, desarrollada en PHP con Laravel y Filament, centraliza ventas, finanzas e inventario. Diseñé la base de datos en Supabase (PostgreSQL) y la API RESTful para conectar las diferentes áreas del negocio, optimizando la eficiencia operativa.",
-      "highlights": ["Laravel", "Filament", "PHP", "Tailwindcss", "Supabase"],
-      "url": "https://distribuidorazafiro.online"
-    }
-  ]
+  "interests": [],
+  "references": [],
+  "projects": []
 }

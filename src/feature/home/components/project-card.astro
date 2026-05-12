@@ -1,0 +1,91 @@
+---
+import TechBadge from "./tech-badge.astro";
+
+interface Props {
+  name: string;
+  description: string;
+  status: "lanzado" | "abandonado" | "en-progreso";
+  highlights: string[];
+  whatWorked: string;
+  whatFailed: string;
+  url?: string;
+}
+
+const { name, description, status, highlights, whatWorked, whatFailed, url } = Astro.props;
+
+const statusConfig: Record<string, { label: string; class: string }> = {
+  lanzado: { label: "Lanzado", class: "bg-green-100 text-green-800 border-green-200" },
+  "en-progreso": { label: "En Progreso", class: "bg-yellow-100 text-yellow-800 border-yellow-200" },
+  abandonado: { label: "Abandonado", class: "bg-gray-100 text-gray-600 border-gray-200" },
+};
+
+const currentStatus = statusConfig[status] || statusConfig.lanzado;
+---
+
+<article class="group bg-secondary rounded-xl border border-border p-6 hover:border-laravel/30 transition-all hover-lift">
+  <!-- Header with status badge -->
+  <div class="flex items-start justify-between gap-4 mb-4">
+    <h3 class="text-xl font-semibold text-text-primary group-hover:text-laravel transition-colors">
+      {name}
+    </h3>
+    <span class={`px-2.5 py-1 text-xs font-medium rounded-full border ${currentStatus.class}`}>
+      {currentStatus.label}
+    </span>
+  </div>
+
+  <!-- Description -->
+  <p class="text-text-secondary text-sm mb-4 leading-relaxed">
+    {description}
+  </p>
+
+  <!-- Tech stack -->
+  <div class="flex flex-wrap gap-2 mb-5">
+    {highlights.map((tech) => (
+      <TechBadge name={tech} category="secondary" />
+    ))}
+  </div>
+
+  <!-- What worked / What failed -->
+  <div class="space-y-4 pt-4 border-t border-border">
+    <div class="flex items-start gap-3">
+      <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600">
+          <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+        </svg>
+      </div>
+      <div>
+        <p class="text-xs font-semibold text-green-700 mb-1">Lo que funcionó</p>
+        <p class="text-sm text-text-secondary">{whatWorked}</p>
+      </div>
+    </div>
+
+    <div class="flex items-start gap-3">
+      <div class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <div>
+        <p class="text-xs font-semibold text-amber-700 mb-1">Lo que aprendí</p>
+        <p class="text-sm text-text-secondary">{whatFailed}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Links -->
+  {url && (
+    <div class="mt-5 pt-4 border-t border-border">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-sm font-medium text-laravel hover:underline"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        Ver proyecto
+      </a>
+    </div>
+  )}
+</article>

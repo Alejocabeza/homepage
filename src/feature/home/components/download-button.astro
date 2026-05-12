@@ -3,6 +3,7 @@ interface Props {
   url: string;
   fileName: string;
 }
+
 const { url, fileName } = Astro.props;
 ---
 
@@ -10,22 +11,22 @@ const { url, fileName } = Astro.props;
   href={url}
   download={fileName}
   target="_blank"
-  class="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white transition-colors rounded-md bg-primary hover:bg-primary/80"
+  class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-text-secondary border border-border rounded-lg transition-all hover:border-laravel hover:text-laravel"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
+    width="18"
+    height="18"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="icon icon-tabler icons-tabler-outline icon-tabler-download"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path><path
-      d="M7 11l5 5l5 -5"></path><path d="M12 4l0 12"></path></svg
   >
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
   Descargar CV
 </a>

@@ -17,9 +17,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `${homeUrl}#homepage`,
   url: homeUrl,
-  name: `${siteMetadata.author} | Portafolio`,
+  name: `${siteMetadata.author} | Portfolio`,
   description: siteMetadata.description,
-  inLanguage: siteMetadata.locale,
+  inLanguage: "es",
   about: {
     "@id": personSchema["@id"],
   },
@@ -41,10 +41,10 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title="Ingeniero Backend en Latinoamérica"
-  description={siteMetadata.description}
+  title={`${siteMetadata.author} | Laravel Specialist`}
+  description="Laravel Specialist con experiencia en aplicaciones SaaS, ERP y web robustas. Building robust Laravel applications for ambitious teams."
   structuredData={[personSchema, webPageSchema, breadcrumbSchema]}
-  keywords={[...siteMetadata.keywords, "Alejandro Cabeza"]}
+  keywords={[...siteMetadata.keywords, "Alejandro Cabeza", "Laravel Specialist"]}
 >
   <HomePage />
 </Layout>

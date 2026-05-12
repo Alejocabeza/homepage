@@ -11,6 +11,13 @@ const site = process.env.PUBLIC_SITE_URL ?? "https://alejandrocabeza.dev";
 export default defineConfig({
   site,
   output: "server",
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },

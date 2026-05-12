@@ -1,20 +1,34 @@
 ---
-import { NAVIGATION } from "@/shared/lib/navigation";
+import { basics } from "@/shared/data/cv.json";
+
+interface NavItem {
+  title: string;
+  url: string;
+}
+
+const navItems: NavItem[] = [
+  { title: "Inicio", url: "#presentacion" },
+  { title: "Proyectos", url: "#projects" },
+  { title: "Experiencia", url: "#experiencia" },
+  { title: "Stack", url: "#stack" },
+  { title: "Sobre mí", url: "#sobre-mi" },
+  { title: "Contacto", url: "#contact" },
+];
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-50 w-full"
   role="banner"
 >
   <nav
-    class="flex px-2 sm:px-3 text-sm sm:text-base font-medium rounded-full text-text-secondary justify-center items-center"
+    class="flex items-center justify-center mx-auto mt-4 px-4 py-2 text-sm font-medium bg-white/90 backdrop-blur-md rounded-full border border-border shadow-sm max-w-fit"
     aria-label="Navegación principal"
   >
     {
-      NAVIGATION.map(
-        ({ title, url, icon }: { title: string; url: string; icon: any }) => (
+      navItems.map(
+        ({ title, url }: NavItem) => (
           <a
-            class="relative block px-1 py-1 sm:px-2 sm:py-2 transition hover:text-accent"
+            class="relative px-3 py-1.5 text-text-secondary hover:text-accent transition-colors"
             aria-label={title}
             href={url}
           >
@@ -26,36 +40,7 @@ import { NAVIGATION } from "@/shared/lib/navigation";
   </nav>
 </header>
 
-<style>
-  nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 6.25rem;
-  }
-
-  @keyframes nav-shadown {
-    to {
-      /* shadow-lg approx */
-      box-shadow:
-        0 0.625rem 0.9375rem -0.1875rem rgba(2, 6, 23, 0.7),
-        0 0.25rem 0.375rem -0.125rem rgba(2, 6, 23, 0.06);
-      /* ring-1 approximated with border */
-      border-width: 0.0625rem;
-      border-style: solid;
-      border-color: rgba(255, 255, 255, 0.1); /* ring-white/10 */
-      /* backdrop blur */
-      backdrop-filter: blur(0.5rem);
-      -webkit-backdrop-filter: blur(0.5rem);
-      /* background color from bg-bg-secondary/90 */
-      background-color: rgba(2, 12, 27, 0.9);
-      border-radius: 624.9375rem;
-    }
-  }
-</style>
-
 <script>
-  // language toggle functionality removed
-
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("header nav a");

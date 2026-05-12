@@ -1,0 +1,35 @@
+---
+interface Props {
+  name: string;
+  category?: "primary" | "secondary";
+  level?: string;
+}
+
+const { name, category = "secondary", level } = Astro.props;
+
+const getLevelDots = (lvl: string | undefined) => {
+  if (!lvl) return null;
+  const filled = lvl === "Avanzado" ? 3 : 2;
+  return Array.from({ length: 3 }, (_, i) => i < filled);
+};
+const levelDots = getLevelDots(level);
+---
+
+<span
+  class={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium transition-all hover-lift ${
+    category === "primary"
+      ? "bg-laravel/10 text-laravel border border-laravel/20"
+      : "bg-secondary text-text-secondary border border-border hover:border-border-hover"
+  }`}
+>
+  {name}
+  {levelDots && (
+    <div class="flex items-center gap-1 ml-2">
+      {levelDots.map((filled: boolean) => (
+        <span
+          class={`w-1.5 h-1.5 rounded-full ${filled ? "bg-laravel" : "bg-gray-300"}`}
+        />
+      ))}
+    </div>
+  )}
+</span>

@@ -16,22 +16,15 @@ const { title, description, status, tags, slug, href, author, author_avatar } =
 const isExternalLink = href ? /^https?:\/\//i.test(href) : false;
 ---
 
-<div
-  class="group relative bg-secondary rounded-lg shadow-lg p-6 flex flex-col justify-between transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-accent/10 border border-slate-800 hover:border-accent/20"
+<article
+  class="group relative bg-white rounded-lg p-6 flex flex-col justify-between border border-border hover:border-accent/40 hover:shadow-md transition-all duration-300"
 >
   <div class="grow">
-    <header class="flex justify-between items-start mb-4">
-      <h3
-        class="text-xl font-bold text-text-primary group-hover:text-accent transition-colors duration-300"
-      >
+    <header class="flex justify-between items-start mb-3">
+      <h3 class="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors">
         {
           href ? (
-            <a
-              href={href}
-              class="after:absolute after:inset-0"
-              target={isExternalLink ? "_blank" : undefined}
-              rel={isExternalLink ? "noopener noreferrer" : undefined}
-            >
+            <a href={href} class="after:absolute after:inset-0" target={isExternalLink ? "_blank" : undefined} rel={isExternalLink ? "noopener noreferrer" : undefined}>
               {title}
             </a>
           ) : (
@@ -39,71 +32,52 @@ const isExternalLink = href ? /^https?:\/\//i.test(href) : false;
           )
         }
       </h3>
-      <div class="flex items-center gap-4">
-        {
-          isExternalLink && href && (
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-text-secondary hover:text-accent transition-colors duration-300 z-10"
-              aria-label={`Ver el proyecto ${title} en vivo`}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-up-right-from-square"
-              >
-                <>
-                  <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
-                  <path d="m21 3-9 9" />
-                  <path d="M15 3h6v6" />
-                </>
-              </svg>
-            </a>
-          )
-        }
-      </div>
+      {
+        isExternalLink && href && (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-text-muted hover:text-accent transition-colors"
+            aria-label={`Ver ${title} en vivo`}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        )
+      }
     </header>
-    <p class="text-text-secondary mb-4 text-sm">{description}</p>
+    <p class="text-sm text-text-secondary mb-4 line-clamp-3">{description}</p>
     {
       author && (
         <div class="flex items-center gap-2 mb-4">
           {author_avatar && (
-            <img
-              src={author_avatar}
-              alt={author}
-              class="w-6 h-6 rounded-full"
-            />
+            <img src={author_avatar} alt={author} class="w-5 h-5 rounded-full" />
           )}
-          <p class="text-xs text-text-secondary">{author}</p>
+          <p class="text-xs text-text-muted">{author}</p>
         </div>
       )
     }
   </div>
 
-  <footer class="flex flex-wrap gap-2 mt-auto">
+  <footer class="flex flex-wrap gap-1.5 mt-auto">
     {
       status && (
-        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-3 py-1 rounded-full">
+        <span class="px-2 py-1 text-xs text-accent bg-accent/10 rounded border border-accent/20">
           {status}
         </span>
       )
     }
     {
       tags &&
-        tags.map((highlight) => (
-          <span class="bg-accent/10 text-accent text-xs font-medium px-3 py-1 rounded-full">
-            {highlight}
+        tags.map((tag) => (
+          <span class="px-2 py-1 text-xs text-text-muted bg-secondary rounded border border-border">
+            {tag}
           </span>
         ))
     }
   </footer>
-</div>
+</article>

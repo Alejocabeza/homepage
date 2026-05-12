@@ -1,0 +1,38 @@
+---
+import ProjectCard from "@/feature/home/components/project-card.astro";
+import { projects } from "@/shared/data/cv.json";
+
+interface Project {
+  name: string;
+  isActive: boolean;
+  status: string;
+  description: string;
+  highlights: string[];
+  whatWorked: string;
+  whatFailed: string;
+  url?: string;
+}
+---
+
+<section id="projects" class="py-16">
+  <h2 class="text-2xl font-semibold text-text-primary mb-2">
+    Lo que he construido
+  </h2>
+  <p class="text-text-muted mb-10 max-w-xl">
+    Proyectos personales donde comparto lo que funcionó y lo que aprendí
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-grid">
+    {projects.map((project: Project) => (
+      <ProjectCard
+        name={project.name}
+        description={project.description}
+        status={project.status}
+        highlights={project.highlights}
+        whatWorked={project.whatWorked}
+        whatFailed={project.whatFailed}
+        url={project.url}
+      />
+    ))}
+  </div>
+</section>

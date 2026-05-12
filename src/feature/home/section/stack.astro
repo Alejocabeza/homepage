@@ -1,0 +1,47 @@
+---
+import TechBadge from "@/feature/home/components/tech-badge.astro";
+import { skills } from "@/shared/data/cv.json";
+
+interface Skill {
+  name: string;
+  level: string;
+  category: string;
+  keywords?: string[];
+}
+
+const primarySkills = skills.filter((s: Skill) => s.category === "primary");
+const secondarySkills = skills.filter((s: Skill) => s.category === "secondary");
+---
+
+<section id="stack" class="py-16">
+  <h2 class="text-2xl font-semibold text-text-primary mb-2">
+    Mi Stack
+  </h2>
+  <p class="text-text-muted mb-10 max-w-xl">
+    Tecnologías con las que construyo aplicaciones robustas y escalables
+  </p>
+
+  <!-- Primary technologies -->
+  <div class="mb-8">
+    <h3 class="text-sm font-medium text-text-muted uppercase tracking-wide mb-4">
+      Tecnologías Principales
+    </h3>
+    <div class="flex flex-wrap gap-3">
+      {primarySkills.map((skill: Skill) => (
+        <TechBadge name={skill.name} category="primary" level={skill.level} />
+      ))}
+    </div>
+  </div>
+
+  <!-- Secondary technologies -->
+  <div>
+    <h3 class="text-sm font-medium text-text-muted uppercase tracking-wide mb-4">
+      Herramientas de Soporte
+    </h3>
+    <div class="flex flex-wrap gap-3">
+      {secondarySkills.map((skill: Skill) => (
+        <TechBadge name={skill.name} category="secondary" level={skill.level} />
+      ))}
+    </div>
+  </div>
+</section>

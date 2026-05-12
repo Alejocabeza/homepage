@@ -1,17 +1,17 @@
-import { basics } from "@/shared/data/cv.json";
+import { basics, work } from "@/shared/data/cv.json";
 
 const FALLBACK_SITE_URL = "https://alejandrocabeza.dev";
 const rawSiteUrl = (import.meta.env.PUBLIC_SITE_URL ??
   FALLBACK_SITE_URL) as string;
 const normalizedSiteUrl = rawSiteUrl.replace(/\/$/, "");
 
-const displayName =
-  basics.name?.replace(/^hola,\s*/i, "").trim() || "Alejandro Cabeza";
+const displayName = basics.name || "Alejandro Cabeza";
 const defaultDescription =
-  "Alejandro Cabeza es un ingeniero backend especializado en Node.js, Laravel, Symfony y arquitecturas escalables. Construye APIs resilientes, automatiza despliegues CI/CD y lidera equipos para entregar productos de alto rendimiento.";
+  "Senior Backend Engineer con 3+ años edificando arquitecturas escalables y APIs de alto rendimiento. Especializado en Node.js, PHP, PostgreSQL y soluciones Cloud/DevOps.";
 
 const keywords = [
   "desarrollador backend",
+  "backend engineer",
   "node.js",
   "nestjs",
   "express",
@@ -26,7 +26,15 @@ const keywords = [
   "microservicios",
   "postgresql",
   "ingeniero de software",
+  "full stack developer",
+  "devops engineer",
 ];
+
+// Extraer skills únicos para el schema
+const skillSet = new Set(
+  work.flatMap((w) => w.stack || [])
+);
+const knowsAbout = Array.from(skillSet);
 
 export interface SiteMetadata {
   baseUrl: string;
@@ -89,7 +97,36 @@ export const buildPersonSchema = () => ({
     postalCode: basics.location.postalCode,
     addressCountry: basics.location.countryCode,
   },
-  knowsAbout: keywords,
+  knowsAbout: knowsAbout,
+  worksFor: work.map((w) => ({
+    "@type": "Organization",
+    name: w.name,
+    url: w.url,
+  })),
+});
+
+// Schema para reclutadores - ProfessionalService o JobPosting
+export const buildProfessionalSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: siteMetadata.author,
+  url: siteMetadata.baseUrl,
+  image: absoluteUrl("/avatar.png"),
+  description: defaultDescription,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: basics.location.city,
+    addressRegion: basics.location.region,
+    addressCountry: basics.location.countryCode,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: siteMetadata.contactEmail,
+    contactType: "recruitment",
+    availableLanguage: ["Spanish", "English"],
+  },
+  sameAs: siteMetadata.sameAs,
+  priceRange: "$$$",
 });
 
 export default siteMetadata;

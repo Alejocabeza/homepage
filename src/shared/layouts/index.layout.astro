@@ -9,7 +9,6 @@ type SeoProps = {
   canonical?: string;
   ogImage?: string;
   type?: "website" | "article" | "profile" | string;
-  locale?: string;
   noindex?: boolean;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
   datePublished?: string;
@@ -25,15 +24,13 @@ const {
   canonical,
   ogImage,
   type = "website",
-  locale,
   noindex,
   structuredData,
   datePublished,
   dateModified,
   keywords,
-}: Props = Astro.props as Props;
+} = Astro.props as Props;
 
-const resolvedLocale = locale ?? siteMetadata.locale ?? "es";
 const pageTitle = title
   ? `${title} | ${siteMetadata.siteName}`
   : siteMetadata.title;
@@ -67,7 +64,7 @@ const defaultSchemas: Record<string, unknown>[] = [
     name: siteMetadata.siteName,
     url: siteMetadata.baseUrl,
     description: metaDescription,
-    inLanguage: resolvedLocale,
+    inLanguage: "es",
     publisher: {
       "@type": "Person",
       name: siteMetadata.author,
@@ -80,7 +77,7 @@ const jsonLdSchemas = [...defaultSchemas, ...schemaEntries];
 const mermaidScriptSrc = (await import("../scripts/mermaid-init.js?url"))
   .default;
 ---
-<html lang={resolvedLocale}>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -104,12 +101,7 @@ const mermaidScriptSrc = (await import("../scripts/mermaid-init.js?url"))
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={metaDescription} />
     {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-    {siteMetadata.ogLocale && (
-      <meta property="og:locale" content={siteMetadata.ogLocale} />
-    )}
-    {siteMetadata.alternateLocales?.map((altLocale) => (
-      <meta property="og:locale:alternate" content={altLocale} />
-    ))}
+    <meta property="og:locale" content="es_ES" />
     {ogImageUrl && (
       <>
         <meta property="og:image" content={ogImageUrl} />
@@ -143,16 +135,12 @@ const mermaidScriptSrc = (await import("../scripts/mermaid-init.js?url"))
       </script>
     ))}
   </head>
-  <body class="relative text-primary bg-primary">
-    <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full
-	bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(100,255,218,0.2),rgba(255,255,255,0))]"
-    >
-    </div>
+<body class="relative text-text-primary bg-primary">
     <Header />
-    <main class="max-w-full sm:max-w-[700px] mx-auto">
+    <main class="max-w-3xl mx-auto px-4 sm:px-6">
       <slot />
     </main>
+
     <script type="module" src={mermaidScriptSrc}></script>
   </body>
 </html>

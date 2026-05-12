@@ -1,50 +1,79 @@
 ---
 import {type Post} from '@/shared/lib/notion';
-import SocialShare from '@/shared/components/social-share.astro'; // Import the SocialShare component
+import SocialShare from '@/shared/components/social-share.astro';
 
 type Props = {
   post: Post;
   renderedContent: string | null;
-  articleUrl: string; // Add articleUrl to props
+  articleUrl: string;
 }
 
-const {post, renderedContent, articleUrl}: Props = Astro.props as Props; // Destructure articleUrl
+const {post, renderedContent, articleUrl}: Props = Astro.props as Props;
 
+const formattedDate = new Date(post.date).toLocaleDateString('es', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
 ---
 
-<main class="py-32 md:py-36 px-4 md:px-0 max-w-3xl mx-auto">
+<main class="py-24 px-6 md:px-0 max-w-3xl mx-auto">
   <article>
-    <h1 class="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl mb-4">{post.title}</h1>
+    <!-- Back link -->
+    <a href="/blog" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-accent transition-colors mb-8">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+      </svg>
+      Volver al blog
+    </a>
 
-    <div class="flex flex-wrap gap-2 mb-4">
+    <!-- Title -->
+    <h1 class="text-3xl sm:text-4xl font-semibold text-white mb-4">
+      {post.title}
+    </h1>
+
+    <!-- Meta info -->
+    <div class="flex flex-wrap items-center gap-4 mb-6">
+      <!-- Category -->
       {post.category && (
-        <span class="bg-blue-900/50 text-blue-300 text-xs font-medium px-3 py-1 rounded-full">
+        <span class="px-2.5 py-1 text-xs text-accent bg-accent/10 rounded border border-accent/20">
           {post.category}
         </span>
       )}
+      
+      <!-- Date -->
+      <time datetime={new Date(post.date).toISOString()} class="text-sm text-text-muted">
+        {formattedDate}
+      </time>
+
+      <!-- Author -->
+      {post.author && (
+        <div class="flex items-center gap-2">
+          {post.author_avatar && (
+            <img src={post.author_avatar} alt={post.author} class="w-6 h-6 rounded-full" />
+          )}
+          <p class="text-sm text-text-secondary">{post.author}</p>
+        </div>
+      )}
+    </div>
+
+    <!-- Tags -->
+    <div class="flex flex-wrap gap-2 mb-8">
       {post.tags && post.tags.map((tag) => (
-        <span class="bg-accent/10 text-accent text-xs font-medium px-3 py-1 rounded-full">
+        <span class="px-2 py-1 text-xs text-text-muted bg-primary rounded border border-border">
           {tag}
         </span>
       ))}
     </div>
 
-    <time datetime={new Date(post.date).toISOString()} class="text-sm text-text-secondary mb-2 block">
-      Fecha de Publicación: {new Date(post.date).toLocaleDateString('es', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      })}
-    </time>
-
-    {post.author && (
-      <div class="flex items-center gap-2 mb-8">
-        {post.author_avatar && <img src={post.author_avatar} alt={post.author} class="w-8 h-8 rounded-full" />}
-        <p class="text-sm text-text-secondary"><span class="font-semibold">{post.author}</span></p>
-      </div>
-    )}
-
-    <div class="prose prose-lg max-w-none text-text-secondary mt-28" set:html={renderedContent} />
+    <!-- Content -->
+    <div class="prose prose-invert max-w-none text-text-secondary prose-headings:text-white prose-a:text-accent prose-strong:text-white prose-code:text-accent prose-pre:bg-secondary prose-pre:border prose-pre:border-border">
+      <Fragment set:html={renderedContent} />
+    </div>
   </article>
-  <SocialShare title={post.title} url={articleUrl} /> {/* Add the SocialShare component here */}
+
+  <!-- Social Share -->
+  <div class="mt-12 pt-8 border-t border-border">
+    <SocialShare title={post.title} url={articleUrl} />
+  </div>
 </main>

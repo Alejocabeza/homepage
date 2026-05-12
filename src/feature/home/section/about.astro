@@ -2,29 +2,61 @@
 import { basics } from "@/shared/data/cv.json";
 ---
 
-<section id="sobre-mi" class="py-32 md:py-36 px-4 md:px-0">
-  <h2
-    id="sobre-mi-heading"
-    class="flex mb-6 text-3xl font-semibold gap-x-3 text-text-primary"
-  >
+<section id="sobre-mi" class="py-16">
+  <h2 class="text-2xl font-semibold text-text-primary mb-12">
     Sobre mí
   </h2>
-  <article
-    class="flex flex-col items-center justify-center gap-8 text-text-secondary md:flex-row mt-16"
-  >
-    <div
-      class="[&>p]:mb-4 [&>p>strong]:text-accent [&>p>strong]:font-normal [&>p>strong]:font-mono order-2 md:order-1 text-pretty"
-    >
-      {basics.aboutMe.map((text) => <p>{text}</p>)}
-    </div>
+  
+  <div class="flex flex-col md:flex-row gap-10 items-start">
+    <!-- Text -->
+    <div class="flex-1 max-w-2xl">
+      <ul class="space-y-4 mb-10">
+        {basics.aboutMe.map((text) => (
+          <li class="flex items-start gap-3 text-base text-text-secondary">
+            <span class="text-laravel mt-1">▸</span>
+            <span>{text}</span>
+          </li>
+        ))}
+      </ul>
 
-    <img
-      width="200"
-      height="200"
-      src="/avatar.png"
-      alt={basics.name}
-      class="order-1 object-cover w-48 sm:w-56 md:w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-bg-secondary ring-1 ring-accent/20 mb-8 sm:mb-0"
-      style="object-position: 50% 50%"
-    />
-  </article>
+      <!-- Failure Narrative Section -->
+      <div class="bg-secondary rounded-xl p-6 border border-border mt-8">
+        <h3 class="text-lg font-semibold text-text-primary mb-4 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          Lo que he aprendido del fracaso
+        </h3>
+        
+        <div class="space-y-4">
+          <div>
+            <h4 class="text-sm font-medium text-text-primary mb-2">TaskFlow - Mi tablero Kanban abandonado</h4>
+            <p class="text-sm text-text-muted">
+              Quería crear un clon de Trello con Laravel + Livewire. El proyecto avanzó bien hasta que me di cuenta de que estaba reconstruyendo algo que ya existía mejor hecho. Aprendí a identificar cuando una idea ya tiene soluciones maduras y es mejor usar herramientas existentes.
+            </p>
+          </div>
+          
+          <div>
+            <h4 class="text-sm font-medium text-text-primary mb-2">Brevio - Mi primer SaaS</h4>
+            <p class="text-sm text-text-muted">
+              Al inicio usé Supabase (PostgreSQL + Auth) en lugar de un backend Laravel dedicado. Era más rápido de implementar pero limité las posibilidades de personalización. Aprendí que para proyectos que necesitan flexibilidad, Laravel sigue siendo mi mejor opción.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Avatar -->
+    <div class="flex-shrink-0">
+      <img
+        width="160"
+        height="160"
+        src="/avatar.png"
+        alt={basics.name}
+        class="w-32 h-32 sm:w-40 sm:h-40 rounded-xl object-cover border border-border shadow-sm"
+      />
+    </div>
+  </div>
 </section>
